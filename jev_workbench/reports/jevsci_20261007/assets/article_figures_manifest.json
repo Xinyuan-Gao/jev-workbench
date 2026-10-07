@@ -1,0 +1,18 @@
+{
+  "source_analysis": "/Users/gxy/投稿管理/jev_workbench/reports/jevsci_20261007/final_analysis.json",
+  "analysis_sha256": "725ecddc34335ed08d29ca4e14a2b8015ec58c27d7dcd5ba3df8b6c00e09d036",
+  "script_sha256": "d5f8b771dfda7696e7bcf1198e8890563bdbba3bb65e5f2fe11c1a9062c7ffc9",
+  "figures": [
+    "c01_data_split.png",
+    "c02_accuracy_massive.png",
+    "c03_accuracy_t2.png",
+    "c04_macro_f1_massive.png",
+    "c05_macro_f1_t2.png",
+    "c06_valid_failure.png",
+    "c07_rag_confusion.png",
+    "c08_intent_recall.png",
+    "c09_latency.png",
+    "c10_difference.png",
+    "c11_stability.png"
+  ]
+}

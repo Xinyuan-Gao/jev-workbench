@@ -1,0 +1,155 @@
+{
+  "status": "candidate_not_frozen",
+  "dataset_ids": [
+    "massive",
+    "t2"
+  ],
+  "route_status": "separate_phase_B_awaiting_real_independent_human_gold",
+  "execution": {
+    "remote_models": {
+      "jev": "jev-1.13.0",
+      "gemini": "gemini-3.8-flash"
+    },
+    "remote_repeats": 3,
+    "order_seed": 20261007,
+    "max_http_attempts": 3,
+    "timeout_seconds": 45,
+    "backoff_seconds": 1,
+    "allow_indeterminate_retry": false,
+    "max_indeterminate_retries_per_job": 0,
+    "budget": {
+      "status": "bounded_by_existing_user_full_test_authorization",
+      "unknown_cost_policy": "bounded_calls",
+      "max_total_http_attempts": 22176,
+      "currency": "CNY",
+      "maximum_spend": null,
+      "authorization_basis": "用户已要求全部测试、重新完整实验；使用已有提供的两家API，预先限制计划矩阵与HTTP尝试，不引入新服务或购买。费用不可核实，不能承诺人民币上限。"
+    },
+    "remote_base_urls": {
+      "jev": "https://5yuantoken.org/v1",
+      "gemini": "https://5yuantoken.org/v1"
+    }
+  },
+  "analysis": {
+    "primary_repeat": 0,
+    "bootstrap_iterations": 10000,
+    "statistical_seed": 20261007,
+    "primary_tested_metric": "all_planned_accuracy",
+    "confirmatory_pairs": [
+      "JEV-Gemini",
+      "JEV-best_local_selected_on_validation"
+    ],
+    "holm_family": "two prespecified comparisons per final formal task",
+    "massive_bootstrap_strata": "gold_label",
+    "t2_bootstrap_unit": "query",
+    "minimum_meaningful_accuracy_difference": 0.05,
+    "other_metric_status": "descriptive_and_exploratory",
+    "best_local_by_validation": {
+      "massive": {
+        "model": "local:lr",
+        "selection_metric": "validation_60_fixed_label_macro_f1",
+        "score": 0.8100945878998396,
+        "all_family_scores": {
+          "lr": 0.8100945878998396,
+          "linear_svc": 0.8023347342844731,
+          "xgboost": 0.7040565950570781,
+          "lightgbm": 0.6756484602137783
+        }
+      },
+      "t2": {
+        "model": "local:linear_svc",
+        "selection_metric": "validation_2_fixed_label_macro_f1",
+        "score": 0.5923296560963722,
+        "all_family_scores": {
+          "lr": 0.5918355069218377,
+          "linear_svc": 0.5923296560963722,
+          "xgboost": 0.5918491484184916,
+          "lightgbm": 0.5786544143956286
+        }
+      }
+    },
+    "permutation_iterations": 10000,
+    "seed": 20261007,
+    "alpha": 0.05,
+    "datasets": {
+      "massive": {
+        "bootstrap_stratify": "gold_label",
+        "best_local_family": "lr"
+      },
+      "t2": {
+        "bootstrap_stratify": null,
+        "best_local_family": "linear_svc"
+      }
+    },
+    "sample_size_sensitivity_artifact": "audits/design_sensitivity.json",
+    "non_significance_policy": "no equivalence claim; fixed size, no test-driven expansion or optional stopping"
+  },
+  "matrix": {
+    "logical_jobs": 23408,
+    "local_jobs": 16016,
+    "remote_first_attempts": 7392,
+    "remote_attempt_bound_without_indeterminate_recovery": 22176
+  },
+  "planned_artifacts": [
+    "PROTOCOL.md",
+    "data/massive_candidate.json",
+    "data/t2_candidate.json",
+    "data/task_schemas_candidate.json",
+    "artifacts/massive/local_dev_report.json",
+    "artifacts/massive/local_models.joblib",
+    "artifacts/t2/local_dev_report.json",
+    "artifacts/t2/local_models.joblib",
+    "artifacts/remote_dev_report.json",
+    "audits/data_source_research.md",
+    "audits/statistics_data_review.md",
+    "audits/local_freeze_review.md",
+    "audits/design_sensitivity.json",
+    "audits/design_sensitivity_review.md",
+    "audits/final_preflight_initial_review.md",
+    "README.md",
+    "requirements.lock.txt",
+    "audits/runtime_environment.json",
+    "audits/dataset_reproduction.json",
+    "audits/runtime_review.md",
+    "audits/final_analysis_cross_review.md",
+    "data_sources/massive/LICENSE",
+    "data_sources/massive/NOTICE.md",
+    "data_sources/t2/t2_readme.md",
+    "data_sources/t2/t2_source_selection_manifest.json",
+    "data_sources/t2/t2_selected_text_audit.json",
+    "configuration_candidate.json",
+    "readiness.json",
+    "IMPLEMENTATION_PLAN.md",
+    "audits/pre_freeze_tests.txt",
+    "audits/report_figures_plan.md"
+  ],
+  "formal_phase": "A_public_human_gold_two_tasks",
+  "execution_source_sha256": {
+    "__init__.py": "95e23a1a8bd9748ed087a03516152cb1446bcc05e5328da3b49f29cecc426555",
+    "analyze.py": "99e4bc299825c55fe16b293d3e998b30685c492169829f6cc672358c7e8d2057",
+    "datasets.py": "4273b7dc5577f3206765d6526eeb1b7b4d5857a8e227074b368ce7bb51e206f4",
+    "design_sensitivity.py": "8806cf2d29a0e6cd1bc127ae9dae3bf362c64652275823edf689906585965017",
+    "freeze.py": "a337a1f213340d7a816f9018d8b2ac7feb94c2d633a77b697102877e034fc51d",
+    "journal.py": "bacd8c9c16da593bb621b4c6c278dd232ed919ef403e93d8ff75d9157425c7c7",
+    "local_models.py": "3ab7a3a41183dec45c6300544194357f9cef617c032f17f00db6e15243719c16",
+    "remote.py": "b9e9cb3a4412a9b0219f5616a3fc4c635be21d5ab3678d6cea5b470170816e29",
+    "report_figures.py": "2b089fbbcfd62575a96f80bbe27f80122289c031e75aee316fa1860117694878",
+    "run.py": "2ccf7fc6caa36e8a24f2373c6b27d37375c32fde5e5cb9cf9e3da6157558b3e4",
+    "statistics.py": "9c32312460cdfde1e59966d3333189fc85981211078b71d44dc562de12fc37c1",
+    "status.py": "d91a596cf7f8c45e1b88b9cdf9acbeeb5ae2d61e5016dc80904eedd8f1220104",
+    "task_schemas.py": "e829776f2f1f8bb72a3cbc6d19a40e71768c19afca008b455350117ab95618a2"
+  },
+  "runtime_environment": {
+    "python": "3.12.0",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "xgboost": "3.4.1",
+      "lightgbm": "4.7.0",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0",
+      "pytest": "9.0.3"
+    }
+  }
+}

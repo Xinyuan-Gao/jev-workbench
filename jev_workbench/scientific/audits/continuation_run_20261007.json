@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-07T09:33:10.262894+00:00",
+  "continuation_bundle_sha256": "007ee805574d085a9b39d45e4faf1f26255e241c891a8f07c462692604652dd3",
+  "parent_bundle_sha256": "57f18b1ce03c2a3a47e72d09215dada5a492b589b02f55a47e7c6f048b934506",
+  "workers": 8,
+  "budget_cap": 22176,
+  "datasets": {
+    "massive": {
+      "planned": 10602,
+      "terminal": 10602,
+      "pending": 0,
+      "statuses": {
+        "http_error": 1,
+        "valid": 10601
+      },
+      "http_started": 3354,
+      "http_finished": 3354,
+      "indeterminate_recovery_events": 0,
+      "manifest_hash": "f8d679f69e4f2d00a6c85ed3bbefa1f22a1b95d23bc25c11354703d1a39fe269",
+      "protocol_hash": "57f18b1ce03c2a3a47e72d09215dada5a492b589b02f55a47e7c6f048b934506"
+    },
+    "t2": {
+      "planned": 12806,
+      "terminal": 12805,
+      "pending": 1,
+      "statuses": {
+        "http_error": 94,
+        "malformed_response": 3,
+        "network_error": 64,
+        "valid": 12644
+      },
+      "http_started": 4415,
+      "http_finished": 4414,
+      "indeterminate_recovery_events": 1,
+      "manifest_hash": "e4bb11718104add4d23d4eadb2297ae9a89a01a5e644493a8e2ae497642cc05c",
+      "protocol_hash": "57f18b1ce03c2a3a47e72d09215dada5a492b589b02f55a47e7c6f048b934506"
+    }
+  },
+  "interpretation": "MASSIVE complete; T2 has one indeterminate HTTP request preserved as pending; no automatic duplicate retry.",
+  "http_started_total": 7769
+}

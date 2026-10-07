@@ -1,0 +1,2106 @@
+{
+  "updated_at_utc": "2026-10-07T09:33:12.374892+00:00",
+  "phase": "正式实验",
+  "frozen": true,
+  "freeze_hash": "57f18b1ce03c2a3a47e72d09215dada5a492b589b02f55a47e7c6f048b934506",
+  "datasets": [
+    {
+      "id": "massive",
+      "title": "中文语音助手意图",
+      "state": "候选数据已清理，待冻结",
+      "counts": {
+        "train": {
+          "records": 10684,
+          "groups": 10684
+        },
+        "validation": {
+          "records": 1958,
+          "groups": 1958
+        },
+        "test": {
+          "records": 558,
+          "groups": 558
+        }
+      },
+      "labels": 60,
+      "source": {
+        "local_file": "jev_workbench/scientific/data_sources/massive/zh-CN.jsonl",
+        "sha256": "992bf0bef3d678f08c27e514739bc851163e8f40f530bfb4d5970a2c24408ace",
+        "url": "https://github.com/alexa/massive",
+        "version": "1.1",
+        "license": "CC-BY-4.0 dataset / Apache-2.0 code"
+      },
+      "manifest_sha256": "eaa5b3d8f38db461d6e5b43d22479910ec0f798b2615a03afc163461464a8b36",
+      "removed_records": 980,
+      "structural_ready": true,
+      "near_duplicate_audit": {
+        "method": "character_tfidf_cosine",
+        "threshold": 0.9,
+        "min_length": 2,
+        "ngrams": [
+          2,
+          4
+        ],
+        "fit_scope": "all input-only audit units; vectorizer never reused for model features",
+        "priority": [
+          "test",
+          "validation",
+          "train"
+        ],
+        "candidate_pairs": 25,
+        "short_units_exact_only": 8,
+        "removed_records": 25,
+        "removed_groups": 25,
+        "semantic_duplicate_detection": "not established",
+        "pretraining_contamination": "cannot exclude"
+      },
+      "limits": [
+        "官方中文语音助手数据，不等同于自然客服消息",
+        "候选测试59类，cooking_query无测试支持；验证缺audio_volume_other",
+        "三个测试类别仅有1、3、4条，不能称每类充分验证",
+        "按类别限额抽样，不代表自然意图频率",
+        "公开数据的预训练污染无法排除"
+      ]
+    },
+    {
+      "id": "t2",
+      "title": "问题—片段信息相关性",
+      "state": "候选数据已清理，待冻结",
+      "counts": {
+        "train": {
+          "records": 4030,
+          "groups": 1200
+        },
+        "validation": {
+          "records": 671,
+          "groups": 200
+        },
+        "test": {
+          "records": 674,
+          "groups": 200
+        }
+      },
+      "labels": 2,
+      "source": {
+        "local_file": "jev_workbench/scientific/data_sources/t2/selected_original_records.jsonl",
+        "sha256": "cc733d6a1235bf0966108091116bc41285c678f9aab8e6a57f1f8e05d0b6f4f7",
+        "url": "https://huggingface.co/datasets/THUIR/T2Ranking",
+        "version": "2a369a430a70979223f1b9a41b1919774d46b432",
+        "collection_sha256": "07b84e543e9ba696124a727c00629d5bce586631648c436c98dd6e9b146da212",
+        "license": "Apache-2.0"
+      },
+      "manifest_sha256": "300043f9965af180420f5c8c9e6cd69b933aaca3b3ef91c2d34fff0c2643b5c9",
+      "removed_records": 0,
+      "structural_ready": true,
+      "near_duplicate_audit": {
+        "method": "character_tfidf_cosine",
+        "threshold": 0.9,
+        "min_length": 2,
+        "ngrams": [
+          2,
+          4
+        ],
+        "fit_scope": "all input-only audit units; vectorizer never reused for model features",
+        "priority": [
+          "test",
+          "validation",
+          "train"
+        ],
+        "candidate_pairs": 0,
+        "short_units_exact_only": 0,
+        "removed_records": 0,
+        "removed_groups": 0,
+        "semantic_duplicate_detection": "not established",
+        "pretraining_contamination": "cannot exclude"
+      },
+      "limits": [
+        "原公开dev内部按query重新划分，不能称官方test成绩",
+        "每等级限额抽样，不代表自然检索候选分布",
+        "多个片段共享query，以query计独立样本量",
+        "公开数据的预训练污染无法排除",
+        "保留完整片段，超长输入若服务拒绝也计入失败"
+      ]
+    }
+  ],
+  "local_validation": [
+    {
+      "dataset": "massive",
+      "model": "多数类",
+      "family": "majority",
+      "state": "complete",
+      "candidates_done": 0,
+      "candidates_total": 0,
+      "repeats_done": 1,
+      "repeats_total": 1,
+      "validation_macro_f1": 0.00209031434498165,
+      "params": {},
+      "candidates": []
+    },
+    {
+      "dataset": "massive",
+      "model": "Logistic Regression",
+      "family": "lr",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 1,
+      "repeats_total": 1,
+      "validation_macro_f1": 0.8100945878998396,
+      "params": {
+        "C": 10.0,
+        "class_weight": "balanced"
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "C": 0.03,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.09022417627566695,
+          "model_fit_ms": 1270.9917500033043
+        },
+        {
+          "index": 1,
+          "params": {
+            "C": 0.03,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6189263687281397,
+          "model_fit_ms": 200.35629099584185
+        },
+        {
+          "index": 2,
+          "params": {
+            "C": 0.1,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.3128637863633792,
+          "model_fit_ms": 1658.241958997678
+        },
+        {
+          "index": 3,
+          "params": {
+            "C": 0.1,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6648308505701475,
+          "model_fit_ms": 603.4926249994896
+        },
+        {
+          "index": 4,
+          "params": {
+            "C": 0.3,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6199736892396638,
+          "model_fit_ms": 2560.357374997693
+        },
+        {
+          "index": 5,
+          "params": {
+            "C": 0.3,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7299195553195762,
+          "model_fit_ms": 1028.4020420076558
+        },
+        {
+          "index": 6,
+          "params": {
+            "C": 1.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7277679708448687,
+          "model_fit_ms": 3416.938124995795
+        },
+        {
+          "index": 7,
+          "params": {
+            "C": 1.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7806215447761665,
+          "model_fit_ms": 1941.2050419923617
+        },
+        {
+          "index": 8,
+          "params": {
+            "C": 3.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7595083634321809,
+          "model_fit_ms": 4941.430416991352
+        },
+        {
+          "index": 9,
+          "params": {
+            "C": 3.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7973945474316597,
+          "model_fit_ms": 3030.467958000372
+        },
+        {
+          "index": 10,
+          "params": {
+            "C": 10.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7746292808470046,
+          "model_fit_ms": 5833.7785830080975
+        },
+        {
+          "index": 11,
+          "params": {
+            "C": 10.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.8100945878998396,
+          "model_fit_ms": 3978.8483750016894
+        }
+      ]
+    },
+    {
+      "dataset": "massive",
+      "model": "LinearSVC",
+      "family": "linear_svc",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 1,
+      "repeats_total": 1,
+      "validation_macro_f1": 0.8023347342844731,
+      "params": {
+        "C": 3.0,
+        "class_weight": "balanced"
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "C": 0.03,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6991477522851078,
+          "model_fit_ms": 546.9347089965595
+        },
+        {
+          "index": 1,
+          "params": {
+            "C": 0.03,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7175295967254769,
+          "model_fit_ms": 560.7797499978915
+        },
+        {
+          "index": 2,
+          "params": {
+            "C": 0.1,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.737553159788858,
+          "model_fit_ms": 487.70491700270213
+        },
+        {
+          "index": 3,
+          "params": {
+            "C": 0.1,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7546391099830096,
+          "model_fit_ms": 496.99091700313147
+        },
+        {
+          "index": 4,
+          "params": {
+            "C": 0.3,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7778299194409252,
+          "model_fit_ms": 461.7930829990655
+        },
+        {
+          "index": 5,
+          "params": {
+            "C": 0.3,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7794919373253358,
+          "model_fit_ms": 500.6228749989532
+        },
+        {
+          "index": 6,
+          "params": {
+            "C": 1.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7974102108315897,
+          "model_fit_ms": 498.80979100998957
+        },
+        {
+          "index": 7,
+          "params": {
+            "C": 1.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7968917940185438,
+          "model_fit_ms": 527.3323750006966
+        },
+        {
+          "index": 8,
+          "params": {
+            "C": 3.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7888558469210678,
+          "model_fit_ms": 547.9002079955535
+        },
+        {
+          "index": 9,
+          "params": {
+            "C": 3.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.8023347342844731,
+          "model_fit_ms": 603.5164159984561
+        },
+        {
+          "index": 10,
+          "params": {
+            "C": 10.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7883584450333013,
+          "model_fit_ms": 852.242999986629
+        },
+        {
+          "index": 11,
+          "params": {
+            "C": 10.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7840153250939635,
+          "model_fit_ms": 997.8222079953412
+        }
+      ]
+    },
+    {
+      "dataset": "massive",
+      "model": "XGBoost",
+      "family": "xgboost",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 5,
+      "repeats_total": 5,
+      "validation_macro_f1": 0.7040565950570781,
+      "params": {
+        "n_estimators": 120,
+        "max_depth": 6,
+        "learning_rate": 0.1
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6340975637459868,
+          "model_fit_ms": 4050.592500003404
+        },
+        {
+          "index": 1,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6755807628726497,
+          "model_fit_ms": 4151.488499992411
+        },
+        {
+          "index": 2,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6718074695299718,
+          "model_fit_ms": 8866.978291989653
+        },
+        {
+          "index": 3,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6892845880869357,
+          "model_fit_ms": 8360.312499993597
+        },
+        {
+          "index": 4,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.670803798570945,
+          "model_fit_ms": 8250.766082986956
+        },
+        {
+          "index": 5,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.693319398186466,
+          "model_fit_ms": 8240.326166007435
+        },
+        {
+          "index": 6,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6958378937148771,
+          "model_fit_ms": 16710.355999995954
+        },
+        {
+          "index": 7,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7040565950570781,
+          "model_fit_ms": 14986.96220900456
+        },
+        {
+          "index": 8,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6870263532601733,
+          "model_fit_ms": 13666.041584001505
+        },
+        {
+          "index": 9,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7019116795088379,
+          "model_fit_ms": 13477.349624998169
+        },
+        {
+          "index": 10,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6999738699535918,
+          "model_fit_ms": 25789.292749992455
+        },
+        {
+          "index": 11,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.7010012276835248,
+          "model_fit_ms": 20939.180583998677
+        }
+      ]
+    },
+    {
+      "dataset": "massive",
+      "model": "LightGBM",
+      "family": "lightgbm",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 5,
+      "repeats_total": 5,
+      "validation_macro_f1": 0.6756484602137783,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 3,
+        "learning_rate": 0.05
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6258593381819911,
+          "model_fit_ms": 2695.989500003634
+        },
+        {
+          "index": 1,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.020573856622805684,
+          "model_fit_ms": 1977.2222909959964
+        },
+        {
+          "index": 2,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.63553840859522,
+          "model_fit_ms": 6825.187499998719
+        },
+        {
+          "index": 3,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.12677624235928536,
+          "model_fit_ms": 3054.3635840003844
+        },
+        {
+          "index": 4,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6620451475773085,
+          "model_fit_ms": 5694.945666997228
+        },
+        {
+          "index": 5,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.020573856622805684,
+          "model_fit_ms": 3252.526541997213
+        },
+        {
+          "index": 6,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6588150465761619,
+          "model_fit_ms": 14007.805500004906
+        },
+        {
+          "index": 7,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.12677624235928536,
+          "model_fit_ms": 4212.898792000487
+        },
+        {
+          "index": 8,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.6756484602137783,
+          "model_fit_ms": 9304.365583011531
+        },
+        {
+          "index": 9,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.020573856622805684,
+          "model_fit_ms": 4769.825208000839
+        },
+        {
+          "index": 10,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.663522353983585,
+          "model_fit_ms": 21794.793666995247
+        },
+        {
+          "index": 11,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.12677624235928536,
+          "model_fit_ms": 5783.517999996548
+        }
+      ]
+    },
+    {
+      "dataset": "t2",
+      "model": "多数类",
+      "family": "majority",
+      "state": "complete",
+      "candidates_done": 0,
+      "candidates_total": 0,
+      "repeats_done": 1,
+      "repeats_total": 1,
+      "validation_macro_f1": 0.3548076923076923,
+      "params": {},
+      "candidates": []
+    },
+    {
+      "dataset": "t2",
+      "model": "Logistic Regression",
+      "family": "lr",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 1,
+      "repeats_total": 1,
+      "validation_macro_f1": 0.5918355069218377,
+      "params": {
+        "C": 1.0,
+        "class_weight": "balanced"
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "C": 0.03,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5161837035568715,
+          "model_fit_ms": 60.23708400607575
+        },
+        {
+          "index": 1,
+          "params": {
+            "C": 0.03,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5602600074198973,
+          "model_fit_ms": 60.54241699166596
+        },
+        {
+          "index": 2,
+          "params": {
+            "C": 0.1,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.561083172147002,
+          "model_fit_ms": 78.21325000259094
+        },
+        {
+          "index": 3,
+          "params": {
+            "C": 0.1,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5856699895161434,
+          "model_fit_ms": 66.32891700428445
+        },
+        {
+          "index": 4,
+          "params": {
+            "C": 0.3,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.586237046036041,
+          "model_fit_ms": 137.95866700820625
+        },
+        {
+          "index": 5,
+          "params": {
+            "C": 0.3,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5877938034188034,
+          "model_fit_ms": 105.61516699090134
+        },
+        {
+          "index": 6,
+          "params": {
+            "C": 1.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5800762359902145,
+          "model_fit_ms": 229.30566599825397
+        },
+        {
+          "index": 7,
+          "params": {
+            "C": 1.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5918355069218377,
+          "model_fit_ms": 253.40662499365862
+        },
+        {
+          "index": 8,
+          "params": {
+            "C": 3.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5779301294234773,
+          "model_fit_ms": 431.29733300884254
+        },
+        {
+          "index": 9,
+          "params": {
+            "C": 3.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5734533082639448,
+          "model_fit_ms": 326.85558299999684
+        },
+        {
+          "index": 10,
+          "params": {
+            "C": 10.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5610477684442603,
+          "model_fit_ms": 477.05970899551176
+        },
+        {
+          "index": 11,
+          "params": {
+            "C": 10.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5633998788716603,
+          "model_fit_ms": 634.2806249886053
+        }
+      ]
+    },
+    {
+      "dataset": "t2",
+      "model": "LinearSVC",
+      "family": "linear_svc",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 1,
+      "repeats_total": 1,
+      "validation_macro_f1": 0.5923296560963722,
+      "params": {
+        "C": 0.1,
+        "class_weight": "balanced"
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "C": 0.03,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5870597915903166,
+          "model_fit_ms": 154.0055830118945
+        },
+        {
+          "index": 1,
+          "params": {
+            "C": 0.03,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5836700654932006,
+          "model_fit_ms": 162.61820899671875
+        },
+        {
+          "index": 2,
+          "params": {
+            "C": 0.1,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5818002329220803,
+          "model_fit_ms": 221.22566599864513
+        },
+        {
+          "index": 3,
+          "params": {
+            "C": 0.1,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5923296560963722,
+          "model_fit_ms": 237.63229099859018
+        },
+        {
+          "index": 4,
+          "params": {
+            "C": 0.3,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5715003894998097,
+          "model_fit_ms": 365.8086669893237
+        },
+        {
+          "index": 5,
+          "params": {
+            "C": 0.3,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5752832108788763,
+          "model_fit_ms": 399.1561250004452
+        },
+        {
+          "index": 6,
+          "params": {
+            "C": 1.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5581918081918082,
+          "model_fit_ms": 610.2674589928938
+        },
+        {
+          "index": 7,
+          "params": {
+            "C": 1.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5550397877984086,
+          "model_fit_ms": 622.7290420065401
+        },
+        {
+          "index": 8,
+          "params": {
+            "C": 3.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5498440673049028,
+          "model_fit_ms": 823.7780000054045
+        },
+        {
+          "index": 9,
+          "params": {
+            "C": 3.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5560455689914079,
+          "model_fit_ms": 1049.4460420013638
+        },
+        {
+          "index": 10,
+          "params": {
+            "C": 10.0,
+            "class_weight": null
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5631036353771026,
+          "model_fit_ms": 2842.550832996494
+        },
+        {
+          "index": 11,
+          "params": {
+            "C": 10.0,
+            "class_weight": "balanced"
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.563451042758521,
+          "model_fit_ms": 2656.7079159867717
+        }
+      ]
+    },
+    {
+      "dataset": "t2",
+      "model": "XGBoost",
+      "family": "xgboost",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 5,
+      "repeats_total": 5,
+      "validation_macro_f1": 0.5918491484184916,
+      "params": {
+        "n_estimators": 120,
+        "max_depth": 6,
+        "learning_rate": 0.1
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.54072553045859,
+          "model_fit_ms": 248.10195800091606
+        },
+        {
+          "index": 1,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5639963953708974,
+          "model_fit_ms": 243.2125420018565
+        },
+        {
+          "index": 2,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5670091555248651,
+          "model_fit_ms": 973.7857090076432
+        },
+        {
+          "index": 3,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5839759799926156,
+          "model_fit_ms": 935.7745000015711
+        },
+        {
+          "index": 4,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.564796449031479,
+          "model_fit_ms": 432.6921250030864
+        },
+        {
+          "index": 5,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5634455918710151,
+          "model_fit_ms": 430.911458999617
+        },
+        {
+          "index": 6,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5894003868471953,
+          "model_fit_ms": 1828.4359999961453
+        },
+        {
+          "index": 7,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5918491484184916,
+          "model_fit_ms": 1785.7907919969875
+        },
+        {
+          "index": 8,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5717851981155095,
+          "model_fit_ms": 688.0498329992406
+        },
+        {
+          "index": 9,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5717851981155095,
+          "model_fit_ms": 673.8119159999769
+        },
+        {
+          "index": 10,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5673758865248226,
+          "model_fit_ms": 2924.8135410016403
+        },
+        {
+          "index": 11,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5819314641744548,
+          "model_fit_ms": 2882.5912079919362
+        }
+      ]
+    },
+    {
+      "dataset": "t2",
+      "model": "LightGBM",
+      "family": "lightgbm",
+      "state": "complete",
+      "candidates_done": 12,
+      "candidates_total": 12,
+      "repeats_done": 5,
+      "repeats_total": 5,
+      "validation_macro_f1": 0.5786544143956286,
+      "params": {
+        "n_estimators": 120,
+        "max_depth": 6,
+        "learning_rate": 0.05
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5331785133360769,
+          "model_fit_ms": 159.1844590002438
+        },
+        {
+          "index": 1,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5672961768770153,
+          "model_fit_ms": 158.68962499371264
+        },
+        {
+          "index": 2,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5489708653598964,
+          "model_fit_ms": 354.91379200539086
+        },
+        {
+          "index": 3,
+          "params": {
+            "n_estimators": 60,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5424480054551654,
+          "model_fit_ms": 356.90612498729024
+        },
+        {
+          "index": 4,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5615126718945335,
+          "model_fit_ms": 250.17724999634083
+        },
+        {
+          "index": 5,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5653983076120181,
+          "model_fit_ms": 247.32241699530277
+        },
+        {
+          "index": 6,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5786544143956286,
+          "model_fit_ms": 638.595541997347
+        },
+        {
+          "index": 7,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5428609556184549,
+          "model_fit_ms": 631.7111660027876
+        },
+        {
+          "index": 8,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5553010988285294,
+          "model_fit_ms": 373.05516700143926
+        },
+        {
+          "index": 9,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5770015203767568,
+          "model_fit_ms": 367.06683300144505
+        },
+        {
+          "index": 10,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.05
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5591906451189068,
+          "model_fit_ms": 1010.3667079965817
+        },
+        {
+          "index": 11,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 6,
+            "learning_rate": 0.1
+          },
+          "status": "valid",
+          "validation_macro_f1": 0.5584662155628459,
+          "model_fit_ms": 973.8800839986652
+        }
+      ]
+    }
+  ],
+  "readiness": {
+    "status": "ready_to_freeze_phase_A",
+    "gates": {
+      "provenance_license": {
+        "title": "来源与许可",
+        "passed": true,
+        "evidence": "MASSIVE 1.1 官方中文文件已核验；T2 原始3.66GB片段库哈希与官方一致。出处、许可、原始ID与抽样记录已保存。"
+      },
+      "human_gold": {
+        "title": "标准答案依据",
+        "passed": true,
+        "evidence": "正式阶段A仅含MASSIVE意图与T2问题—片段，保留公开人工标签及原始等级。路由不在此次冻结矩阵，须真实双人独立标注和裁决后另开阶段B；不称路由已验收。"
+      },
+      "independent_test_units": {
+        "title": "独立测试单元",
+        "passed": true,
+        "evidence": "中文意图558条独立话语；相关性200个独立问题、674对片段。路由尚未形成正式标注测试集。"
+      },
+      "duplicate_audit": {
+        "title": "重复与泄漏筛查",
+        "passed": true,
+        "evidence": "两份候选数据结构验收通过，按预定词面阈值清理并保存排除。语义重复与预训练污染仍无法全部排除。"
+      },
+      "local_validation_selection": {
+        "title": "本地验证集调优",
+        "passed": true,
+        "evidence": "两份数据各48个候选配置已全部执行；XGBoost和LightGBM各真实训练5个种子，权重和全部验证记录已保存。未预测正式test。"
+      },
+      "remote_dev_compatibility": {
+        "title": "远程验证集接入",
+        "passed": true,
+        "evidence": "18次真实验证集单次请求全部返回合法类别，含四个原相关性等级和验证集最长完整片段；请求标签字段白名单与凭证脱敏已复查。这不是正式测试成绩。"
+      },
+      "protocol_tests": {
+        "title": "执行与评分程序",
+        "passed": true,
+        "evidence": "全科学套件170项通过（pre_freeze_tests.txt）；分析器四项原始缺陷独立复核通过，18条真实验证链符合原始请求/响应/终态一致性合同。正式图外观仍需真实结果后复查，不把合成测试当模型成绩。"
+      },
+      "fixed_analysis": {
+        "title": "固定统计口径",
+        "passed": true,
+        "evidence": "主检验为全提交正确率；F1、有效率与稳定性另报。意图按类分层、相关性按query成对重采样，预定10000次。"
+      },
+      "model_identity": {
+        "title": "模型版本记录",
+        "passed": true,
+        "evidence": "已保存两服务实际响应model、请求别名、usage、UTC与原始响应。本地依赖与参数已记录；无法独立核实网关底层官方身份。"
+      },
+      "executable_budget": {
+        "title": "调用预算",
+        "passed": true,
+        "evidence": "依用户已授权的全部测试，阶段A固定7392次远程逻辑调用、每次最多3尝试，总HTTP上限22176；超限前停止且保留pending。价格仍未知，调用次数限制不等于人民币费用上限。"
+      }
+    },
+    "formal_test_calls": 0,
+    "scope_assumption": "阶段A先完成有公开人工gold的中文意图与相关性；路由阶段B须待真实盲标，不纳入本次确认性比较。",
+    "dev_remote_calls": 18
+  },
+  "download": {
+    "status": "verified",
+    "downloaded_bytes": 3659243528,
+    "total_bytes": 3659243528
+  },
+  "formal_results": [
+    {
+      "dataset": "massive",
+      "model": "gemini:gemini-3.8-flash",
+      "repeat": 0,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 465,
+      "accuracy_all_submissions": 0.8333333333333334,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "massive",
+      "model": "gemini:gemini-3.8-flash",
+      "repeat": 1,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 472,
+      "accuracy_all_submissions": 0.8458781362007168,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "massive",
+      "model": "gemini:gemini-3.8-flash",
+      "repeat": 2,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 466,
+      "accuracy_all_submissions": 0.8351254480286738,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "massive",
+      "model": "jev:jev-1.13.0",
+      "repeat": 0,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 557,
+      "failed": 1,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 440,
+      "accuracy_all_submissions": 0.7885304659498208,
+      "valid_output_rate": 0.9982078853046595,
+      "complete": true,
+      "failures": {
+        "http_error": 1
+      },
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "massive",
+      "model": "jev:jev-1.13.0",
+      "repeat": 1,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 442,
+      "accuracy_all_submissions": 0.7921146953405018,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "massive",
+      "model": "jev:jev-1.13.0",
+      "repeat": 2,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 442,
+      "accuracy_all_submissions": 0.7921146953405018,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:lightgbm",
+      "repeat": 0,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 359,
+      "accuracy_all_submissions": 0.6433691756272402,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:lightgbm",
+      "repeat": 1,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 336,
+      "accuracy_all_submissions": 0.6021505376344086,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:lightgbm",
+      "repeat": 2,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 358,
+      "accuracy_all_submissions": 0.6415770609318996,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:lightgbm",
+      "repeat": 3,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 349,
+      "accuracy_all_submissions": 0.6254480286738351,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:lightgbm",
+      "repeat": 4,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 356,
+      "accuracy_all_submissions": 0.6379928315412187,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:linear_svc",
+      "repeat": 0,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 442,
+      "accuracy_all_submissions": 0.7921146953405018,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:lr",
+      "repeat": 0,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 443,
+      "accuracy_all_submissions": 0.7939068100358423,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:majority",
+      "repeat": 0,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 10,
+      "accuracy_all_submissions": 0.017921146953405017,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:xgboost",
+      "repeat": 0,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 372,
+      "accuracy_all_submissions": 0.6666666666666666,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:xgboost",
+      "repeat": 1,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 376,
+      "accuracy_all_submissions": 0.6738351254480287,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:xgboost",
+      "repeat": 2,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 375,
+      "accuracy_all_submissions": 0.6720430107526881,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:xgboost",
+      "repeat": 3,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 378,
+      "accuracy_all_submissions": 0.6774193548387096,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "massive",
+      "model": "local:xgboost",
+      "repeat": 4,
+      "planned": 558,
+      "terminal": 558,
+      "valid": 558,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 558,
+      "correct": 376,
+      "accuracy_all_submissions": 0.6738351254480287,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "gemini:gemini-3.8-flash",
+      "repeat": 0,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 641,
+      "failed": 33,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 416,
+      "accuracy_all_submissions": 0.6172106824925816,
+      "valid_output_rate": 0.9510385756676558,
+      "complete": true,
+      "failures": {
+        "http_error": 17,
+        "network_error": 15,
+        "malformed_response": 1
+      },
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "t2",
+      "model": "gemini:gemini-3.8-flash",
+      "repeat": 1,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 635,
+      "failed": 39,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 417,
+      "accuracy_all_submissions": 0.6186943620178041,
+      "valid_output_rate": 0.9421364985163204,
+      "complete": true,
+      "failures": {
+        "malformed_response": 1,
+        "http_error": 27,
+        "network_error": 11
+      },
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "t2",
+      "model": "gemini:gemini-3.8-flash",
+      "repeat": 2,
+      "planned": 674,
+      "terminal": 673,
+      "valid": 645,
+      "failed": 28,
+      "pending": 1,
+      "independent_units": 200,
+      "correct": 418,
+      "accuracy_all_submissions": null,
+      "valid_output_rate": 0.956973293768546,
+      "complete": false,
+      "failures": {
+        "malformed_response": 1,
+        "http_error": 14,
+        "network_error": 13
+      },
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "t2",
+      "model": "jev:jev-1.13.0",
+      "repeat": 0,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 655,
+      "failed": 19,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 408,
+      "accuracy_all_submissions": 0.6053412462908012,
+      "valid_output_rate": 0.9718100890207715,
+      "complete": true,
+      "failures": {
+        "http_error": 8,
+        "network_error": 11
+      },
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "t2",
+      "model": "jev:jev-1.13.0",
+      "repeat": 1,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 653,
+      "failed": 21,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 402,
+      "accuracy_all_submissions": 0.5964391691394659,
+      "valid_output_rate": 0.9688427299703264,
+      "complete": true,
+      "failures": {
+        "http_error": 17,
+        "network_error": 4
+      },
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "t2",
+      "model": "jev:jev-1.13.0",
+      "repeat": 2,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 653,
+      "failed": 21,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 403,
+      "accuracy_all_submissions": 0.5979228486646885,
+      "valid_output_rate": 0.9688427299703264,
+      "complete": true,
+      "failures": {
+        "http_error": 11,
+        "network_error": 10
+      },
+      "cost": null,
+      "cost_status": "unknown"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:lightgbm",
+      "repeat": 0,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 401,
+      "accuracy_all_submissions": 0.5949554896142433,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:lightgbm",
+      "repeat": 1,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 422,
+      "accuracy_all_submissions": 0.6261127596439169,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:lightgbm",
+      "repeat": 2,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 401,
+      "accuracy_all_submissions": 0.5949554896142433,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:lightgbm",
+      "repeat": 3,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 379,
+      "accuracy_all_submissions": 0.5623145400593472,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:lightgbm",
+      "repeat": 4,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 398,
+      "accuracy_all_submissions": 0.5905044510385756,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:linear_svc",
+      "repeat": 0,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 415,
+      "accuracy_all_submissions": 0.615727002967359,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:lr",
+      "repeat": 0,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 413,
+      "accuracy_all_submissions": 0.612759643916914,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:majority",
+      "repeat": 0,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 376,
+      "accuracy_all_submissions": 0.5578635014836796,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:xgboost",
+      "repeat": 0,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 404,
+      "accuracy_all_submissions": 0.599406528189911,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:xgboost",
+      "repeat": 1,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 391,
+      "accuracy_all_submissions": 0.5801186943620178,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:xgboost",
+      "repeat": 2,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 412,
+      "accuracy_all_submissions": 0.6112759643916914,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:xgboost",
+      "repeat": 3,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 377,
+      "accuracy_all_submissions": 0.5593471810089021,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    },
+    {
+      "dataset": "t2",
+      "model": "local:xgboost",
+      "repeat": 4,
+      "planned": 674,
+      "terminal": 674,
+      "valid": 674,
+      "failed": 0,
+      "pending": 0,
+      "independent_units": 200,
+      "correct": 411,
+      "accuracy_all_submissions": 0.6097922848664689,
+      "valid_output_rate": 1.0,
+      "complete": true,
+      "failures": {},
+      "cost": null,
+      "cost_status": "not_applicable"
+    }
+  ],
+  "formal_progress": {
+    "planned": 23408,
+    "terminal": 23407,
+    "valid": 23245,
+    "failed": 162,
+    "pending": 1
+  },
+  "formal_results_state": "按完整计划提交评分",
+  "sample_scope": {
+    "massive": {
+      "test_rows": 558,
+      "independent_groups": 558,
+      "min_rows_per_group": 1,
+      "max_rows_per_group": 1,
+      "exact_mcnemar_applicable_to_primary": true
+    },
+    "t2": {
+      "test_rows": 674,
+      "independent_groups": 200,
+      "min_rows_per_group": 2,
+      "max_rows_per_group": 4,
+      "exact_mcnemar_applicable_to_primary": false
+    }
+  },
+  "routing": {
+    "state": "待真人独立标注核验",
+    "confirmatory": false
+  },
+  "remote": {
+    "state": "验证集接入已完成；正式调用预算待明确",
+    "dev_calls": 18,
+    "repeats_planned": 3
+  }
+}

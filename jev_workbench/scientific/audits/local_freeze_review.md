@@ -1,0 +1,67 @@
+# 本地模型 / 冻结 / 同对象恢复只读复核
+
+2026-10-07。只读 scientific/local_models.py、journal.py、freeze.py 和对应tests；未修改生产代码，未调用真实API。指定runtime/local_models/freeze suite：59 passed in 7.15s。仅证明运行与离线模型实现，不代表新一轮正式科学实验完成。
+
+## 结论
+
+同对象恢复前轮问题已修复；当前本地模型训练/调参与预定真正seed重复的实现满足核心协议；冻结helper的缺失/失败门槛拦截和artifact hash校验工作正常。没有发现需要中止当前MASSIVE train/dev fit的test泄漏问题。
+
+正式test前仍要完成root统一的真实证据门槛：远程dev兼容canary、模型身份scope、budget、RAG可靠数据、路由真人gold（或降级探索）、完整artifact冻结。不能把59个离线tests与某个高dev分数当作这些门槛已通过。
+
+## 已核实实现
+
+### 同对象HTTP恢复
+
+journal.py:117-121新增recover_pending事务调用_recover；execute_jobs在读pending之前调用。未finishedHTTP会记录indeterminate/potential_duplicate且默认跳过，需明确allow_indeterminate_retry=True；已经durable finished且有冻结parser outcome可恢复terminal不再HTTP调用。对应同对象unfinished与finishedtests现在通过。原fourruntime问题的脱敏、置信度OverflowError、真实Gemini filters wording、恢复execution_id审计保留，均无退回。
+
+singlewriter仍是明确前提，不把这一实现称为跨进程/网关exactly-once。HTTP服务无idempotency时在“请求发出但响应丢失”场景必须记录不确定成本，当前潜在重复标记的设计正确。部署代码仍必须传真实credentials到DurableJournal(secrets=...)。
+
+### 训练特征与无test调优
+
+local_models.py:77-102：fit仅接受train；TF-IDF词表/IDF及SVD全train。RAG先train queries+passages得到共享vocabulary，再分别train query/passagedocument frequency得到两套IDF；SVD以train query/passagematrix堆叠拟合。dev/test transform不调用fit，测试通过sentinel验证词表与SVD参数不变。
+
+RAG features有query、passage、abs difference、elementwise product、cosine、字符/ASCII token Jaccard、query token coverage，方向不对称信息明确；稀疏线性与dense SVD树都有交互，不再只有拼接。query/passages的两套IDF会令同文本的余弦不必严格1，这是该特征定义，不应称唯一标准文本余弦；公开这套定义即可。
+
+_validate_partitions要求非空train/dev、labels在train全覆盖，IDs/groups不重合，reject显式testsplit；训练接口不接受test。Prediction接口只读input，不读gold；tests通过BlindRecord验证。
+
+当前split缺失时函数默认train/dev，意味着接口依赖调用方记录的身份而非独立验证源split；真实candidate都显式split且freeze manifest/hash有出处，满足本轮使用场景。不要把这层白名单单测描述成能识别任意人工篡改split的泄漏。
+
+### 调参、持久化与真实seed重复
+
+四可训练family均12个不同配置：LogReg/LinearSVC各6个C×2个class_weight，XGB/LGB各3个n_estimators×2个depth×2个learning_rate。feature配置固定char(1,3)/12000/SVD64/1thread，未宣称无限调参最优。
+
+各candidate固定主seed实际fittrain、实际predictdev，F1显式labels为全配置label集合、zero_division=0；完整参数/fit时间/dev预测时间/错误全部保存，未以失败candidate的0分冒充有效candidate。
+
+family开始前初始report持久化，每candidate完成后fsync temp+atomic replace；allcandidatefail和随机repeatfail也有failed报告。此前fullsuite失败的progress persistence/validation support三项已修复并在当前指定suite通过。Prediction配置与joblib实际模型可roundtrip，tree选中estimator复用当前winner，未重复额外拟合主seed。
+
+XGB/LGB在额外4个distinctseed真实refittrain features/SVD/estimator，具subsample/colsample且LGB启用subsample_freq=1；不是复制primarypredict输出，具不同estimator与SVD实例。LR lbfgs和SVC dual=False保持deterministic_primary_only，majority也只primary；重复不增加独立case n。自定义seeds支持多于5个时reportrepeat_policy字符串仍“five_real_seed_fits”，实次数以seeds/repeats为准，建议最终说明从list生成。
+
+### Prediction置信度和latency口径
+
+Local model confidence为predict_proba最大类别概率（LR/XGB/LGB），LinearSVC和majority无概率，明确missing，没有把SVC margin转换成虚构概率，也没有为majority填1。
+
+这些confidence尚未校准，不与JEV/Gemini直接横比可靠性。正常estimator训练确保numeric class索引对应configuredlabels；prediction从predict返回，与predict_proba最大通常一致，仍无需把maxconfidence等同所有模型统一概率含义。
+
+单rowlatency计入InputFeatures.transform、predict与可选predict_proba（实际上概率模型会多执行一次predict_proba，属于该实现端到端耗时），不含模型fit/devsearch。dev批预测耗时另记录，与单row服务latency不可混用。feature_fit_ms在每candidate引用同一family一次fit的时间，汇总计算总训练成本时不能把这个引用重复加12次。
+
+## 需修正文案但不阻断dev fit
+
+位置select_candidate:140-144、reporttie_break:272。实际tie只有最高Macro-F1然后candidate_index；预定index顺序确定且不依test，这点科学有效。但树grid遍历n_estimators优先，60棵depth6排在120棵depth3之前；按理论节点数前者可能更复杂。“predeclared simpler candidate_index”不是已计算复杂度。
+
+建议Protocol/report统一写“验证分数相同按预定参数枚举顺序选择”，若一定承诺complexity-first则先定义透明complexity公式并一致使用。当前开发尚无test输出，改口径不会构成事后test挑选，但需记录最终冻结版本。
+
+默认12配置/SVD64是合理明确基线之一，不能宣称“最佳可达传统模型”。没有tune词表/ngrams/SVDdimensions也是预定计算预算选择，应文章明确。rarelabel和dev缺类边界继承data审查报告。
+
+## 冻结helper验收与边界
+
+freeze.py:30-45：requiredgate缺少/非dict/passed不严格True/无evidence会抛ValueError，不写frozen；artifact必须非空unique、相对root内部文件，env/credentials/secrets路径禁入；真实文件bytes和SHA256从磁盘读取；target.open('x')避免自动覆盖现有frozen，UTC与bundlecanonicalhash记录。
+
+verify_freeze校验bundlehash并重算所有artifacthash，变化/缺失导致validFalse。现有tests涵盖human_goldfalse/missing拦截、内容改动、路径外溢与env禁止、frozen已存在不覆盖。
+
+但passed=True＋非空evidence只验证调用方声明，不验证证据真实性或证据所指报告文件是否存在/内容合格。fixture-only字符串足以让builder执行，这是它当前interface设计。root应把真实审计/report/gold/budget说明作为artifact并由实际gate checker/审查生成状态；不能在文章说“freeze.py已自动证明human_gold/预算都满足”。
+
+freeze registration自己明确“local immutable record; no external timestamp certification”，文案应称本地冻结记录，非外部认证预注册。exclusive create不是OS防修改或第三方时间戳，之后verifyhash证明文件与已记录hash一致，不能证明有人无法编辑重算bundlehash。
+
+进一步部署gate应规定正式test命令启动前必须verify_freeze==valid，且所有正式planned jobs引用该bundlehash；仅存在freeze工具不保证任意脚本无法绕过。当前本审查无正式test启动入口，因此只认helper验收，不声称这个执行gate已在所有调用路径强制。
+
+JSONgate/metadata可能包含敏感文字，_artifact禁文件名不自动扫描文件内容。root冻结时用已有credential-safe导出报告，避免将任何secret写到metadata；实际API密钥不作为artifact。此处是具体记录责任，不需另发泛泛用户审批。

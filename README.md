@@ -1,79 +1,118 @@
-# JEV Workbench / JEV 实验工作台
+# JEV Workbench / JEV 对比实验工作台
 
-一个本地运行的文本分类实验工作台，把 JEV、Gemini、TF-IDF + XGBoost、TF-IDF + LightGBM 和固定规则放在同一个页面里。可以选择场景、开始或停止实验、查看逐条输入与预测、导出 JSON；运行结束的记录会保存到磁盘，刷新页面或重启后可读取。
+把 JEV、Gemini 和本地文本分类管线放到同一批测试上比较的实验代码、执行前协议、审计记录与结果。所有成绩都来自本仓库里的运行记录，可以按下面的命令从只读的 SQLite 重新算一遍。
 
-仓库包含工作台代码、固定合成样本模板和 2026-10-07 修正实验的 15 组历史结果。启动服务只读取历史记录，不会自动调用远程 API。
+## 这次实验做了什么
 
-## 本地启动
+阶段 A 用两份有公开人工标注的中文数据：
 
-需要 Python 3.10+（本次验证为 Python 3.12）。后端与静态界面没有构建步骤。
+| 任务 | 数据 | 独立测试单元 | 标签 |
+|---|---|---:|---|
+| 中文意图判断 | [MASSIVE 1.1](https://github.com/alexa/massive) zh-CN | 558 条话语 | 60 类，测试覆盖 59 类 |
+| 问题—片段相关性 | [T2Ranking](https://github.com/THUIR/T2Ranking) | 200 个问题 / 674 对 | relevant、irrelevant |
+
+比较对象是五种本地管线和两个远程服务（走同一家第三方兼容网关，零样本）：
+
+- 多数类地板线
+- TF-IDF + Logistic Regression
+- TF-IDF + LinearSVC
+- TF-IDF + XGBoost
+- TF-IDF + LightGBM
+- JEV（请求别名 `jev-1.13.0`）
+- Gemini（请求别名 `gemini-3.8-flash`）
+
+本地管线各自在训练集拟合、在验证集按 Macro-F1 选配置（每个可训练模型 12 个预定配置，树模型另跑 5 个真实种子）；远程服务每个组合跑 3 轮真实调用。整个矩阵 23,408 个样本×模型×重复组合，其中本地 16,016 个、远程 7,392 个，本轮实际发起 7,769 次 HTTP 请求。
+
+## 主要结果
+
+全提交正确率，primary repeat 0。失败计入分母，另有 95% 区间：
+
+| 模型 | 中文意图（558 条） | 问题—片段相关性（674 对） |
+|---|---:|---:|
+| 多数类 | 1.79% | 55.79% |
+| TF-IDF + LR | 79.39% | 61.28% |
+| TF-IDF + LinearSVC | 79.21% | 61.57% |
+| TF-IDF + XGBoost | 66.67% | 59.94% |
+| TF-IDF + LightGBM | 64.34% | 59.50% |
+| JEV | 78.85% | 60.53% |
+| Gemini | **83.33%** | 61.72% |
+
+四个预定比较（全提交正确率，Holm 校正）：
+
+| 比较 | 差值 | 95% 区间 | Holm p |
+|---|---:|---|---:|
+| 中文意图 JEV − Gemini | −4.48pp | −6.81 ~ −2.33 | 0.0019 |
+| 中文意图 JEV − TF-IDF + LR | −0.54pp | −3.58 ~ +2.51 | 1.000 |
+| 相关性 JEV − Gemini | −1.19pp | −4.31 ~ +1.92 | 1.000 |
+| 相关性 JEV − TF-IDF + LinearSVC | −1.04pp | −5.66 ~ +3.56 | 1.000 |
+
+只有中文意图上 Gemini 显著高于 JEV。JEV 和本地线性基线在两项任务上都分不出方向。JEV 明显更好的地方是有效输出率（相关性任务 97.18% 对 Gemini 95.10%）和延迟（相关性任务均值 2.22 秒对 5.62 秒）。
+
+## 仓库结构
+
+```
+jev_workbench/
+  scientific/          实验模块：数据清理、模型训练与选择、冻结、运行、统计、图形
+    PROTOCOL.md        执行前协议（研究问题、数据验收、指标与比较口径）
+    README.md          模块说明与重建步骤
+    frozen.json        冻结清单与源文件哈希
+    frozen_continuation.json  续跑冻结（见「已知限制」）
+    audits/            数据来源核查、验证集选择复核、样本量敏感性核算
+    artifacts/         各任务的 summary、验证集调优报告、状态快照
+    tests/             模块测试
+  reports/jevsci_20261007/
+    final_analysis.py  文章侧分析：复用冻结统计，容忍一条非首要轮次的 pending
+    final_analysis.json
+    make_article_charts.py + assets/   文章图表
+    article_source.md  文章正文（带排版标记）
+  backend/             本地工作台服务
+  frontend/            静态页面，含 scientific.html 进度页
+  tests/               工作台测试
+article/               文章成稿
+```
+
+## 快速开始
+
+需要 Python 3.10+（本次验证为 Python 3.12）。
 
 ```bash
 git clone https://github.com/Xinyuan-Gao/jev-workbench.git
 cd jev-workbench
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
+python3 -m venv .venv && source .venv/bin/activate
+python -m pip install -r requirements-dev.txt
+
+python -m pytest -q jev_workbench/tests jev_workbench/scientific/tests
 python -m jev_workbench.backend.server
 ```
 
-- 原工作台：<http://127.0.0.1:8765/>
-- 修正实验结果与样本复核：<http://127.0.0.1:8765/corrected.html>
+- 工作台：<http://127.0.0.1:8765/>
+- 本次实验状态页：<http://127.0.0.1:8765/scientific.html>
 
-`WORKBENCH_HOST` 和 `WORKBENCH_PORT` 可修改监听地址与端口，默认只监听本机。固定规则模式只需要 Python 标准库；依赖安装失败时，仍可启动服务和浏览历史结果，但树模型不能运行。macOS 上 XGBoost / LightGBM 若报告缺少 `libomp`，可先通过 Homebrew 安装：`brew install libomp`。
+远程模型需要自己的凭据：`cp jev_workbench/.env.example jev_workbench/.env.local`，填入自己的 API URL、key 与模型 alias。密钥只由后端读取，不经过前端；仓库里没有任何可用密钥。本地管线不需要凭据。
 
-## 远程模型配置
+## 数据来源与许可
 
-```bash
-cp jev_workbench/.env.example jev_workbench/.env.local
-```
+原始数据不随仓库分发（体积和许可考虑），需要按下面的出处自行下载并用清单里的 SHA256 校验：
 
-编辑 `.env.local`，填自己的 API URL、key 与 Gemini 模型 alias，然后重启服务。环境变量优先于这个文件；密钥由后端读取，不经过前端。仓库没有附带可用密钥。选择 JEV / Gemini 并点击开始会调用你配置的服务，产生的费用由提供商计费。规则、XGBoost 和 LightGBM 在本机运行。
+- MASSIVE 1.1，CC BY 4.0（数据）/ Apache 2.0（代码）：<https://github.com/alexa/massive>
+  - 论文：<https://arxiv.org/abs/2204.08582>
+  - 数据包：<https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz>
+  - 使用文件：`data/zh-CN.jsonl`，SHA256 记录在 `scientific/data/massive_candidate.json`
+- T2Ranking，Apache 2.0：<https://huggingface.co/datasets/THUIR/T2Ranking>
+  - 论文（四级相关性标注）：<https://arxiv.org/abs/2304.03679>
 
-示例配置沿用本次实验的中转地址。JEV 网关 `/chat/completions` 使用唯一 user message 内的 `{state, questions}` envelope，官方 TypeSafe 路由可配置 `/systemone`；只有对接真正的 OpenAI JSON 协议代理时才设 `JEV_API_PROTOCOL=openai`。Gemini 走 OpenAI-compatible messages 协议，使用独立 key。历史 alias `jev-latest` 和 `gemini-3.8-flash` 并没有被验证为不可变的底层模型版本，也不能仅凭 alias 确认官方产品身份。
+重建与校验步骤写在 `jev_workbench/scientific/README.md`。仓库保留了数据清理后的任务 schema，但不含清理后的候选数据和训练权重，所以直接运行 `verify_freeze` 会报告缺失——这是有意的，不是哈希不一致。
 
-## 样本数量与实验口径
+## 实验口径与已知限制
 
-| 场景 | 完整目录 | train | validation | test |
-|---|---:|---:|---:|---:|
-| 中文意图分类 | 216 | 126 | 36 | 54 |
-| RAG 片段相关性 | 200 | 120 | 40 | 40 |
-| Agent 路由 | 216 | 126 | 36 | 54 |
+- 测试前先冻结协议、清单、配置和源码哈希；测试标签只用于评分，模型输入按任务白名单构造，标签、分组 id 和记录 id 都不进请求。
+- 只有全提交准确率做了预定比较和 Holm 校正；Macro-F1 区间标为探索性。未显著不等于等效。
+- 一条 T2Ranking 的 Gemini 第 3 轮请求停在 `indeterminate`：请求已发出、结果不确定，冻结策略不允许为凑满矩阵重复提交可能已经计费的请求，因此保留 pending。它不在 primary repeat，不进入任何预定比较。`analyze.py` 会因为矩阵不完整拒绝出正式分析，`reports/jevsci_20261007/final_analysis.py` 是容忍这一条并显式记录排除范围的分析脚本。
+- 远程延迟包含网络、网关排队和重试等待；本地延迟不含训练。两者不是同一个速度指标。
+- token 用量有记录，但没有可核对的单价或账单，因此不给费用数字。
+- 公开数据无法排除预训练污染；本地分词与去重只做词面筛查。
+- 阶段 B（Agent 首步路由）需要两位真人独立标注与裁决，尚未建立标准答案，不在本次结果里。
 
-样本由固定模板与变体确定性展开，约 200 条指完整目录，不是每个场景正式测了 200 条。按 group ID 排序切分，组内变体不跨 train / validation / test；split 函数里的 seed 参数没有参与随机化。validation 留出，但本轮没有用来调参。传统模型及 TF-IDF 只在 train 上拟合，所有模式都只在相同 test 上评分。Gemini 请求不包含标准答案；JEV 的 RAG 请求同时包含 query 与 passage。
+## 文章
 
-五种模式 × 三个场景，共 15 组历史运行都已执行结束。test 是 148 条记录、22 个核心模板/主题组；五种模式合计 740 次尝试，不是 740 个独立案例。Gemini 路由 54 条中，50 条返回合法类别、4 条返回过滤拒答，拒答单独计为失败。有效输出准确率和 Macro-F1 排除失败；全尝试正确率把失败计为未答对。
-
-| 模式 | 意图：全尝试正确率 | RAG：全尝试正确率 | 路由：全尝试正确率 |
-|---|---:|---:|---:|
-| 固定规则 | 88.89% | 100% | 100% |
-| XGBoost | 50% | 50% | 37.04% |
-| LightGBM | 37.04% | 50% | 25.93% |
-| JEV | 98.15% | 100% | 100% |
-| Gemini | 100% | 95% | 92.59% |
-
-完整统计见 [matrix.md](jev_workbench/reports/corrected_20261007/matrix.md)，逐条结果与分组清单在同目录。数据是合成模板、单轮运行；规则设计参考过整个目录的词汇。这些分数不能直接作为真实业务的泛化能力排名。历史结果里的四条拒答通过离线输出验证记为失败，保留原返回；当前逐条 runner 遇到异常会结束该组，不会自动补测未处理样本。重新运行时应检查状态和已处理数量。
-
-## 项目结构
-
-```text
-jev_workbench/
-  backend/       HTTP API、适配器、固定样本、树模型、评分与运行保存
-  frontend/      无构建依赖的工作台、修正结果查看页
-  tests/         请求答案泄漏、RAG 完整输入、分组切分和结果恢复检查
-  reports/corrected_20261007/  已核对的历史结果与切分清单
-  .env.example   空密钥配置模板
-```
-
-历史 JSON 已随仓库提供，新生成的运行记录默认被 Git 忽略。原始旧实验日志、本地凭据、飞书文档导出和私人工作区内容没有上传。
-
-## 本地检查
-
-```bash
-python -m pip install -r requirements-dev.txt
-python -m pytest -q jev_workbench/tests
-node --check jev_workbench/frontend/app.js
-node jev_workbench/frontend/smoke_check.mjs
-```
-
-Node.js 只用于前端静态检查，不是启动服务的必需依赖。上述 tests 使用本地替身，不调用远程 API。
+`article/JEV-public-benchmark-comparison.md` 是这次实验的文章成稿，包含完整的方法、结果表、错例和限制说明。

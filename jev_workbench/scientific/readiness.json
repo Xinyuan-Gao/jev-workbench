@@ -1,0 +1,58 @@
+{
+  "status": "ready_to_freeze_phase_A",
+  "gates": {
+    "provenance_license": {
+      "title": "来源与许可",
+      "passed": true,
+      "evidence": "MASSIVE 1.1 官方中文文件已核验；T2 原始3.66GB片段库哈希与官方一致。出处、许可、原始ID与抽样记录已保存。"
+    },
+    "human_gold": {
+      "title": "标准答案依据",
+      "passed": true,
+      "evidence": "正式阶段A仅含MASSIVE意图与T2问题—片段，保留公开人工标签及原始等级。路由不在此次冻结矩阵，须真实双人独立标注和裁决后另开阶段B；不称路由已验收。"
+    },
+    "independent_test_units": {
+      "title": "独立测试单元",
+      "passed": true,
+      "evidence": "中文意图558条独立话语；相关性200个独立问题、674对片段。路由尚未形成正式标注测试集。"
+    },
+    "duplicate_audit": {
+      "title": "重复与泄漏筛查",
+      "passed": true,
+      "evidence": "两份候选数据结构验收通过，按预定词面阈值清理并保存排除。语义重复与预训练污染仍无法全部排除。"
+    },
+    "local_validation_selection": {
+      "title": "本地验证集调优",
+      "passed": true,
+      "evidence": "两份数据各48个候选配置已全部执行；XGBoost和LightGBM各真实训练5个种子，权重和全部验证记录已保存。未预测正式test。"
+    },
+    "remote_dev_compatibility": {
+      "title": "远程验证集接入",
+      "passed": true,
+      "evidence": "18次真实验证集单次请求全部返回合法类别，含四个原相关性等级和验证集最长完整片段；请求标签字段白名单与凭证脱敏已复查。这不是正式测试成绩。"
+    },
+    "protocol_tests": {
+      "title": "执行与评分程序",
+      "passed": true,
+      "evidence": "全科学套件170项通过（pre_freeze_tests.txt）；分析器四项原始缺陷独立复核通过，18条真实验证链符合原始请求/响应/终态一致性合同。正式图外观仍需真实结果后复查，不把合成测试当模型成绩。"
+    },
+    "fixed_analysis": {
+      "title": "固定统计口径",
+      "passed": true,
+      "evidence": "主检验为全提交正确率；F1、有效率与稳定性另报。意图按类分层、相关性按query成对重采样，预定10000次。"
+    },
+    "model_identity": {
+      "title": "模型版本记录",
+      "passed": true,
+      "evidence": "已保存两服务实际响应model、请求别名、usage、UTC与原始响应。本地依赖与参数已记录；无法独立核实网关底层官方身份。"
+    },
+    "executable_budget": {
+      "title": "调用预算",
+      "passed": true,
+      "evidence": "依用户已授权的全部测试，阶段A固定7392次远程逻辑调用、每次最多3尝试，总HTTP上限22176；超限前停止且保留pending。价格仍未知，调用次数限制不等于人民币费用上限。"
+    }
+  },
+  "formal_test_calls": 0,
+  "scope_assumption": "阶段A先完成有公开人工gold的中文意图与相关性；路由阶段B须待真实盲标，不纳入本次确认性比较。",
+  "dev_remote_calls": 18
+}

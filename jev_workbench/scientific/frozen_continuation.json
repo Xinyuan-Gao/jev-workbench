@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-07T08:51:35.019410+00:00",
+  "registration": "local immutable continuation record; no external timestamp certification",
+  "artifacts": [
+    {
+      "path": "IMPLEMENTATION_PLAN.md",
+      "sha256": "cfd0ef4e15798c3d9128abc02f4001aedc1ab7a09b57c60c9a15d29ed83a10f5",
+      "bytes": 3571
+    },
+    {
+      "path": "PROTOCOL.md",
+      "sha256": "2a630e7661c639c46e1deacea4d677f8b92ab81966dab70d3c429039911c8d98",
+      "bytes": 10332
+    },
+    {
+      "path": "README.md",
+      "sha256": "acc3da60c73f510d74fa95bd458dcd62cb1575f6bc49d5c7b0c9e7c51c931cc3",
+      "bytes": 7294
+    },
+    {
+      "path": "__init__.py",
+      "sha256": "95e23a1a8bd9748ed087a03516152cb1446bcc05e5328da3b49f29cecc426555",
+      "bytes": 278
+    },
+    {
+      "path": "analyze.py",
+      "sha256": "9dfa431444c49a82df0303f94f4cf3917eb373df97a40bd637b88592a6673383",
+      "bytes": 24222
+    },
+    {
+      "path": "artifacts/massive/local_dev_report.json",
+      "sha256": "9f23175bbda82b2e6edfdc1cb2a8fde4ddbe31535bc2a570449cba94d48f1fcd",
+      "bytes": 1625916
+    },
+    {
+      "path": "artifacts/massive/local_models.joblib",
+      "sha256": "b8ed858fb15daf83f07ad1d8e0bfef990f13c3acc26907b5b4f1e97f96946368",
+      "bytes": 106707478
+    },
+    {
+      "path": "artifacts/remote_dev_report.json",
+      "sha256": "cd716673035585f2a303cd03e3db69142d2dad14dff76248cc660dd3d1f539c3",
+      "bytes": 13169
+    },
+    {
+      "path": "artifacts/t2/local_dev_report.json",
+      "sha256": "2270cddb7550773a7aac128276ecd5cfdb15f7559f5118feba956d6e03d91eac",
+      "bytes": 715075
+    },
+    {
+      "path": "artifacts/t2/local_models.joblib",
+      "sha256": "848e301e83a20d2e44a663e894a9f47224ba2067cbe53c214290b4e8e3adf36c",
+      "bytes": 64277462
+    },
+    {
+      "path": "audits/data_source_research.md",
+      "sha256": "4b33ad86ad81cf9392da09c88c890885f59430c35a9b0ffb2613fce634ec09c7",
+      "bytes": 13057
+    },
+    {
+      "path": "audits/dataset_reproduction.json",
+      "sha256": "bdecaffe8d7e582f8fb1e11b2417a9b90ff19b88d9f7dffc9f2cb15b7c94fa76",
+      "bytes": 257
+    },
+    {
+      "path": "audits/design_sensitivity.json",
+      "sha256": "84f7b42adff06ad482ca0846c9c20340db19a2e0ead282d597bb04d11fb5c706",
+      "bytes": 3057
+    },
+    {
+      "path": "audits/design_sensitivity_review.md",
+      "sha256": "f8084cf5dfb16252d6a0db5ad41d75875448a5907d16014be57dea205478e8fa",
+      "bytes": 7513
+    },
+    {
+      "path": "audits/final_analysis_cross_review.md",
+      "sha256": "efe05ed7c1949292a804679bf1dc117b4382daecafb0c6ce9d3acd09c539856c",
+      "bytes": 8431
+    },
+    {
+      "path": "audits/final_preflight_initial_review.md",
+      "sha256": "7cbbec1d0aa66155ee170638948ad7ad02af23af313f1992b18435e05f097e7f",
+      "bytes": 8938
+    },
+    {
+      "path": "audits/frozen_checkpoint_20261007.json",
+      "sha256": "51e4877d5d39fd4169e0f61742ce21f4c09d14a08c2191b22220c9373309b018",
+      "bytes": 17739
+    },
+    {
+      "path": "audits/local_freeze_review.md",
+      "sha256": "0f7320e25b83357951ef85cdd7293a9e1f4e64dace6bbb1712c954494b2acf11",
+      "bytes": 8075
+    },
+    {
+      "path": "audits/pre_freeze_tests.txt",
+      "sha256": "1541154d576095b19159114c14d157c736174f68221937ded61c04791538e3d1",
+      "bytes": 261
+    },
+    {
+      "path": "audits/report_figures_plan.md",
+      "sha256": "6297c3eb28e7ccedb444cd0958e20aa5d6812a041c7349313861d998c43b007d",
+      "bytes": 4261
+    },
+    {
+      "path": "audits/runtime_environment.json",
+      "sha256": "860fc1618c0ec0347ca54475d7029dd6cf8952627ab5a537be390325c019f140",
+      "bytes": 244
+    },
+    {
+      "path": "audits/runtime_review.md",
+      "sha256": "02f0ba232b62ceb909be66264979e9e143308cceec6e27003dd1004b41b76e15",
+      "bytes": 8882
+    },
+    {
+      "path": "audits/statistics_data_review.md",
+      "sha256": "ecb1f0e725baadb18a8160ecb2f70efa32b6eb49ee1f0a772d415eb014e8ef29",
+      "bytes": 11449
+    },
+    {
+      "path": "configuration_candidate.json",
+      "sha256": "74bf4537ca2e8fb72165465ecaca9416000e8a1b0ee8d562d97e75593d43bd00",
+      "bytes": 5762
+    },
+    {
+      "path": "data/massive_candidate.json",
+      "sha256": "5ae1fdc1e337cd1b96f08cd8446a9e0fd7b163deca50b0f6b4dcaa4e0c5df526",
+      "bytes": 6497934
+    },
+    {
+      "path": "data/t2_candidate.json",
+      "sha256": "3a6fe495482dd154333871f82635f54a80e22d33e1c62effcd9d6209d5ee5fa1",
+      "bytes": 13878999
+    },
+    {
+      "path": "data/task_schemas_candidate.json",
+      "sha256": "d8e26339d2c370ea2f6f51ebfe06c25cb6df8e3eb2e6a5e130d5027fc76bf504",
+      "bytes": 7925
+    },
+    {
+      "path": "data_sources/massive/LICENSE",
+      "sha256": "c2e6ea015269147de02117ebdd91f30ef09831251f5345fa8365273b1db1d435",
+      "bytes": 18704
+    },
+    {
+      "path": "data_sources/massive/NOTICE.md",
+      "sha256": "db1466b051afd1d9ad34b7bd6346a1857f568a0c5f6534168813b4ad3c26013e",
+      "bytes": 500
+    },
+    {
+      "path": "data_sources/t2/t2_readme.md",
+      "sha256": "e75fe58450516cdb76ce49b18be9d5685490f41440e246bb37fbd2543b96f73f",
+      "bytes": 9697
+    },
+    {
+      "path": "data_sources/t2/t2_selected_text_audit.json",
+      "sha256": "6816d9f24aa2f03703a6ce2a80be1c0f59f179e79b4b0d4b436676e2c7a4525f",
+      "bytes": 900
+    },
+    {
+      "path": "data_sources/t2/t2_source_selection_manifest.json",
+      "sha256": "4fc9b1546a8f6f8db96442aaabd51c924c75cabb34d8b2dc3e47f926d92da83d",
+      "bytes": 190853
+    },
+    {
+      "path": "datasets.py",
+      "sha256": "4273b7dc5577f3206765d6526eeb1b7b4d5857a8e227074b368ce7bb51e206f4",
+      "bytes": 13627
+    },
+    {
+      "path": "design_sensitivity.py",
+      "sha256": "8806cf2d29a0e6cd1bc127ae9dae3bf362c64652275823edf689906585965017",
+      "bytes": 4615
+    },
+    {
+      "path": "freeze.py",
+      "sha256": "a337a1f213340d7a816f9018d8b2ac7feb94c2d633a77b697102877e034fc51d",
+      "bytes": 3171
+    },
+    {
+      "path": "frozen.json",
+      "sha256": "51e4877d5d39fd4169e0f61742ce21f4c09d14a08c2191b22220c9373309b018",
+      "bytes": 17739
+    },
+    {
+      "path": "journal.py",
+      "sha256": "ea2e66e4b0c9bef64f6c1de3a0f110e385894241bc022d11b60e6a24a8c3b165",
+      "bytes": 14793
+    },
+    {
+      "path": "local_models.py",
+      "sha256": "3ab7a3a41183dec45c6300544194357f9cef617c032f17f00db6e15243719c16",
+      "bytes": 22192
+    },
+    {
+      "path": "readiness.json",
+      "sha256": "a376c72dbca8faf5182b6c64106a8dbe33bef8c8c903b5e742211f2b441c8481",
+      "bytes": 3165
+    },
+    {
+      "path": "remote.py",
+      "sha256": "b9e9cb3a4412a9b0219f5616a3fc4c635be21d5ab3678d6cea5b470170816e29",
+      "bytes": 19018
+    },
+    {
+      "path": "report_figures.py",
+      "sha256": "2b089fbbcfd62575a96f80bbe27f80122289c031e75aee316fa1860117694878",
+      "bytes": 24792
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "94b9b6427f8d9fb3f9047c83ebc285efea7d2f1d97c6b425a95bc22ca9a8cc7b",
+      "bytes": 127
+    },
+    {
+      "path": "run.py",
+      "sha256": "98791fbb7649882ea71822dc264265a978a5693797d100e2871bb96f3cbed28a",
+      "bytes": 25893
+    },
+    {
+      "path": "statistics.py",
+      "sha256": "9c32312460cdfde1e59966d3333189fc85981211078b71d44dc562de12fc37c1",
+      "bytes": 11771
+    },
+    {
+      "path": "status.py",
+      "sha256": "d91a596cf7f8c45e1b88b9cdf9acbeeb5ae2d61e5016dc80904eedd8f1220104",
+      "bytes": 5254
+    },
+    {
+      "path": "task_schemas.py",
+      "sha256": "e829776f2f1f8bb72a3cbc6d19a40e71768c19afca008b455350117ab95618a2",
+      "bytes": 6733
+    },
+    {
+      "path": "tests/test_analyze.py",
+      "sha256": "4bfe8c1328be3844e67382aa5e599056a463a05188c6254a631f1f7cc9dfbd6b",
+      "bytes": 21262
+    },
+    {
+      "path": "tests/test_datasets.py",
+      "sha256": "a7a869096221f0a3ce9d1305bda8b6bf7a6bf846996c3cb263f7b390053f8917",
+      "bytes": 6090
+    },
+    {
+      "path": "tests/test_design_sensitivity.py",
+      "sha256": "32c9bd27e4c8db3c26b6ca05e97f60eefdde66707183b02e0c041e4228daa038",
+      "bytes": 1425
+    },
+    {
+      "path": "tests/test_freeze.py",
+      "sha256": "5c6a482b7ceaf3b0a03992080f2b4635a2a8553ca071bb5b16768e144cd15fc4",
+      "bytes": 1712
+    },
+    {
+      "path": "tests/test_local_models.py",
+      "sha256": "806eeed63a111de49d1af48aaf1f8be114fd6fe0c7b27a8ebe53464eab6a3979",
+      "bytes": 10808
+    },
+    {
+      "path": "tests/test_report_figures.py",
+      "sha256": "2b0542884816c77cbbead8a873ef5d6625ad454e805238d7c2c36774f2b9e90b",
+      "bytes": 7457
+    },
+    {
+      "path": "tests/test_run.py",
+      "sha256": "4712e41a4033096b534fbf1f015ea75cd434397950d0bacc8faa0083fef5f4c0",
+      "bytes": 20852
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "sha256": "4e11235b4094ad4303560bea6015029605fd6d58bddea63dfa9c118faa34d3f0",
+      "bytes": 24933
+    },
+    {
+      "path": "tests/test_statistics.py",
+      "sha256": "3307efdbb77b847782e8ceafc6ba9c36d7f30b3e1ee23096d2f84479bb6c2109",
+      "bytes": 4950
+    }
+  ],
+  "gates": {
+    "provenance_license": {
+      "title": "来源与许可",
+      "passed": true,
+      "evidence": "MASSIVE 1.1 官方中文文件已核验；T2 原始3.66GB片段库哈希与官方一致。出处、许可、原始ID与抽样记录已保存。"
+    },
+    "human_gold": {
+      "title": "标准答案依据",
+      "passed": true,
+      "evidence": "正式阶段A仅含MASSIVE意图与T2问题—片段，保留公开人工标签及原始等级。路由不在此次冻结矩阵，须真实双人独立标注和裁决后另开阶段B；不称路由已验收。"
+    },
+    "independent_test_units": {
+      "title": "独立测试单元",
+      "passed": true,
+      "evidence": "中文意图558条独立话语；相关性200个独立问题、674对片段。路由尚未形成正式标注测试集。"
+    },
+    "duplicate_audit": {
+      "title": "重复与泄漏筛查",
+      "passed": true,
+      "evidence": "两份候选数据结构验收通过，按预定词面阈值清理并保存排除。语义重复与预训练污染仍无法全部排除。"
+    },
+    "local_validation_selection": {
+      "title": "本地验证集调优",
+      "passed": true,
+      "evidence": "两份数据各48个候选配置已全部执行；XGBoost和LightGBM各真实训练5个种子，权重和全部验证记录已保存。未预测正式test。"
+    },
+    "remote_dev_compatibility": {
+      "title": "远程验证集接入",
+      "passed": true,
+      "evidence": "18次真实验证集单次请求全部返回合法类别，含四个原相关性等级和验证集最长完整片段；请求标签字段白名单与凭证脱敏已复查。这不是正式测试成绩。"
+    },
+    "protocol_tests": {
+      "title": "执行与评分程序",
+      "passed": true,
+      "evidence": "全科学套件170项通过（pre_freeze_tests.txt）；分析器四项原始缺陷独立复核通过，18条真实验证链符合原始请求/响应/终态一致性合同。正式图外观仍需真实结果后复查，不把合成测试当模型成绩。"
+    },
+    "fixed_analysis": {
+      "title": "固定统计口径",
+      "passed": true,
+      "evidence": "主检验为全提交正确率；F1、有效率与稳定性另报。意图按类分层、相关性按query成对重采样，预定10000次。"
+    },
+    "model_identity": {
+      "title": "模型版本记录",
+      "passed": true,
+      "evidence": "已保存两服务实际响应model、请求别名、usage、UTC与原始响应。本地依赖与参数已记录；无法独立核实网关底层官方身份。"
+    },
+    "executable_budget": {
+      "title": "调用预算",
+      "passed": true,
+      "evidence": "依用户已授权的全部测试，阶段A固定7392次远程逻辑调用、每次最多3尝试，总HTTP上限22176；超限前停止且保留pending。价格仍未知，调用次数限制不等于人民币费用上限。"
+    }
+  },
+  "metadata": {
+    "status": "frozen_phase_A_public_human_gold",
+    "dataset_ids": [
+      "massive",
+      "t2"
+    ],
+    "route_status": "separate_phase_B_human_annotation_incomplete",
+    "execution": {
+      "remote_models": {
+        "jev": "jev-1.13.0",
+        "gemini": "gemini-3.8-flash"
+      },
+      "remote_repeats": 3,
+      "order_seed": 20261007,
+      "max_http_attempts": 3,
+      "timeout_seconds": 45,
+      "backoff_seconds": 1,
+      "allow_indeterminate_retry": false,
+      "max_indeterminate_retries_per_job": 0,
+      "budget": {
+        "status": "bounded_by_existing_user_full_test_authorization",
+        "unknown_cost_policy": "bounded_calls",
+        "max_total_http_attempts": 22176,
+        "currency": "CNY",
+        "maximum_spend": null,
+        "authorization_basis": "用户已要求全部测试、重新完整实验；使用已有提供的两家API，预先限制计划矩阵与HTTP尝试，不引入新服务或购买。费用不可核实，不能承诺人民币上限。"
+      },
+      "remote_base_urls": {
+        "jev": "https://5yuantoken.org/v1",
+        "gemini": "https://5yuantoken.org/v1"
+      },
+      "workers": 8
+    },
+    "analysis": {
+      "primary_repeat": 0,
+      "bootstrap_iterations": 10000,
+      "statistical_seed": 20261007,
+      "primary_tested_metric": "all_planned_accuracy",
+      "confirmatory_pairs": [
+        "JEV-Gemini",
+        "JEV-best_local_selected_on_validation"
+      ],
+      "holm_family": "two prespecified comparisons per final formal task",
+      "massive_bootstrap_strata": "gold_label",
+      "t2_bootstrap_unit": "query",
+      "minimum_meaningful_accuracy_difference": 0.05,
+      "other_metric_status": "descriptive_and_exploratory",
+      "best_local_by_validation": {
+        "massive": {
+          "model": "local:lr",
+          "selection_metric": "validation_60_fixed_label_macro_f1",
+          "score": 0.8100945878998396,
+          "all_family_scores": {
+            "lr": 0.8100945878998396,
+            "linear_svc": 0.8023347342844731,
+            "xgboost": 0.7040565950570781,
+            "lightgbm": 0.6756484602137783
+          }
+        },
+        "t2": {
+          "model": "local:linear_svc",
+          "selection_metric": "validation_2_fixed_label_macro_f1",
+          "score": 0.5923296560963722,
+          "all_family_scores": {
+            "lr": 0.5918355069218377,
+            "linear_svc": 0.5923296560963722,
+            "xgboost": 0.5918491484184916,
+            "lightgbm": 0.5786544143956286
+          }
+        }
+      },
+      "permutation_iterations": 10000,
+      "seed": 20261007,
+      "alpha": 0.05,
+      "datasets": {
+        "massive": {
+          "bootstrap_stratify": "gold_label",
+          "best_local_family": "lr"
+        },
+        "t2": {
+          "bootstrap_stratify": null,
+          "best_local_family": "linear_svc"
+        }
+      },
+      "sample_size_sensitivity_artifact": "audits/design_sensitivity.json",
+      "non_significance_policy": "no equivalence claim; fixed size, no test-driven expansion or optional stopping"
+    },
+    "matrix": {
+      "logical_jobs": 23408,
+      "local_jobs": 16016,
+      "remote_first_attempts": 7392,
+      "remote_attempt_bound_without_indeterminate_recovery": 22176
+    },
+    "planned_artifacts": [
+      "PROTOCOL.md",
+      "data/massive_candidate.json",
+      "data/t2_candidate.json",
+      "data/task_schemas_candidate.json",
+      "artifacts/massive/local_dev_report.json",
+      "artifacts/massive/local_models.joblib",
+      "artifacts/t2/local_dev_report.json",
+      "artifacts/t2/local_models.joblib",
+      "artifacts/remote_dev_report.json",
+      "audits/data_source_research.md",
+      "audits/statistics_data_review.md",
+      "audits/local_freeze_review.md",
+      "audits/design_sensitivity.json",
+      "audits/design_sensitivity_review.md",
+      "audits/final_preflight_initial_review.md",
+      "README.md",
+      "requirements.lock.txt",
+      "audits/runtime_environment.json",
+      "audits/dataset_reproduction.json",
+      "audits/runtime_review.md",
+      "audits/final_analysis_cross_review.md",
+      "data_sources/massive/LICENSE",
+      "data_sources/massive/NOTICE.md",
+      "data_sources/t2/t2_readme.md",
+      "data_sources/t2/t2_source_selection_manifest.json",
+      "data_sources/t2/t2_selected_text_audit.json",
+      "configuration_candidate.json",
+      "readiness.json",
+      "IMPLEMENTATION_PLAN.md",
+      "audits/pre_freeze_tests.txt",
+      "audits/report_figures_plan.md"
+    ],
+    "formal_phase": "A_public_human_gold_two_tasks",
+    "execution_source_sha256": {
+      "__init__.py": "95e23a1a8bd9748ed087a03516152cb1446bcc05e5328da3b49f29cecc426555",
+      "analyze.py": "9dfa431444c49a82df0303f94f4cf3917eb373df97a40bd637b88592a6673383",
+      "datasets.py": "4273b7dc5577f3206765d6526eeb1b7b4d5857a8e227074b368ce7bb51e206f4",
+      "design_sensitivity.py": "8806cf2d29a0e6cd1bc127ae9dae3bf362c64652275823edf689906585965017",
+      "freeze.py": "a337a1f213340d7a816f9018d8b2ac7feb94c2d633a77b697102877e034fc51d",
+      "journal.py": "ea2e66e4b0c9bef64f6c1de3a0f110e385894241bc022d11b60e6a24a8c3b165",
+      "local_models.py": "3ab7a3a41183dec45c6300544194357f9cef617c032f17f00db6e15243719c16",
+      "remote.py": "b9e9cb3a4412a9b0219f5616a3fc4c635be21d5ab3678d6cea5b470170816e29",
+      "report_figures.py": "2b089fbbcfd62575a96f80bbe27f80122289c031e75aee316fa1860117694878",
+      "run.py": "98791fbb7649882ea71822dc264265a978a5693797d100e2871bb96f3cbed28a",
+      "statistics.py": "9c32312460cdfde1e59966d3333189fc85981211078b71d44dc562de12fc37c1",
+      "status.py": "d91a596cf7f8c45e1b88b9cdf9acbeeb5ae2d61e5016dc80904eedd8f1220104",
+      "task_schemas.py": "e829776f2f1f8bb72a3cbc6d19a40e71768c19afca008b455350117ab95618a2"
+    },
+    "runtime_environment": {
+      "python": "3.12.0",
+      "packages": {
+        "numpy": "2.4.4",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "xgboost": "3.4.1",
+        "lightgbm": "4.7.0",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.7.0",
+        "pytest": "9.0.3"
+      }
+    },
+    "continuation": {
+      "parent_bundle_sha256": "57f18b1ce03c2a3a47e72d09215dada5a492b589b02f55a47e7c6f048b934506",
+      "journal_protocol_hash": "57f18b1ce03c2a3a47e72d09215dada5a492b589b02f55a47e7c6f048b934506",
+      "checkpoint_artifact": "audits/frozen_checkpoint_20261007.json",
+      "reason": "safe resume after key rotation and concurrent execution hardening"
+    }
+  },
+  "bundle_sha256": "007ee805574d085a9b39d45e4faf1f26255e241c891a8f07c462692604652dd3"
+}

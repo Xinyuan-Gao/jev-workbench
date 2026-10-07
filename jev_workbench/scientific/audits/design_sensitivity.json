@@ -1,0 +1,68 @@
+{
+  "status": "prospective_pretest_assumption_sensitivity",
+  "test_predictions_used": false,
+  "target_accuracy_difference": 0.05,
+  "confirmatory_comparison_count": 4,
+  "datasets": {
+    "massive": {
+      "test_rows": 558,
+      "independent_groups": 558,
+      "min_rows_per_group": 1,
+      "max_rows_per_group": 1,
+      "kish_group_size_weight_effective_n": 558.0,
+      "kish_interpretation": "size-weight concentration only, not a measured outcome ICC or guaranteed effective n",
+      "single_proportion_worst_case_wilson_half_width": 0.041343877370756454,
+      "wilson_applicability": "IID Bernoulli illustration; allocation/group dependence may require different interval",
+      "exact_mcnemar_applicable_to_primary": true,
+      "prospective_power_5pp": [
+        {
+          "discordance_assumption": 0.1,
+          "unadjusted_alpha": 0.05,
+          "power_unadjusted": 0.9625443763871919,
+          "conservative_family_alpha": 0.0125,
+          "power_at_conservative_family_alpha": 0.8882376730889597
+        },
+        {
+          "discordance_assumption": 0.2,
+          "unadjusted_alpha": 0.05,
+          "power_unadjusted": 0.7270742472441348,
+          "conservative_family_alpha": 0.0125,
+          "power_at_conservative_family_alpha": 0.5261684027392204
+        },
+        {
+          "discordance_assumption": 0.4,
+          "unadjusted_alpha": 0.05,
+          "power_unadjusted": 0.43711895840398896,
+          "conservative_family_alpha": 0.0125,
+          "power_at_conservative_family_alpha": 0.24353684238093587
+        },
+        {
+          "discordance_assumption": 0.6,
+          "unadjusted_alpha": 0.05,
+          "power_unadjusted": 0.31274887089329384,
+          "conservative_family_alpha": 0.0125,
+          "power_at_conservative_family_alpha": 0.15203400371991366
+        }
+      ]
+    },
+    "t2": {
+      "test_rows": 674,
+      "independent_groups": 200,
+      "min_rows_per_group": 2,
+      "max_rows_per_group": 4,
+      "kish_group_size_weight_effective_n": 193.8037542662116,
+      "kish_interpretation": "size-weight concentration only, not a measured outcome ICC or guaranteed effective n",
+      "single_proportion_worst_case_wilson_half_width": 0.06863914039610813,
+      "wilson_applicability": "IID Bernoulli illustration; allocation/group dependence may require different interval",
+      "exact_mcnemar_applicable_to_primary": false,
+      "power_limit": "No exact primary passage-accuracy power claim: grouped correctness correlation and effect allocation are unknown before test. Query count alone cannot establish 80% power."
+    }
+  },
+  "method": "exact mixture over binomial discordant-count and conditional exact McNemar rejection",
+  "limitations": [
+    "Assumed discordance is not estimated from formal test.",
+    "Holm conservative first threshold is used as sensitivity, not the actual adjusted test.",
+    "Power is not guaranteed for unseen tasks, rare labels, Macro-F1 or clustered RAG.",
+    "No test-driven expansion or optional stopping is authorized by this report."
+  ]
+}

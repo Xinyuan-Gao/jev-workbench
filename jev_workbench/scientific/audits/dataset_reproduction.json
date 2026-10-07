@@ -1,0 +1,12 @@
+{
+  "massive": {
+    "matches_current_record_manifest": true,
+    "rebuilt_records": 13200,
+    "test_predictions_used": false
+  },
+  "t2": {
+    "matches_current_record_manifest": true,
+    "rebuilt_records": 5375,
+    "test_predictions_used": false
+  }
+}

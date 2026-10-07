@@ -10,6 +10,19 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 *.log
-runs/
-# The checked-in benchmark is an immutable historical example. New runs stay local.
-jev_workbench/reports/corrected_20261007/corrected-*.json
+
+# Journals, trained weights and raw HTTP dumps stay local: they are large and
+# they contain request/response payloads that are not published.
+*.sqlite
+*.joblib
+*.sqlite-journal
+.matrix-run.lock
+
+# Raw third-party datasets are downloaded, not redistributed. See README.
+jev_workbench/scientific/data_sources/
+jev_workbench/scientific/data/massive_candidate.json
+jev_workbench/scientific/data/t2_candidate.json
+
+# Feishu document exports used while drafting.
+jev_workbench/scientific/audits/feishu_*
+jev_workbench/scientific/evidence/feishu_*

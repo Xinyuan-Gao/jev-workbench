@@ -1,4 +1,7 @@
-# Local traditional-model backends
+# Local traditional-model backends used by the scientific comparison.
+numpy>=1.26
+scipy>=1.11
 scikit-learn>=1.4
 xgboost>=2.0
 lightgbm>=4.0
+joblib>=1.3

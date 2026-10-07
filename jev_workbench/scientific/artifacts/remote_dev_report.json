@@ -1,0 +1,482 @@
+{
+  "purpose": "validation-only protocol compatibility; not test ranking",
+  "test_used": false,
+  "planned": 18,
+  "complete": true,
+  "automatic_retries": 0,
+  "protocol_hash": "92bad0ab37dd3a52c7cd2a8d9368ca11a87835351561f6b3a246c24d524ce8c6",
+  "cost": null,
+  "models": {
+    "jev": "jev-1.13.0",
+    "gemini": "gemini-3.8-flash"
+  },
+  "checks": [
+    {
+      "dataset": "massive",
+      "provider": "jev",
+      "item_id": "massive-zh-13462",
+      "status": "valid",
+      "prediction": "qa_maths",
+      "input_chars": 6,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "massive",
+      "provider": "jev",
+      "item_id": "massive-zh-7665",
+      "status": "valid",
+      "prediction": "calendar_set",
+      "input_chars": 18,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "massive",
+      "provider": "jev",
+      "item_id": "massive-zh-778",
+      "status": "valid",
+      "prediction": "play_music",
+      "input_chars": 8,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "massive",
+      "provider": "jev",
+      "item_id": "massive-zh-15471",
+      "status": "valid",
+      "prediction": "general_quirky",
+      "input_chars": 15,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "massive",
+      "provider": "gemini",
+      "item_id": "massive-zh-13462",
+      "status": "valid",
+      "prediction": "qa_maths",
+      "input_chars": 6,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "massive",
+      "provider": "gemini",
+      "item_id": "massive-zh-7665",
+      "status": "valid",
+      "prediction": "calendar_set",
+      "input_chars": 18,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "massive",
+      "provider": "gemini",
+      "item_id": "massive-zh-778",
+      "status": "valid",
+      "prediction": "play_music",
+      "input_chars": 8,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "massive",
+      "provider": "gemini",
+      "item_id": "massive-zh-15471",
+      "status": "valid",
+      "prediction": "email_sendemail",
+      "input_chars": 15,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "jev",
+      "item_id": "t2-dev-16975-57421",
+      "status": "valid",
+      "prediction": "irrelevant",
+      "input_chars": 364,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "jev",
+      "item_id": "t2-dev-2153-3167",
+      "status": "valid",
+      "prediction": "irrelevant",
+      "input_chars": 615,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "jev",
+      "item_id": "t2-dev-12354-120881",
+      "status": "valid",
+      "prediction": "relevant",
+      "input_chars": 232,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "jev",
+      "item_id": "t2-dev-17136-407334",
+      "status": "valid",
+      "prediction": "irrelevant",
+      "input_chars": 355,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "jev",
+      "item_id": "t2-dev-19456-13141",
+      "status": "valid",
+      "prediction": "relevant",
+      "input_chars": 15184,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "jev",
+        "request_model": "jev-1.13.0",
+        "temperature": null,
+        "temperature_status": "unspecified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "gemini",
+      "item_id": "t2-dev-16975-57421",
+      "status": "valid",
+      "prediction": "irrelevant",
+      "input_chars": 364,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "gemini",
+      "item_id": "t2-dev-2153-3167",
+      "status": "valid",
+      "prediction": "irrelevant",
+      "input_chars": 615,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "gemini",
+      "item_id": "t2-dev-12354-120881",
+      "status": "valid",
+      "prediction": "relevant",
+      "input_chars": 232,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "gemini",
+      "item_id": "t2-dev-17136-407334",
+      "status": "valid",
+      "prediction": "irrelevant",
+      "input_chars": 355,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    },
+    {
+      "dataset": "t2",
+      "provider": "gemini",
+      "item_id": "t2-dev-19456-13141",
+      "status": "valid",
+      "prediction": "irrelevant",
+      "input_chars": 15184,
+      "response_metadata": {
+        "cost": null,
+        "cost_status": "unknown",
+        "endpoint": "https://5yuantoken.org/v1/chat/completions",
+        "provider": "gemini",
+        "request_model": "gemini-3.8-flash",
+        "temperature": 0,
+        "temperature_status": "specified",
+        "usage_status": "present"
+      }
+    }
+  ],
+  "request_gold_fields_absent": true,
+  "secret_scan_passed": true,
+  "provider_evidence": {
+    "jev": {
+      "checks": 9,
+      "statuses": {
+        "valid": 9
+      },
+      "response_models": [
+        "jev-1.13.0"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 574,
+          "prompt_tokens": 3464,
+          "total_tokens": 4038
+        },
+        {
+          "completion_tokens": 573,
+          "prompt_tokens": 3478,
+          "total_tokens": 4051
+        },
+        {
+          "completion_tokens": 573,
+          "prompt_tokens": 3468,
+          "total_tokens": 4041
+        },
+        {
+          "completion_tokens": 575,
+          "prompt_tokens": 3473,
+          "total_tokens": 4048
+        },
+        {
+          "completion_tokens": 37,
+          "prompt_tokens": 976,
+          "total_tokens": 1013
+        },
+        {
+          "completion_tokens": 37,
+          "prompt_tokens": 1202,
+          "total_tokens": 1239
+        },
+        {
+          "completion_tokens": 37,
+          "prompt_tokens": 859,
+          "total_tokens": 896
+        },
+        {
+          "completion_tokens": 37,
+          "prompt_tokens": 993,
+          "total_tokens": 1030
+        },
+        {
+          "completion_tokens": 37,
+          "prompt_tokens": 14716,
+          "total_tokens": 14753
+        }
+      ]
+    },
+    "gemini": {
+      "checks": 9,
+      "statuses": {
+        "valid": 9
+      },
+      "response_models": [
+        "gemini-3.8-flash"
+      ],
+      "usage": [
+        {
+          "completion_tokens": 57,
+          "completion_tokens_details": {
+            "reasoning_tokens": 38
+          },
+          "prompt_tokens": 3721,
+          "total_tokens": 3778
+        },
+        {
+          "completion_tokens": 132,
+          "completion_tokens_details": {
+            "reasoning_tokens": 104
+          },
+          "prompt_tokens": 3733,
+          "total_tokens": 3865
+        },
+        {
+          "completion_tokens": 88,
+          "completion_tokens_details": {
+            "reasoning_tokens": 60
+          },
+          "prompt_tokens": 3725,
+          "total_tokens": 3813
+        },
+        {
+          "completion_tokens": 319,
+          "completion_tokens_details": {
+            "reasoning_tokens": 291
+          },
+          "prompt_tokens": 3729,
+          "total_tokens": 4048
+        },
+        {
+          "completion_tokens": 82,
+          "completion_tokens_details": {
+            "reasoning_tokens": 66
+          },
+          "prompt_tokens": 620,
+          "total_tokens": 702
+        },
+        {
+          "completion_tokens": 142,
+          "completion_tokens_details": {
+            "reasoning_tokens": 126
+          },
+          "prompt_tokens": 845,
+          "total_tokens": 987
+        },
+        {
+          "completion_tokens": 185,
+          "completion_tokens_details": {
+            "reasoning_tokens": 169
+          },
+          "prompt_tokens": 575,
+          "total_tokens": 760
+        },
+        {
+          "completion_tokens": 262,
+          "completion_tokens_details": {
+            "reasoning_tokens": 246
+          },
+          "prompt_tokens": 668,
+          "total_tokens": 930
+        },
+        {
+          "completion_tokens": 148,
+          "completion_tokens_details": {
+            "reasoning_tokens": 132
+          },
+          "prompt_tokens": 13731,
+          "total_tokens": 13879
+        }
+      ]
+    }
+  }
+}

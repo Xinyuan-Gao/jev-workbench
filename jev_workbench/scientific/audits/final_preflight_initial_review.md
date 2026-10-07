@@ -1,0 +1,73 @@
+# 最终执行入口 preflight 独立只读审查
+
+2026-10-07。审查scientific/run.py、test_run.py、当前journal/remote、本地T2 sparse修复、统计mean_group_accuracy/repeat_stability。未修改源码、未调用真实API、未执行任何真实正式test prediction。
+
+指定run/local_models/statistics/runtime suite：86 passed in 7.19s。另用monkeypatchedurlopen独立验证预算前停止确为0 wire calls，而非只检查FakeClient.calls。
+
+## 总体结论
+
+新入口的全planned分母、冻结文件hash校验后才加载权重/预测、单writer、字面dotenv、预算按每HTTPstarted统计、恢复seedorder、有限indeterminate重试都具有效基础实现。真实两份dev产物已complete，T2 sparse已修复。
+
+正式调用前还需解决两点：当前执行源hash未被run.py强制纳入/核对；attempt持久化失败可被普通sample异常吞掉并错误terminal。下面给出实际触发与最小修复方向。remote费用、模型dev兼容性、真实路由gold等仍pending，不称新实验已完成。
+
+## 1. P1：正式入口未强制当前执行source版本hash
+
+位置run.py:88-120。强制检查的artifact只有task schemas、candidate data、各datasetjoblib与devreport。test_run.fixture_bundle只冻结4个数据/权重/报告artifact，也能run正式matrix；不要求run.py、remote.py、journal.py、local_models.py、statistics.py的hash。
+
+如果root实际bundle确实纳入源文件且verify读取同一路径，当前run会检查这些列入artifact的文件，这条路径有效。但helper/入口不拒绝缺source的freeze；source不列入时改执行代码仍可通过verify。更进一步，若冻结的是source_snapshot复制件、实际import却仍加载别处代码，verify快照hash并不证明执行版本相同。
+
+建议run前强制execution_source_sha256 mapping，逐项hash实际module.__file__源文件；或要求预定源artifact并核对实际执行module路径/内容hash等于它们。需要test缺source拒绝、真实执行源码变化拒绝、冻结snapshot一致但实际module变化拒绝。root计划纳actualsource/weights/devreport/schema/source license很好，应同时让入口做到不能省略。
+
+## 2. P1：HTTP attempt持久化失败被当业务失败terminal
+
+位置run.py:259-265（persist callback）、journal.py execute_jobs的普通except Exception。
+
+最小离线fixture：实际AuditedHTTPClient送出1次mockHTTP，合法yesresponse；on_attempt started能append，finished callback抛OSError('temporary durable log failure')，之后record_terminal恢复可写。execute_jobs捕获普通Exception，最终记录status=execution_error/prediction=None，attempt只有jobstarted与httpstarted，没有finished/rawbody/usage。因为已经terminal，恢复不会补审原响应，摘要可以complete。
+
+这不是provider/sample业务失败，而是审计证据丢失。注释“persistence errors must propagate”目前只覆盖record_terminal位置的错误，未覆盖predict_fn内部调用on_attempt。
+
+建议run.persist对journal.append_attempt失败抛独立JournalPersistenceFailure(BaseException)，使execute_jobs不把它转terminal，停运行并保留pending；run外层可给durability_failure状态和安全错误码，不能继续把日志不全实验称complete。可以把这个行为放在统一journal append_attempt的persist边界，用BaseException确保所有predictor callbacks一致。相应测试startedcallbackfailure确保wire0；finishedcallbackfailure确保wire1/pending/不complete/重启显式indeterminate。secret异常string也应脱敏或只给类型。
+
+## 3. 预算与恢复已核实
+
+AuditedHTTPClient调用started callback发生在urlopen之前；BudgetLimitReached继承BaseException，既不会被HTTP层except Exception吞，也不会被execute_jobs当sample失败terminal。独立mockurlopen计数确认prewirecallbackbudgetstop=0。预算达到上限前成功开始的HTTPstarted落journal，下次run从所有datasetjournal累加used_attempts，重试每个started也消耗1，不能通过重启免费重置计数。
+
+run先predict入口budget检查，再每HTTPstarted回调检查，对重试也有效。回调在日志persist之前增加used count，这是保守预算策略；如果进程在persist与wire之间中断，日志中的一次started不保证真的收费，但保守上界保护正确，结果费用须写unknown。
+
+max_total_http_attempts是整体跨datasetcap；remote modelrepeat至少3，max_http_attempts1～3。预算不足可安全停止，planned仍pending且不complete；不能把“预算已经耗尽”写成完整实验。cap并不证明实际人民币费用，有真实单价/usage才可核算成本。
+
+indeterminate恢复必须freeze allow=True和max_indeterminate_retries_per_job>=1，CLI再给explicitflag；journal按duplicate_retry_authorization计每job次数，达上限跳过pending，不能无限重测。全plannedfullorder先seedshuffle再filterpending，恢复时顺序不变化。单writer fcntl防两个matrixwriter同时预测。read_status只roSQLite、不加载权重、不触发恢复、不需freeze，用于观察进行中记录。
+
+预算int字段目前bool可能通过Pythonisinstance(int)（max_total_http_attempts=True当1），应与其他executionint参数一致排除bool，属于参数完整性小修，当前真实budget尚未freeze不影响已完成devfit。
+
+## 4. planned矩阵与真实产物检查
+
+LOCAL_REPEATS=majority1+lr1+linear_svc1+xgboost5+lightgbm5=13 local组合/row；两个remote各3=6组合/row，总19n。local-only仍保存全部remoteplannedpending，remote-only反之；未选择组合不从分母丢失。summaryallaccuracy只在该model/repeat全terminal后发布，primaryrepeat0，当前valid/failed/pending分列。
+
+真实MASSIVE test558records/558groups：local7254、remote3348、matrix10602。
+
+真实T2 test674pairs/200querygroups：local8762、remote4044、matrix12806。
+
+两任务合计test1232输入行、758独立单位（两个任务不可拿跨task合计当一个同分布n），local16016jobs、remote7392logicalcalls、total23408jobs。若每remotejob最多3HTTPattempt则22176attempt上界；允许indeterminate恢复可能产生额外尝试，仍被全局cap截断，必须在budget中预先写清。
+
+从磁盘实际读取两份local_dev_report：均statuscomplete、test_usedFalse、fit_splittrain、selection_splitvalidation；各4trainablefamily12/12candidatevalid，majority无grid，repeats1/1/1/5/5。报告train/devid集合与当前candidate实际split集合完全相符。
+
+实际joblibload检查两份模型：family/repeat数和配置labels均匹配，树seed20261007～20261011真有5模型，所有非majorityfeatures.fit_record_ids与当前trainIDs相同。未调用model.predict(test)，这些只是结构及出处检查。
+
+## 5. 本地T2 sparse修复与统计新增
+
+local_models.py sparseRAG transform已修正abs(query-passage)，不再引用undefined p。输入稀疏matrix维度为4×vocabulary+3，CSR/datafinite；新test真实LR/SVC train/devfit而非mockassertshape。实际T2devreport全部candidatevalid、joblib存在，先前接口错误不再存在。
+
+local transform阶段exception现在persistfailed报告而非留下running；root不应复用任何旧failed/runningartifact参与freeze。
+
+score.mean_group_accuracy为每group内部correctness均值再跨group均值；主accuracy仍eachplannedrowequalweight，返回weighting明确。测试smallgroup1条正确/largegroup3条失败，rowaccuracy=.25、groupmean=.5，两者不混淆。
+
+repeat_stability要求单model，按repeat分组，_pair检查相同itemgold/group且无pending，拒缺失某repeatitem；报告uniqueitems/groups，不增加n。outcomeagreement包括类别与失败状态，conditionalpredictionagreement仅bothvalid，allroundscorrect与validrounddistribution有具体分母，inferencescope明确描述性稳定性。deterministicmodel只有1round时assessableFalse。没有给这些稳定性指标未经验证的显著性声明。
+
+## 6. 冻结前其他口径边界
+
+sourcehash、weights、report冻结是必要完整性，但hash本身不证明weight由该report当前数据训练。当前实际fitID检查已一致；为了可复算更稳，devreport应写train/devinput+labelmanifesthash，formal入口核对，防“ID没改但input改过”误配。当前ID检查不是发现真的错配，不需重跑已确认产物。
+
+run对datasetminimum200和gold/许可/duplicates依赖passedgate及其证据，不能把bareTrue视为独立自动认证；root要冻结真实审计报告，保持未完gatesFalse。T2源dev自划分、每grade限额，泛化范围仍是该公开片段来源的分类，非自然生产RAG分布；MASSIVE缺test/validationclass与稀有class照前审查保留。
+
+本次可交付的是已完成devselection与更可靠的执行平台；有付费canary/test的新成绩、费用和真人路由标注不能由离线平台测试替代。

@@ -13,7 +13,8 @@ from .experiments import get_experiment, simulate_prediction, split_records
 from .traditional import TraditionalModel
 from .evaluation import classification_metrics
 
-HISTORY_DIR = Path(__file__).resolve().parents[1] / "reports" / "corrected_20261007"
+# Optional local history for the SavedRun viewer; empty unless the user saves runs here.
+HISTORY_DIR = Path(__file__).resolve().parents[1] / "reports" / "saved_runs"
 
 
 def benchmark_summary(history_dir: Path = HISTORY_DIR) -> Dict[str, Any]:

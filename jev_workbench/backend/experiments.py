@@ -1,9 +1,9 @@
 """Built-in experiments and deterministic simulation policies.
 
 The built-in datasets are generated from fixed templates instead of being
-sampled at runtime. The catalog is reproducible; group IDs are sorted for
-train/validation/test allocation. The split seed argument is retained for
-compatibility and is not used to randomize the split.
+sampled at runtime.  This keeps every run reproducible (seed 42 in the UI),
+while giving the workbench enough cases to make accuracy and latency
+comparisons meaningful.
 """
 from __future__ import annotations
 
