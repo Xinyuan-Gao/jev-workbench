@@ -12,7 +12,13 @@
 
 ### 中文意图用 MASSIVE 的 60 类
 
-[MASSIVE 1.1](https://github.com/alexa/massive) 的 zh-CN 部分是中文语音助手指令，一条话对应一个意图，比如“取消我的闹钟”是 [[G]]alarm_remove[[/]]。它自带官方训练、验证、测试划分，许可为 CC BY 4.0；我用的是官方包里那个 zh-CN.jsonl，下载文件和清单哈希都留在本地。
+[MASSIVE 1.1](https://github.com/alexa/massive) 的 zh-CN 部分是中文语音助手指令，一条话对应一个意图。它自带官方训练、验证、测试划分，许可为 CC BY 4.0；我用的是官方包里那个 zh-CN.jsonl，下载文件和清单哈希都留在本地。测试集里的一条记录长这样：
+
+> massive-zh-1454
+> 
+> 输入：**关掉闹钟**
+> 
+> 标准答案：**alarm_remove**
 
 ![](IMG:c01_data_split)
 
