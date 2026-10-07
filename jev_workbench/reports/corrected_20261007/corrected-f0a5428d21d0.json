@@ -1,0 +1,896 @@
+{
+  "run_id": "corrected-f0a5428d21d0",
+  "experiment": "agent-routing",
+  "experiment_name": "Agent 路由选择",
+  "mode": "gemini",
+  "status": "partial",
+  "dataset_total": 216,
+  "train_count": 126,
+  "validation_count": 36,
+  "test_count": 54,
+  "split_group_counts": {
+    "train": 21,
+    "validation": 6,
+    "test": 9
+  },
+  "input_contract": {
+    "model_receives_gold_label": false,
+    "rag_sends_query_and_passage": true,
+    "group_held_out": true
+  },
+  "metrics": {
+    "total": 54,
+    "completed": 50,
+    "failed": 4,
+    "completion_rate": 0.9259259259259259,
+    "valid_output_rate": 0.9259259259259259,
+    "accuracy_attempted": 0.9259259259259259,
+    "accuracy_completed": 1.0,
+    "macro_f1_completed": 1.0,
+    "per_class_completed": {
+      "search": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 17
+      },
+      "code": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "writing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      }
+    },
+    "avg_latency_ms_completed": 4653.59844,
+    "p95_latency_ms_completed": 8345.927749999997
+  },
+  "results": [
+    {
+      "id": "route-127",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，请给出可执行的下一步。",
+        "id": "route-127"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3394.844
+    },
+    {
+      "id": "route-128",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，希望今天完成。",
+        "id": "route-128"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 3963.95
+    },
+    {
+      "id": "route-129",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，结果需要附上依据。",
+        "id": "route-129"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4193.407
+    },
+    {
+      "id": "route-130",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，请按优先级处理。",
+        "id": "route-130"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 2495.271
+    },
+    {
+      "id": "route-131",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，团队马上要用。",
+        "id": "route-131"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 2636.677
+    },
+    {
+      "id": "route-132",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，尽量说明你的判断。",
+        "id": "route-132"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3609.679
+    },
+    {
+      "id": "route-133",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，请给出可执行的下一步。",
+        "id": "route-133"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4643.72
+    },
+    {
+      "id": "route-134",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，希望今天完成。",
+        "id": "route-134"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 4591.825
+    },
+    {
+      "id": "route-135",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，结果需要附上依据。",
+        "id": "route-135"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4481.958
+    },
+    {
+      "id": "route-136",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，请按优先级处理。",
+        "id": "route-136"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 5446.715
+    },
+    {
+      "id": "route-137",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，团队马上要用。",
+        "id": "route-137"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 5231.786
+    },
+    {
+      "id": "route-138",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，尽量说明你的判断。",
+        "id": "route-138"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 5220.831
+    },
+    {
+      "id": "route-139",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，请给出可执行的下一步。",
+        "id": "route-139"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 2745.557
+    },
+    {
+      "id": "route-140",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，希望今天完成。",
+        "id": "route-140"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 3889.498
+    },
+    {
+      "id": "route-141",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，结果需要附上依据。",
+        "id": "route-141"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3464.548
+    },
+    {
+      "id": "route-142",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，请按优先级处理。",
+        "id": "route-142"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 3020.996
+    },
+    {
+      "id": "route-143",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，团队马上要用。",
+        "id": "route-143"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 3190.32
+    },
+    {
+      "id": "route-144",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，尽量说明你的判断。",
+        "id": "route-144"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 2780.055
+    },
+    {
+      "id": "route-055",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，请给出可执行的下一步。",
+        "id": "route-055"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.82,
+      "probabilities": {},
+      "latency_ms": 13171.382
+    },
+    {
+      "id": "route-056",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，希望今天完成。",
+        "id": "route-056"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.92,
+      "probabilities": {},
+      "latency_ms": 4077.675
+    },
+    {
+      "id": "route-057",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，结果需要附上依据。",
+        "id": "route-057"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4131.016
+    },
+    {
+      "id": "route-058",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，请按优先级处理。",
+        "id": "route-058"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.85,
+      "probabilities": {},
+      "latency_ms": 4331.205
+    },
+    {
+      "id": "route-059",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，团队马上要用。",
+        "id": "route-059"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4526.111
+    },
+    {
+      "id": "route-060",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，尽量说明你的判断。",
+        "id": "route-060"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.88,
+      "probabilities": {},
+      "latency_ms": 4709.862
+    },
+    {
+      "id": "route-061",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，请给出可执行的下一步。",
+        "id": "route-061"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4123.891
+    },
+    {
+      "id": "route-062",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，希望今天完成。",
+        "id": "route-062"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 3350.334
+    },
+    {
+      "id": "route-063",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，结果需要附上依据。",
+        "id": "route-063"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3043.12
+    },
+    {
+      "id": "route-064",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，请按优先级处理。",
+        "id": "route-064"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 2983.103
+    },
+    {
+      "id": "route-065",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，团队马上要用。",
+        "id": "route-065"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4807.636
+    },
+    {
+      "id": "route-066",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，尽量说明你的判断。",
+        "id": "route-066"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 5155.372
+    },
+    {
+      "id": "route-067",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，请给出可执行的下一步。",
+        "id": "route-067"
+      },
+      "mode": "gemini",
+      "status": "failed",
+      "prediction": null,
+      "confidence": 0.0,
+      "probabilities": {},
+      "latency_ms": 9266.989,
+      "original_prediction": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "provider_output": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "error_type": "invalid_label",
+      "error": "提供商返回允许标签以外的内容（本条原始返回为过滤拒答文本）",
+      "offline_validation": true
+    },
+    {
+      "id": "route-068",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，希望今天完成。",
+        "id": "route-068"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 2983.651
+    },
+    {
+      "id": "route-069",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，结果需要附上依据。",
+        "id": "route-069"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4912.328
+    },
+    {
+      "id": "route-070",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，请按优先级处理。",
+        "id": "route-070"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4093.855
+    },
+    {
+      "id": "route-071",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，团队马上要用。",
+        "id": "route-071"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.92,
+      "probabilities": {},
+      "latency_ms": 4881.991
+    },
+    {
+      "id": "route-072",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，尽量说明你的判断。",
+        "id": "route-072"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 5459.733
+    },
+    {
+      "id": "route-199",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，请给出可执行的下一步。",
+        "id": "route-199"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3592.52
+    },
+    {
+      "id": "route-200",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，希望今天完成。",
+        "id": "route-200"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 4035.718
+    },
+    {
+      "id": "route-201",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，结果需要附上依据。",
+        "id": "route-201"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3325.355
+    },
+    {
+      "id": "route-202",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，请按优先级处理。",
+        "id": "route-202"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 5750.692
+    },
+    {
+      "id": "route-203",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，团队马上要用。",
+        "id": "route-203"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 5290.533
+    },
+    {
+      "id": "route-204",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，尽量说明你的判断。",
+        "id": "route-204"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 5290.077
+    },
+    {
+      "id": "route-205",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，请给出可执行的下一步。",
+        "id": "route-205"
+      },
+      "mode": "gemini",
+      "status": "failed",
+      "prediction": null,
+      "confidence": 0.0,
+      "probabilities": {},
+      "latency_ms": 5280.518,
+      "original_prediction": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "provider_output": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "error_type": "invalid_label",
+      "error": "提供商返回允许标签以外的内容（本条原始返回为过滤拒答文本）",
+      "offline_validation": true
+    },
+    {
+      "id": "route-206",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，希望今天完成。",
+        "id": "route-206"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 8697.938
+    },
+    {
+      "id": "route-207",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，结果需要附上依据。",
+        "id": "route-207"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 7915.693
+    },
+    {
+      "id": "route-208",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，请按优先级处理。",
+        "id": "route-208"
+      },
+      "mode": "gemini",
+      "status": "failed",
+      "prediction": null,
+      "confidence": 0.0,
+      "probabilities": {},
+      "latency_ms": 13511.139,
+      "original_prediction": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "provider_output": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "error_type": "invalid_label",
+      "error": "提供商返回允许标签以外的内容（本条原始返回为过滤拒答文本）",
+      "offline_validation": true
+    },
+    {
+      "id": "route-209",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，团队马上要用。",
+        "id": "route-209"
+      },
+      "mode": "gemini",
+      "status": "failed",
+      "prediction": null,
+      "confidence": 0.0,
+      "probabilities": {},
+      "latency_ms": 11037.186,
+      "original_prediction": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "provider_output": "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).",
+      "error_type": "invalid_label",
+      "error": "提供商返回允许标签以外的内容（本条原始返回为过滤拒答文本）",
+      "offline_validation": true
+    },
+    {
+      "id": "route-210",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，尽量说明你的判断。",
+        "id": "route-210"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 13919.486
+    },
+    {
+      "id": "route-211",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，请给出可执行的下一步。",
+        "id": "route-211"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4419.722
+    },
+    {
+      "id": "route-212",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，希望今天完成。",
+        "id": "route-212"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 6729.832
+    },
+    {
+      "id": "route-213",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，结果需要附上依据。",
+        "id": "route-213"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3360.83
+    },
+    {
+      "id": "route-214",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，请按优先级处理。",
+        "id": "route-214"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3453.208
+    },
+    {
+      "id": "route-215",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，团队马上要用。",
+        "id": "route-215"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 3502.049
+    },
+    {
+      "id": "route-216",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，尽量说明你的判断。",
+        "id": "route-216"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3652.367
+    }
+  ],
+  "output_validation": {
+    "validated_at": "2026-10-07T09:13:54.641397+08:00",
+    "method": "offline allowed-label validation; no new API requests",
+    "invalid_ids": [
+      "route-067",
+      "route-205",
+      "route-208",
+      "route-209"
+    ],
+    "source_backup": "raw_before_output_validation/corrected-f0a5428d21d0.json"
+  }
+}

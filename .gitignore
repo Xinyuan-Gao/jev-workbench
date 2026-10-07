@@ -1,0 +1,15 @@
+# Local credentials and runtime artifacts
+.env
+.env.*
+!.env.example
+!.env.*.example
+**/.env.local
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+*.log
+runs/
+# The checked-in benchmark is an immutable historical example. New runs stay local.
+jev_workbench/reports/corrected_20261007/corrected-*.json

@@ -1,0 +1,689 @@
+{
+  "run_id": "corrected-ea0fd22decf0",
+  "experiment": "rag-relevance",
+  "experiment_name": "RAG 片段相关性",
+  "mode": "gemini",
+  "status": "completed",
+  "dataset_total": 200,
+  "train_count": 120,
+  "validation_count": 40,
+  "test_count": 40,
+  "split_group_counts": {
+    "train": 12,
+    "validation": 4,
+    "test": 4
+  },
+  "input_contract": {
+    "model_receives_gold_label": false,
+    "rag_sends_query_and_passage": true,
+    "group_held_out": true
+  },
+  "metrics": {
+    "total": 40,
+    "completed": 40,
+    "failed": 0,
+    "completion_rate": 1.0,
+    "valid_output_rate": 1.0,
+    "accuracy_attempted": 0.95,
+    "accuracy_completed": 0.95,
+    "macro_f1_completed": 0.949874686716792,
+    "per_class_completed": {
+      "relevant": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "support": 20
+      },
+      "irrelevant": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1": 0.9523809523809523,
+        "support": 20
+      }
+    },
+    "avg_latency_ms_completed": 4398.59355,
+    "p95_latency_ms_completed": 7062.613649999999
+  },
+  "results": [
+    {
+      "id": "rag-161",
+      "group_id": "rag-topic-17",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-161",
+        "query": "怎么设置通知（网页端）",
+        "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.88,
+      "probabilities": {},
+      "latency_ms": 3273.473
+    },
+    {
+      "id": "rag-162",
+      "group_id": "rag-topic-17",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-162",
+        "query": "怎么设置通知（管理员视角）",
+        "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.85,
+      "probabilities": {},
+      "latency_ms": 7631.334
+    },
+    {
+      "id": "rag-163",
+      "group_id": "rag-topic-17",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-163",
+        "query": "怎么设置通知（本月遇到的问题）",
+        "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3965.394
+    },
+    {
+      "id": "rag-164",
+      "group_id": "rag-topic-17",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-164",
+        "query": "怎么设置通知（请给出具体步骤）",
+        "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.8,
+      "probabilities": {},
+      "latency_ms": 5275.837
+    },
+    {
+      "id": "rag-165",
+      "group_id": "rag-topic-17",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-165",
+        "query": "怎么设置通知（急用）",
+        "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3782.164
+    },
+    {
+      "id": "rag-166",
+      "group_id": "rag-topic-17",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-166",
+        "query": "怎么设置通知（网页端）",
+        "passage": "配色面板提供了浅色和深色两套主题。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 4000.893
+    },
+    {
+      "id": "rag-167",
+      "group_id": "rag-topic-17",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-167",
+        "query": "怎么设置通知（管理员视角）",
+        "passage": "配色面板提供了浅色和深色两套主题。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 1.0,
+      "probabilities": {},
+      "latency_ms": 4491.859
+    },
+    {
+      "id": "rag-168",
+      "group_id": "rag-topic-17",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-168",
+        "query": "怎么设置通知（本月遇到的问题）",
+        "passage": "配色面板提供了浅色和深色两套主题。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 4646.825
+    },
+    {
+      "id": "rag-169",
+      "group_id": "rag-topic-17",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-169",
+        "query": "怎么设置通知（请给出具体步骤）",
+        "passage": "配色面板提供了浅色和深色两套主题。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 2981.738
+    },
+    {
+      "id": "rag-170",
+      "group_id": "rag-topic-17",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-170",
+        "query": "怎么设置通知（急用）",
+        "passage": "配色面板提供了浅色和深色两套主题。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 3765.445
+    },
+    {
+      "id": "rag-171",
+      "group_id": "rag-topic-18",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-171",
+        "query": "登录为什么需要验证码（网页端）",
+        "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.88,
+      "probabilities": {},
+      "latency_ms": 5229.601
+    },
+    {
+      "id": "rag-172",
+      "group_id": "rag-topic-18",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-172",
+        "query": "登录为什么需要验证码（管理员视角）",
+        "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.85,
+      "probabilities": {},
+      "latency_ms": 7299.632
+    },
+    {
+      "id": "rag-173",
+      "group_id": "rag-topic-18",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-173",
+        "query": "登录为什么需要验证码（本月遇到的问题）",
+        "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4733.856
+    },
+    {
+      "id": "rag-174",
+      "group_id": "rag-topic-18",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-174",
+        "query": "登录为什么需要验证码（请给出具体步骤）",
+        "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.85,
+      "probabilities": {},
+      "latency_ms": 5143.889
+    },
+    {
+      "id": "rag-175",
+      "group_id": "rag-topic-18",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-175",
+        "query": "登录为什么需要验证码（急用）",
+        "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 5484.733
+    },
+    {
+      "id": "rag-176",
+      "group_id": "rag-topic-18",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-176",
+        "query": "登录为什么需要验证码（网页端）",
+        "passage": "本周榜单展示了最受欢迎的模板。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 4926.959
+    },
+    {
+      "id": "rag-177",
+      "group_id": "rag-topic-18",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-177",
+        "query": "登录为什么需要验证码（管理员视角）",
+        "passage": "本周榜单展示了最受欢迎的模板。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 5396.184
+    },
+    {
+      "id": "rag-178",
+      "group_id": "rag-topic-18",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-178",
+        "query": "登录为什么需要验证码（本月遇到的问题）",
+        "passage": "本周榜单展示了最受欢迎的模板。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 1.0,
+      "probabilities": {},
+      "latency_ms": 3606.796
+    },
+    {
+      "id": "rag-179",
+      "group_id": "rag-topic-18",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-179",
+        "query": "登录为什么需要验证码（请给出具体步骤）",
+        "passage": "本周榜单展示了最受欢迎的模板。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 1.0,
+      "probabilities": {},
+      "latency_ms": 4453.277
+    },
+    {
+      "id": "rag-180",
+      "group_id": "rag-topic-18",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-180",
+        "query": "登录为什么需要验证码（急用）",
+        "passage": "本周榜单展示了最受欢迎的模板。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.999,
+      "probabilities": {},
+      "latency_ms": 2306.925
+    },
+    {
+      "id": "rag-181",
+      "group_id": "rag-topic-19",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-181",
+        "query": "如何查看用量（网页端）",
+        "passage": "控制台概览页显示本月调用量和剩余配额。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4411.51
+    },
+    {
+      "id": "rag-182",
+      "group_id": "rag-topic-19",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-182",
+        "query": "如何查看用量（管理员视角）",
+        "passage": "控制台概览页显示本月调用量和剩余配额。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4403.121
+    },
+    {
+      "id": "rag-183",
+      "group_id": "rag-topic-19",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-183",
+        "query": "如何查看用量（本月遇到的问题）",
+        "passage": "控制台概览页显示本月调用量和剩余配额。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 2866.245
+    },
+    {
+      "id": "rag-184",
+      "group_id": "rag-topic-19",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-184",
+        "query": "如何查看用量（请给出具体步骤）",
+        "passage": "控制台概览页显示本月调用量和剩余配额。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.85,
+      "probabilities": {},
+      "latency_ms": 4337.062
+    },
+    {
+      "id": "rag-185",
+      "group_id": "rag-topic-19",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-185",
+        "query": "如何查看用量（急用）",
+        "passage": "控制台概览页显示本月调用量和剩余配额。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 3759.149
+    },
+    {
+      "id": "rag-186",
+      "group_id": "rag-topic-19",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-186",
+        "query": "如何查看用量（网页端）",
+        "passage": "帮助中心首页新增了常见问题导航。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 4985.89
+    },
+    {
+      "id": "rag-187",
+      "group_id": "rag-topic-19",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-187",
+        "query": "如何查看用量（管理员视角）",
+        "passage": "帮助中心首页新增了常见问题导航。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 3379.082
+    },
+    {
+      "id": "rag-188",
+      "group_id": "rag-topic-19",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-188",
+        "query": "如何查看用量（本月遇到的问题）",
+        "passage": "帮助中心首页新增了常见问题导航。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.96,
+      "probabilities": {},
+      "latency_ms": 3415.307
+    },
+    {
+      "id": "rag-189",
+      "group_id": "rag-topic-19",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-189",
+        "query": "如何查看用量（请给出具体步骤）",
+        "passage": "帮助中心首页新增了常见问题导航。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 4104.883
+    },
+    {
+      "id": "rag-190",
+      "group_id": "rag-topic-19",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-190",
+        "query": "如何查看用量（急用）",
+        "passage": "帮助中心首页新增了常见问题导航。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4679.555
+    },
+    {
+      "id": "rag-191",
+      "group_id": "rag-topic-20",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-191",
+        "query": "服务出现故障时怎么办（网页端）",
+        "passage": "请先查看状态页公告，若持续异常可提交故障工单。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 4333.763
+    },
+    {
+      "id": "rag-192",
+      "group_id": "rag-topic-20",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-192",
+        "query": "服务出现故障时怎么办（管理员视角）",
+        "passage": "请先查看状态页公告，若持续异常可提交故障工单。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.85,
+      "probabilities": {},
+      "latency_ms": 7050.139
+    },
+    {
+      "id": "rag-193",
+      "group_id": "rag-topic-20",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-193",
+        "query": "服务出现故障时怎么办（本月遇到的问题）",
+        "passage": "请先查看状态页公告，若持续异常可提交故障工单。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 4049.995
+    },
+    {
+      "id": "rag-194",
+      "group_id": "rag-topic-20",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-194",
+        "query": "服务出现故障时怎么办（请给出具体步骤）",
+        "passage": "请先查看状态页公告，若持续异常可提交故障工单。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.95,
+      "probabilities": {},
+      "latency_ms": 3864.801
+    },
+    {
+      "id": "rag-195",
+      "group_id": "rag-topic-20",
+      "gold_label": "relevant",
+      "input": {
+        "id": "rag-195",
+        "query": "服务出现故障时怎么办（急用）",
+        "passage": "请先查看状态页公告，若持续异常可提交故障工单。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "relevant",
+      "confidence": 0.98,
+      "probabilities": {},
+      "latency_ms": 4529.179
+    },
+    {
+      "id": "rag-196",
+      "group_id": "rag-topic-20",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-196",
+        "query": "服务出现故障时怎么办（网页端）",
+        "passage": "品牌中心提供了最新的字体下载包。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 3877.26
+    },
+    {
+      "id": "rag-197",
+      "group_id": "rag-topic-20",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-197",
+        "query": "服务出现故障时怎么办（管理员视角）",
+        "passage": "品牌中心提供了最新的字体下载包。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 4872.872
+    },
+    {
+      "id": "rag-198",
+      "group_id": "rag-topic-20",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-198",
+        "query": "服务出现故障时怎么办（本月遇到的问题）",
+        "passage": "品牌中心提供了最新的字体下载包。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 4164.638
+    },
+    {
+      "id": "rag-199",
+      "group_id": "rag-topic-20",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-199",
+        "query": "服务出现故障时怎么办（请给出具体步骤）",
+        "passage": "品牌中心提供了最新的字体下载包。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 3588.152
+    },
+    {
+      "id": "rag-200",
+      "group_id": "rag-topic-20",
+      "gold_label": "irrelevant",
+      "input": {
+        "id": "rag-200",
+        "query": "服务出现故障时怎么办（急用）",
+        "passage": "品牌中心提供了最新的字体下载包。"
+      },
+      "mode": "gemini",
+      "status": "completed",
+      "prediction": "irrelevant",
+      "confidence": 0.99,
+      "probabilities": {},
+      "latency_ms": 2874.325
+    }
+  ]
+}

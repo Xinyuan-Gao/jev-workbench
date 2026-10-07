@@ -1,0 +1,1081 @@
+{
+  "run_id": "corrected-33ce50a377e9",
+  "experiment": "intent-classification",
+  "experiment_name": "中文意图分类",
+  "mode": "lightgbm",
+  "status": "completed",
+  "dataset_total": 216,
+  "train_count": 126,
+  "validation_count": 36,
+  "test_count": 54,
+  "split_group_counts": {
+    "train": 21,
+    "validation": 6,
+    "test": 9
+  },
+  "input_contract": {
+    "model_receives_gold_label": false,
+    "rag_sends_query_and_passage": true,
+    "group_held_out": true
+  },
+  "metrics": {
+    "total": 54,
+    "completed": 54,
+    "failed": 0,
+    "completion_rate": 1.0,
+    "valid_output_rate": 1.0,
+    "accuracy_attempted": 0.37037037037037035,
+    "accuracy_completed": 0.37037037037037035,
+    "macro_f1_completed": 0.3187257187257187,
+    "per_class_completed": {
+      "billing": {
+        "precision": 0.5,
+        "recall": 0.1111111111111111,
+        "f1": 0.1818181818181818,
+        "support": 18
+      },
+      "technical": {
+        "precision": 0.3333333333333333,
+        "recall": 0.7777777777777778,
+        "f1": 0.4666666666666666,
+        "support": 18
+      },
+      "complaint": {
+        "precision": 0.5,
+        "recall": 0.2222222222222222,
+        "f1": 0.30769230769230765,
+        "support": 18
+      }
+    },
+    "avg_latency_ms_completed": 0.2926111111111111,
+    "p95_latency_ms_completed": 0.38449999999999995
+  },
+  "results": [
+    {
+      "id": "intent-055",
+      "group_id": "intent-billing-10",
+      "gold_label": "billing",
+      "input": {
+        "text": "优惠券没有生效，订单金额多收了。请尽快帮忙看看。",
+        "id": "intent-055"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6550814590813205,
+      "probabilities": {
+        "billing": 0.20130265067524664,
+        "complaint": 0.14361589024343296,
+        "technical": 0.6550814590813205
+      },
+      "latency_ms": 0.423
+    },
+    {
+      "id": "intent-056",
+      "group_id": "intent-billing-10",
+      "gold_label": "billing",
+      "input": {
+        "text": "优惠券没有生效，订单金额多收了。麻烦告知下一步怎么做。",
+        "id": "intent-056"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5904299977430564,
+      "probabilities": {
+        "billing": 0.18487218682836723,
+        "complaint": 0.2246978154285764,
+        "technical": 0.5904299977430564
+      },
+      "latency_ms": 0.321
+    },
+    {
+      "id": "intent-057",
+      "group_id": "intent-billing-10",
+      "gold_label": "billing",
+      "input": {
+        "text": "优惠券没有生效，订单金额多收了。这是今天上午发生的。",
+        "id": "intent-057"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5768471180592707,
+      "probabilities": {
+        "billing": 0.3315556817991509,
+        "complaint": 0.09159720014157847,
+        "technical": 0.5768471180592707
+      },
+      "latency_ms": 0.292
+    },
+    {
+      "id": "intent-058",
+      "group_id": "intent-billing-10",
+      "gold_label": "billing",
+      "input": {
+        "text": "优惠券没有生效，订单金额多收了。我可以提供订单号。",
+        "id": "intent-058"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.569769122087348,
+      "probabilities": {
+        "billing": 0.20217974956222762,
+        "complaint": 0.22805112835042446,
+        "technical": 0.569769122087348
+      },
+      "latency_ms": 0.284
+    },
+    {
+      "id": "intent-059",
+      "group_id": "intent-billing-10",
+      "gold_label": "billing",
+      "input": {
+        "text": "优惠券没有生效，订单金额多收了。希望今天能收到回复。",
+        "id": "intent-059"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.4262149229476416,
+      "probabilities": {
+        "billing": 0.2509591274154166,
+        "complaint": 0.3228259496369418,
+        "technical": 0.4262149229476416
+      },
+      "latency_ms": 0.278
+    },
+    {
+      "id": "intent-060",
+      "group_id": "intent-billing-10",
+      "gold_label": "billing",
+      "input": {
+        "text": "优惠券没有生效，订单金额多收了。请确认是否需要补充材料。",
+        "id": "intent-060"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6722320795887727,
+      "probabilities": {
+        "billing": 0.19129314130042469,
+        "complaint": 0.13647477911080244,
+        "technical": 0.6722320795887727
+      },
+      "latency_ms": 0.275
+    },
+    {
+      "id": "intent-061",
+      "group_id": "intent-billing-11",
+      "gold_label": "billing",
+      "input": {
+        "text": "能否把这笔订单改成其他支付方式？请尽快帮忙看看。",
+        "id": "intent-061"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "billing",
+      "confidence": 0.8955644606493395,
+      "probabilities": {
+        "billing": 0.8955644606493395,
+        "complaint": 0.035084722482589405,
+        "technical": 0.06935081686807115
+      },
+      "latency_ms": 0.274
+    },
+    {
+      "id": "intent-062",
+      "group_id": "intent-billing-11",
+      "gold_label": "billing",
+      "input": {
+        "text": "能否把这笔订单改成其他支付方式？麻烦告知下一步怎么做。",
+        "id": "intent-062"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.505547195163219,
+      "probabilities": {
+        "billing": 0.41833607089995273,
+        "complaint": 0.07611673393682825,
+        "technical": 0.505547195163219
+      },
+      "latency_ms": 0.273
+    },
+    {
+      "id": "intent-063",
+      "group_id": "intent-billing-11",
+      "gold_label": "billing",
+      "input": {
+        "text": "能否把这笔订单改成其他支付方式？这是今天上午发生的。",
+        "id": "intent-063"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5356746186236759,
+      "probabilities": {
+        "billing": 0.42536901881722294,
+        "complaint": 0.03895636255910119,
+        "technical": 0.5356746186236759
+      },
+      "latency_ms": 0.268
+    },
+    {
+      "id": "intent-064",
+      "group_id": "intent-billing-11",
+      "gold_label": "billing",
+      "input": {
+        "text": "能否把这笔订单改成其他支付方式？我可以提供订单号。",
+        "id": "intent-064"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.3964877888010606,
+      "probabilities": {
+        "billing": 0.38349711203866643,
+        "complaint": 0.2200150991602729,
+        "technical": 0.3964877888010606
+      },
+      "latency_ms": 0.268
+    },
+    {
+      "id": "intent-065",
+      "group_id": "intent-billing-11",
+      "gold_label": "billing",
+      "input": {
+        "text": "能否把这笔订单改成其他支付方式？希望今天能收到回复。",
+        "id": "intent-065"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.44666420845151933,
+      "probabilities": {
+        "billing": 0.3633494746167846,
+        "complaint": 0.18998631693169624,
+        "technical": 0.44666420845151933
+      },
+      "latency_ms": 0.294
+    },
+    {
+      "id": "intent-066",
+      "group_id": "intent-billing-11",
+      "gold_label": "billing",
+      "input": {
+        "text": "能否把这笔订单改成其他支付方式？请确认是否需要补充材料。",
+        "id": "intent-066"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "billing",
+      "confidence": 0.8906308214579512,
+      "probabilities": {
+        "billing": 0.8906308214579512,
+        "complaint": 0.034891441742380506,
+        "technical": 0.0744777367996683
+      },
+      "latency_ms": 0.447
+    },
+    {
+      "id": "intent-067",
+      "group_id": "intent-billing-12",
+      "gold_label": "billing",
+      "input": {
+        "text": "充值金额没有到账，请检查交易记录。请尽快帮忙看看。",
+        "id": "intent-067"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5831508514910235,
+      "probabilities": {
+        "billing": 0.12013710733371295,
+        "complaint": 0.2967120411752635,
+        "technical": 0.5831508514910235
+      },
+      "latency_ms": 0.331
+    },
+    {
+      "id": "intent-068",
+      "group_id": "intent-billing-12",
+      "gold_label": "billing",
+      "input": {
+        "text": "充值金额没有到账，请检查交易记录。麻烦告知下一步怎么做。",
+        "id": "intent-068"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.4725804515275003,
+      "probabilities": {
+        "billing": 0.08926274838835946,
+        "complaint": 0.4725804515275003,
+        "technical": 0.4381568000841402
+      },
+      "latency_ms": 0.302
+    },
+    {
+      "id": "intent-069",
+      "group_id": "intent-billing-12",
+      "gold_label": "billing",
+      "input": {
+        "text": "充值金额没有到账，请检查交易记录。这是今天上午发生的。",
+        "id": "intent-069"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5660595225109555,
+      "probabilities": {
+        "billing": 0.21157846455210608,
+        "complaint": 0.22236201293693844,
+        "technical": 0.5660595225109555
+      },
+      "latency_ms": 0.292
+    },
+    {
+      "id": "intent-070",
+      "group_id": "intent-billing-12",
+      "gold_label": "billing",
+      "input": {
+        "text": "充值金额没有到账，请检查交易记录。我可以提供订单号。",
+        "id": "intent-070"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.569769122087348,
+      "probabilities": {
+        "billing": 0.20217974956222762,
+        "complaint": 0.22805112835042446,
+        "technical": 0.569769122087348
+      },
+      "latency_ms": 0.281
+    },
+    {
+      "id": "intent-071",
+      "group_id": "intent-billing-12",
+      "gold_label": "billing",
+      "input": {
+        "text": "充值金额没有到账，请检查交易记录。希望今天能收到回复。",
+        "id": "intent-071"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.5445360766059255,
+      "probabilities": {
+        "billing": 0.13224306628080784,
+        "complaint": 0.5445360766059255,
+        "technical": 0.3232208571132666
+      },
+      "latency_ms": 0.277
+    },
+    {
+      "id": "intent-072",
+      "group_id": "intent-billing-12",
+      "gold_label": "billing",
+      "input": {
+        "text": "充值金额没有到账，请检查交易记录。请确认是否需要补充材料。",
+        "id": "intent-072"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6165963801628531,
+      "probabilities": {
+        "billing": 0.1104980110749045,
+        "complaint": 0.2729056087622424,
+        "technical": 0.6165963801628531
+      },
+      "latency_ms": 0.277
+    },
+    {
+      "id": "intent-199",
+      "group_id": "intent-complaint-10",
+      "gold_label": "complaint",
+      "input": {
+        "text": "这次处理让我很不满意，请安排专人联系。请尽快帮忙看看。",
+        "id": "intent-199"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6102516724092784,
+      "probabilities": {
+        "billing": 0.2519441347075561,
+        "complaint": 0.1378041928831655,
+        "technical": 0.6102516724092784
+      },
+      "latency_ms": 0.277
+    },
+    {
+      "id": "intent-200",
+      "group_id": "intent-complaint-10",
+      "gold_label": "complaint",
+      "input": {
+        "text": "这次处理让我很不满意，请安排专人联系。麻烦告知下一步怎么做。",
+        "id": "intent-200"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5152173870709928,
+      "probabilities": {
+        "billing": 0.33083770809899793,
+        "complaint": 0.15394490483000925,
+        "technical": 0.5152173870709928
+      },
+      "latency_ms": 0.274
+    },
+    {
+      "id": "intent-201",
+      "group_id": "intent-complaint-10",
+      "gold_label": "complaint",
+      "input": {
+        "text": "这次处理让我很不满意，请安排专人联系。这是今天上午发生的。",
+        "id": "intent-201"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5805475522801726,
+      "probabilities": {
+        "billing": 0.3469455681848082,
+        "complaint": 0.07250687953501914,
+        "technical": 0.5805475522801726
+      },
+      "latency_ms": 0.391
+    },
+    {
+      "id": "intent-202",
+      "group_id": "intent-complaint-10",
+      "gold_label": "complaint",
+      "input": {
+        "text": "这次处理让我很不满意，请安排专人联系。我可以提供订单号。",
+        "id": "intent-202"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.3964877888010606,
+      "probabilities": {
+        "billing": 0.38349711203866643,
+        "complaint": 0.2200150991602729,
+        "technical": 0.3964877888010606
+      },
+      "latency_ms": 0.325
+    },
+    {
+      "id": "intent-203",
+      "group_id": "intent-complaint-10",
+      "gold_label": "complaint",
+      "input": {
+        "text": "这次处理让我很不满意，请安排专人联系。希望今天能收到回复。",
+        "id": "intent-203"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.470951575349969,
+      "probabilities": {
+        "billing": 0.30808033118228784,
+        "complaint": 0.2209680934677433,
+        "technical": 0.470951575349969
+      },
+      "latency_ms": 0.292
+    },
+    {
+      "id": "intent-204",
+      "group_id": "intent-complaint-10",
+      "gold_label": "complaint",
+      "input": {
+        "text": "这次处理让我很不满意，请安排专人联系。请确认是否需要补充材料。",
+        "id": "intent-204"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.642854488689866,
+      "probabilities": {
+        "billing": 0.230868769515822,
+        "complaint": 0.12627674179431195,
+        "technical": 0.642854488689866
+      },
+      "latency_ms": 0.279
+    },
+    {
+      "id": "intent-205",
+      "group_id": "intent-complaint-11",
+      "gold_label": "complaint",
+      "input": {
+        "text": "你们的承诺没有兑现，我需要一个说法。请尽快帮忙看看。",
+        "id": "intent-205"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5831508514910235,
+      "probabilities": {
+        "billing": 0.12013710733371295,
+        "complaint": 0.2967120411752635,
+        "technical": 0.5831508514910235
+      },
+      "latency_ms": 0.274
+    },
+    {
+      "id": "intent-206",
+      "group_id": "intent-complaint-11",
+      "gold_label": "complaint",
+      "input": {
+        "text": "你们的承诺没有兑现，我需要一个说法。麻烦告知下一步怎么做。",
+        "id": "intent-206"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.4725804515275003,
+      "probabilities": {
+        "billing": 0.08926274838835946,
+        "complaint": 0.4725804515275003,
+        "technical": 0.4381568000841402
+      },
+      "latency_ms": 0.276
+    },
+    {
+      "id": "intent-207",
+      "group_id": "intent-complaint-11",
+      "gold_label": "complaint",
+      "input": {
+        "text": "你们的承诺没有兑现，我需要一个说法。这是今天上午发生的。",
+        "id": "intent-207"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5660595225109555,
+      "probabilities": {
+        "billing": 0.21157846455210608,
+        "complaint": 0.22236201293693844,
+        "technical": 0.5660595225109555
+      },
+      "latency_ms": 0.275
+    },
+    {
+      "id": "intent-208",
+      "group_id": "intent-complaint-11",
+      "gold_label": "complaint",
+      "input": {
+        "text": "你们的承诺没有兑现，我需要一个说法。我可以提供订单号。",
+        "id": "intent-208"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.569769122087348,
+      "probabilities": {
+        "billing": 0.20217974956222762,
+        "complaint": 0.22805112835042446,
+        "technical": 0.569769122087348
+      },
+      "latency_ms": 0.268
+    },
+    {
+      "id": "intent-209",
+      "group_id": "intent-complaint-11",
+      "gold_label": "complaint",
+      "input": {
+        "text": "你们的承诺没有兑现，我需要一个说法。希望今天能收到回复。",
+        "id": "intent-209"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.5445360766059255,
+      "probabilities": {
+        "billing": 0.13224306628080784,
+        "complaint": 0.5445360766059255,
+        "technical": 0.3232208571132666
+      },
+      "latency_ms": 0.27
+    },
+    {
+      "id": "intent-210",
+      "group_id": "intent-complaint-11",
+      "gold_label": "complaint",
+      "input": {
+        "text": "你们的承诺没有兑现，我需要一个说法。请确认是否需要补充材料。",
+        "id": "intent-210"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6165963801628531,
+      "probabilities": {
+        "billing": 0.1104980110749045,
+        "complaint": 0.2729056087622424,
+        "technical": 0.6165963801628531
+      },
+      "latency_ms": 0.269
+    },
+    {
+      "id": "intent-211",
+      "group_id": "intent-complaint-12",
+      "gold_label": "complaint",
+      "input": {
+        "text": "客服一直让我等待，完全没有解决问题。请尽快帮忙看看。",
+        "id": "intent-211"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5831508514910235,
+      "probabilities": {
+        "billing": 0.12013710733371295,
+        "complaint": 0.2967120411752635,
+        "technical": 0.5831508514910235
+      },
+      "latency_ms": 0.381
+    },
+    {
+      "id": "intent-212",
+      "group_id": "intent-complaint-12",
+      "gold_label": "complaint",
+      "input": {
+        "text": "客服一直让我等待，完全没有解决问题。麻烦告知下一步怎么做。",
+        "id": "intent-212"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.4725804515275003,
+      "probabilities": {
+        "billing": 0.08926274838835946,
+        "complaint": 0.4725804515275003,
+        "technical": 0.4381568000841402
+      },
+      "latency_ms": 0.334
+    },
+    {
+      "id": "intent-213",
+      "group_id": "intent-complaint-12",
+      "gold_label": "complaint",
+      "input": {
+        "text": "客服一直让我等待，完全没有解决问题。这是今天上午发生的。",
+        "id": "intent-213"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5660595225109555,
+      "probabilities": {
+        "billing": 0.21157846455210608,
+        "complaint": 0.22236201293693844,
+        "technical": 0.5660595225109555
+      },
+      "latency_ms": 0.297
+    },
+    {
+      "id": "intent-214",
+      "group_id": "intent-complaint-12",
+      "gold_label": "complaint",
+      "input": {
+        "text": "客服一直让我等待，完全没有解决问题。我可以提供订单号。",
+        "id": "intent-214"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.569769122087348,
+      "probabilities": {
+        "billing": 0.20217974956222762,
+        "complaint": 0.22805112835042446,
+        "technical": 0.569769122087348
+      },
+      "latency_ms": 0.283
+    },
+    {
+      "id": "intent-215",
+      "group_id": "intent-complaint-12",
+      "gold_label": "complaint",
+      "input": {
+        "text": "客服一直让我等待，完全没有解决问题。希望今天能收到回复。",
+        "id": "intent-215"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.5445360766059255,
+      "probabilities": {
+        "billing": 0.13224306628080784,
+        "complaint": 0.5445360766059255,
+        "technical": 0.3232208571132666
+      },
+      "latency_ms": 0.278
+    },
+    {
+      "id": "intent-216",
+      "group_id": "intent-complaint-12",
+      "gold_label": "complaint",
+      "input": {
+        "text": "客服一直让我等待，完全没有解决问题。请确认是否需要补充材料。",
+        "id": "intent-216"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6165963801628531,
+      "probabilities": {
+        "billing": 0.1104980110749045,
+        "complaint": 0.2729056087622424,
+        "technical": 0.6165963801628531
+      },
+      "latency_ms": 0.278
+    },
+    {
+      "id": "intent-127",
+      "group_id": "intent-technical-10",
+      "gold_label": "technical",
+      "input": {
+        "text": "API 调用返回 429，请问怎样重试？请尽快帮忙看看。",
+        "id": "intent-127"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "billing",
+      "confidence": 0.8389881465308645,
+      "probabilities": {
+        "billing": 0.8389881465308645,
+        "complaint": 0.10263300732161384,
+        "technical": 0.0583788461475217
+      },
+      "latency_ms": 0.28
+    },
+    {
+      "id": "intent-128",
+      "group_id": "intent-technical-10",
+      "gold_label": "technical",
+      "input": {
+        "text": "API 调用返回 429，请问怎样重试？麻烦告知下一步怎么做。",
+        "id": "intent-128"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5152173870709928,
+      "probabilities": {
+        "billing": 0.33083770809899793,
+        "complaint": 0.15394490483000925,
+        "technical": 0.5152173870709928
+      },
+      "latency_ms": 0.279
+    },
+    {
+      "id": "intent-129",
+      "group_id": "intent-technical-10",
+      "gold_label": "technical",
+      "input": {
+        "text": "API 调用返回 429，请问怎样重试？这是今天上午发生的。",
+        "id": "intent-129"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5805475522801726,
+      "probabilities": {
+        "billing": 0.3469455681848082,
+        "complaint": 0.07250687953501914,
+        "technical": 0.5805475522801726
+      },
+      "latency_ms": 0.28
+    },
+    {
+      "id": "intent-130",
+      "group_id": "intent-technical-10",
+      "gold_label": "technical",
+      "input": {
+        "text": "API 调用返回 429，请问怎样重试？我可以提供订单号。",
+        "id": "intent-130"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.3964877888010606,
+      "probabilities": {
+        "billing": 0.38349711203866643,
+        "complaint": 0.2200150991602729,
+        "technical": 0.3964877888010606
+      },
+      "latency_ms": 0.276
+    },
+    {
+      "id": "intent-131",
+      "group_id": "intent-technical-10",
+      "gold_label": "technical",
+      "input": {
+        "text": "API 调用返回 429，请问怎样重试？希望今天能收到回复。",
+        "id": "intent-131"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.470951575349969,
+      "probabilities": {
+        "billing": 0.30808033118228784,
+        "complaint": 0.2209680934677433,
+        "technical": 0.470951575349969
+      },
+      "latency_ms": 0.303
+    },
+    {
+      "id": "intent-132",
+      "group_id": "intent-technical-10",
+      "gold_label": "technical",
+      "input": {
+        "text": "API 调用返回 429，请问怎样重试？请确认是否需要补充材料。",
+        "id": "intent-132"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "billing",
+      "confidence": 0.8317248110118943,
+      "probabilities": {
+        "billing": 0.8317248110118943,
+        "complaint": 0.10174448705993887,
+        "technical": 0.0665307019281668
+      },
+      "latency_ms": 0.273
+    },
+    {
+      "id": "intent-133",
+      "group_id": "intent-technical-11",
+      "gold_label": "technical",
+      "input": {
+        "text": "搜索功能输入关键词后没有结果。请尽快帮忙看看。",
+        "id": "intent-133"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5831508514910235,
+      "probabilities": {
+        "billing": 0.12013710733371295,
+        "complaint": 0.2967120411752635,
+        "technical": 0.5831508514910235
+      },
+      "latency_ms": 0.267
+    },
+    {
+      "id": "intent-134",
+      "group_id": "intent-technical-11",
+      "gold_label": "technical",
+      "input": {
+        "text": "搜索功能输入关键词后没有结果。麻烦告知下一步怎么做。",
+        "id": "intent-134"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.4725804515275003,
+      "probabilities": {
+        "billing": 0.08926274838835946,
+        "complaint": 0.4725804515275003,
+        "technical": 0.4381568000841402
+      },
+      "latency_ms": 0.269
+    },
+    {
+      "id": "intent-135",
+      "group_id": "intent-technical-11",
+      "gold_label": "technical",
+      "input": {
+        "text": "搜索功能输入关键词后没有结果。这是今天上午发生的。",
+        "id": "intent-135"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5660595225109555,
+      "probabilities": {
+        "billing": 0.21157846455210608,
+        "complaint": 0.22236201293693844,
+        "technical": 0.5660595225109555
+      },
+      "latency_ms": 0.272
+    },
+    {
+      "id": "intent-136",
+      "group_id": "intent-technical-11",
+      "gold_label": "technical",
+      "input": {
+        "text": "搜索功能输入关键词后没有结果。我可以提供订单号。",
+        "id": "intent-136"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.569769122087348,
+      "probabilities": {
+        "billing": 0.20217974956222762,
+        "complaint": 0.22805112835042446,
+        "technical": 0.569769122087348
+      },
+      "latency_ms": 0.268
+    },
+    {
+      "id": "intent-137",
+      "group_id": "intent-technical-11",
+      "gold_label": "technical",
+      "input": {
+        "text": "搜索功能输入关键词后没有结果。希望今天能收到回复。",
+        "id": "intent-137"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "complaint",
+      "confidence": 0.5445360766059255,
+      "probabilities": {
+        "billing": 0.13224306628080784,
+        "complaint": 0.5445360766059255,
+        "technical": 0.3232208571132666
+      },
+      "latency_ms": 0.268
+    },
+    {
+      "id": "intent-138",
+      "group_id": "intent-technical-11",
+      "gold_label": "technical",
+      "input": {
+        "text": "搜索功能输入关键词后没有结果。请确认是否需要补充材料。",
+        "id": "intent-138"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6165963801628531,
+      "probabilities": {
+        "billing": 0.1104980110749045,
+        "complaint": 0.2729056087622424,
+        "technical": 0.6165963801628531
+      },
+      "latency_ms": 0.27
+    },
+    {
+      "id": "intent-139",
+      "group_id": "intent-technical-12",
+      "gold_label": "technical",
+      "input": {
+        "text": "同步数据时任务一直停在处理中。请尽快帮忙看看。",
+        "id": "intent-139"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.6102516724092784,
+      "probabilities": {
+        "billing": 0.2519441347075561,
+        "complaint": 0.1378041928831655,
+        "technical": 0.6102516724092784
+      },
+      "latency_ms": 0.268
+    },
+    {
+      "id": "intent-140",
+      "group_id": "intent-technical-12",
+      "gold_label": "technical",
+      "input": {
+        "text": "同步数据时任务一直停在处理中。麻烦告知下一步怎么做。",
+        "id": "intent-140"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5152173870709928,
+      "probabilities": {
+        "billing": 0.33083770809899793,
+        "complaint": 0.15394490483000925,
+        "technical": 0.5152173870709928
+      },
+      "latency_ms": 0.271
+    },
+    {
+      "id": "intent-141",
+      "group_id": "intent-technical-12",
+      "gold_label": "technical",
+      "input": {
+        "text": "同步数据时任务一直停在处理中。这是今天上午发生的。",
+        "id": "intent-141"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.5805475522801726,
+      "probabilities": {
+        "billing": 0.3469455681848082,
+        "complaint": 0.07250687953501914,
+        "technical": 0.5805475522801726
+      },
+      "latency_ms": 0.351
+    },
+    {
+      "id": "intent-142",
+      "group_id": "intent-technical-12",
+      "gold_label": "technical",
+      "input": {
+        "text": "同步数据时任务一直停在处理中。我可以提供订单号。",
+        "id": "intent-142"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.3964877888010606,
+      "probabilities": {
+        "billing": 0.38349711203866643,
+        "complaint": 0.2200150991602729,
+        "technical": 0.3964877888010606
+      },
+      "latency_ms": 0.268
+    },
+    {
+      "id": "intent-143",
+      "group_id": "intent-technical-12",
+      "gold_label": "technical",
+      "input": {
+        "text": "同步数据时任务一直停在处理中。希望今天能收到回复。",
+        "id": "intent-143"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.470951575349969,
+      "probabilities": {
+        "billing": 0.30808033118228784,
+        "complaint": 0.2209680934677433,
+        "technical": 0.470951575349969
+      },
+      "latency_ms": 0.266
+    },
+    {
+      "id": "intent-144",
+      "group_id": "intent-technical-12",
+      "gold_label": "technical",
+      "input": {
+        "text": "同步数据时任务一直停在处理中。请确认是否需要补充材料。",
+        "id": "intent-144"
+      },
+      "mode": "lightgbm",
+      "status": "completed",
+      "prediction": "technical",
+      "confidence": 0.642854488689866,
+      "probabilities": {
+        "billing": 0.230868769515822,
+        "complaint": 0.12627674179431195,
+        "technical": 0.642854488689866
+      },
+      "latency_ms": 0.294
+    }
+  ]
+}

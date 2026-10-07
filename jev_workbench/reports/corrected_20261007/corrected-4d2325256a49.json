@@ -1,0 +1,1081 @@
+{
+  "run_id": "corrected-4d2325256a49",
+  "experiment": "agent-routing",
+  "experiment_name": "Agent 路由选择",
+  "mode": "xgboost",
+  "status": "completed",
+  "dataset_total": 216,
+  "train_count": 126,
+  "validation_count": 36,
+  "test_count": 54,
+  "split_group_counts": {
+    "train": 21,
+    "validation": 6,
+    "test": 9
+  },
+  "input_contract": {
+    "model_receives_gold_label": false,
+    "rag_sends_query_and_passage": true,
+    "group_held_out": true
+  },
+  "metrics": {
+    "total": 54,
+    "completed": 54,
+    "failed": 0,
+    "completion_rate": 1.0,
+    "valid_output_rate": 1.0,
+    "accuracy_attempted": 0.37037037037037035,
+    "accuracy_completed": 0.37037037037037035,
+    "macro_f1_completed": 0.38285714285714284,
+    "per_class_completed": {
+      "search": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "support": 18
+      },
+      "code": {
+        "precision": 0.25,
+        "recall": 0.4444444444444444,
+        "f1": 0.32,
+        "support": 18
+      },
+      "writing": {
+        "precision": 0.6,
+        "recall": 0.3333333333333333,
+        "f1": 0.42857142857142855,
+        "support": 18
+      }
+    },
+    "avg_latency_ms_completed": 0.3777777777777778,
+    "p95_latency_ms_completed": 0.8328499999999996
+  },
+  "results": [
+    {
+      "id": "route-127",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，请给出可执行的下一步。",
+        "id": "route-127"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8950603008270264,
+      "probabilities": {
+        "code": 0.08134794980287552,
+        "search": 0.8950603008270264,
+        "writing": 0.02359180711209774
+      },
+      "latency_ms": 0.815
+    },
+    {
+      "id": "route-128",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，希望今天完成。",
+        "id": "route-128"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.9121713638305664,
+      "probabilities": {
+        "code": 0.06843200325965881,
+        "search": 0.9121713638305664,
+        "writing": 0.019396640360355377
+      },
+      "latency_ms": 0.331
+    },
+    {
+      "id": "route-129",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，结果需要附上依据。",
+        "id": "route-129"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.9113538265228271,
+      "probabilities": {
+        "code": 0.06406444311141968,
+        "search": 0.9113538265228271,
+        "writing": 0.024581776931881905
+      },
+      "latency_ms": 0.278
+    },
+    {
+      "id": "route-130",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，请按优先级处理。",
+        "id": "route-130"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8950603008270264,
+      "probabilities": {
+        "code": 0.08134794980287552,
+        "search": 0.8950603008270264,
+        "writing": 0.02359180711209774
+      },
+      "latency_ms": 0.255
+    },
+    {
+      "id": "route-131",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，团队马上要用。",
+        "id": "route-131"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.9146949648857117,
+      "probabilities": {
+        "code": 0.06600384414196014,
+        "search": 0.9146949648857117,
+        "writing": 0.01930123008787632
+      },
+      "latency_ms": 0.241
+    },
+    {
+      "id": "route-132",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，尽量说明你的判断。",
+        "id": "route-132"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.9055665731430054,
+      "probabilities": {
+        "code": 0.06792237609624863,
+        "search": 0.9055665731430054,
+        "writing": 0.026511112228035927
+      },
+      "latency_ms": 0.479
+    },
+    {
+      "id": "route-133",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，请给出可执行的下一步。",
+        "id": "route-133"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.6453977823257446,
+      "probabilities": {
+        "code": 0.6453977823257446,
+        "search": 0.2234468162059784,
+        "writing": 0.13115538656711578
+      },
+      "latency_ms": 0.273
+    },
+    {
+      "id": "route-134",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，希望今天完成。",
+        "id": "route-134"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5313460230827332,
+      "probabilities": {
+        "code": 0.5313460230827332,
+        "search": 0.3180471956729889,
+        "writing": 0.15060682594776154
+      },
+      "latency_ms": 0.237
+    },
+    {
+      "id": "route-135",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，结果需要附上依据。",
+        "id": "route-135"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5825840830802917,
+      "probabilities": {
+        "code": 0.5825840830802917,
+        "search": 0.26077723503112793,
+        "writing": 0.15663868188858032
+      },
+      "latency_ms": 0.238
+    },
+    {
+      "id": "route-136",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，请按优先级处理。",
+        "id": "route-136"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.6453977823257446,
+      "probabilities": {
+        "code": 0.6453977823257446,
+        "search": 0.2234468162059784,
+        "writing": 0.13115538656711578
+      },
+      "latency_ms": 0.906
+    },
+    {
+      "id": "route-137",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，团队马上要用。",
+        "id": "route-137"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5222663283348083,
+      "probabilities": {
+        "code": 0.5222663283348083,
+        "search": 0.3250094950199127,
+        "writing": 0.15272416174411774
+      },
+      "latency_ms": 0.65
+    },
+    {
+      "id": "route-138",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，尽量说明你的判断。",
+        "id": "route-138"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5915570855140686,
+      "probabilities": {
+        "code": 0.5915570855140686,
+        "search": 0.2481677383184433,
+        "writing": 0.16027523577213287
+      },
+      "latency_ms": 0.571
+    },
+    {
+      "id": "route-139",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，请给出可执行的下一步。",
+        "id": "route-139"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.8523718118667603,
+      "probabilities": {
+        "code": 0.13742202520370483,
+        "search": 0.01020609401166439,
+        "writing": 0.8523718118667603
+      },
+      "latency_ms": 0.549
+    },
+    {
+      "id": "route-140",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，希望今天完成。",
+        "id": "route-140"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5010771155357361,
+      "probabilities": {
+        "code": 0.5010771155357361,
+        "search": 0.30412793159484863,
+        "writing": 0.19479495286941528
+      },
+      "latency_ms": 0.538
+    },
+    {
+      "id": "route-141",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，结果需要附上依据。",
+        "id": "route-141"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.8500638008117676,
+      "probabilities": {
+        "code": 0.13789737224578857,
+        "search": 0.012038849294185638,
+        "writing": 0.8500638008117676
+      },
+      "latency_ms": 0.866
+    },
+    {
+      "id": "route-142",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，请按优先级处理。",
+        "id": "route-142"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.8523718118667603,
+      "probabilities": {
+        "code": 0.13742202520370483,
+        "search": 0.01020609401166439,
+        "writing": 0.8523718118667603
+      },
+      "latency_ms": 0.552
+    },
+    {
+      "id": "route-143",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，团队马上要用。",
+        "id": "route-143"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.4935986399650574,
+      "probabilities": {
+        "code": 0.4935986399650574,
+        "search": 0.30695170164108276,
+        "writing": 0.19944961369037628
+      },
+      "latency_ms": 1.102
+    },
+    {
+      "id": "route-144",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，尽量说明你的判断。",
+        "id": "route-144"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.858923077583313,
+      "probabilities": {
+        "code": 0.12998463213443756,
+        "search": 0.011092226952314377,
+        "writing": 0.858923077583313
+      },
+      "latency_ms": 0.523
+    },
+    {
+      "id": "route-055",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，请给出可执行的下一步。",
+        "id": "route-055"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.560507595539093,
+      "probabilities": {
+        "code": 0.560507595539093,
+        "search": 0.2769390046596527,
+        "writing": 0.16255339980125427
+      },
+      "latency_ms": 0.306
+    },
+    {
+      "id": "route-056",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，希望今天完成。",
+        "id": "route-056"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5313460230827332,
+      "probabilities": {
+        "code": 0.5313460230827332,
+        "search": 0.3180471956729889,
+        "writing": 0.15060682594776154
+      },
+      "latency_ms": 0.378
+    },
+    {
+      "id": "route-057",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，结果需要附上依据。",
+        "id": "route-057"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.4944359362125397,
+      "probabilities": {
+        "code": 0.4944359362125397,
+        "search": 0.31584709882736206,
+        "writing": 0.18971697986125946
+      },
+      "latency_ms": 0.563
+    },
+    {
+      "id": "route-058",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，请按优先级处理。",
+        "id": "route-058"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5566859245300293,
+      "probabilities": {
+        "code": 0.5566859245300293,
+        "search": 0.28186899423599243,
+        "writing": 0.16144506633281708
+      },
+      "latency_ms": 0.759
+    },
+    {
+      "id": "route-059",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，团队马上要用。",
+        "id": "route-059"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5222663283348083,
+      "probabilities": {
+        "code": 0.5222663283348083,
+        "search": 0.3250094950199127,
+        "writing": 0.15272416174411774
+      },
+      "latency_ms": 0.558
+    },
+    {
+      "id": "route-060",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，尽量说明你的判断。",
+        "id": "route-060"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5036894679069519,
+      "probabilities": {
+        "code": 0.5036894679069519,
+        "search": 0.3015555739402771,
+        "writing": 0.1947549283504486
+      },
+      "latency_ms": 0.306
+    },
+    {
+      "id": "route-061",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，请给出可执行的下一步。",
+        "id": "route-061"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5271744132041931,
+      "probabilities": {
+        "code": 0.5271744132041931,
+        "search": 0.26871684193611145,
+        "writing": 0.20410874485969543
+      },
+      "latency_ms": 0.262
+    },
+    {
+      "id": "route-062",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，希望今天完成。",
+        "id": "route-062"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5044194459915161,
+      "probabilities": {
+        "code": 0.5044194459915161,
+        "search": 0.2982698082923889,
+        "writing": 0.19731074571609497
+      },
+      "latency_ms": 0.238
+    },
+    {
+      "id": "route-063",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，结果需要附上依据。",
+        "id": "route-063"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.4801146984100342,
+      "probabilities": {
+        "code": 0.4801146984100342,
+        "search": 0.29545000195503235,
+        "writing": 0.22443534433841705
+      },
+      "latency_ms": 0.238
+    },
+    {
+      "id": "route-064",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，请按优先级处理。",
+        "id": "route-064"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5236860513687134,
+      "probabilities": {
+        "code": 0.5236860513687134,
+        "search": 0.2735558748245239,
+        "writing": 0.20275813341140747
+      },
+      "latency_ms": 0.223
+    },
+    {
+      "id": "route-065",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，团队马上要用。",
+        "id": "route-065"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.49705833196640015,
+      "probabilities": {
+        "code": 0.49705833196640015,
+        "search": 0.30050140619277954,
+        "writing": 0.20244023203849792
+      },
+      "latency_ms": 0.232
+    },
+    {
+      "id": "route-066",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，尽量说明你的判断。",
+        "id": "route-066"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5036894679069519,
+      "probabilities": {
+        "code": 0.5036894679069519,
+        "search": 0.3015555739402771,
+        "writing": 0.1947549283504486
+      },
+      "latency_ms": 0.223
+    },
+    {
+      "id": "route-067",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，请给出可执行的下一步。",
+        "id": "route-067"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8238000273704529,
+      "probabilities": {
+        "code": 0.14084549248218536,
+        "search": 0.8238000273704529,
+        "writing": 0.03535453975200653
+      },
+      "latency_ms": 0.307
+    },
+    {
+      "id": "route-068",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，希望今天完成。",
+        "id": "route-068"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8441111445426941,
+      "probabilities": {
+        "code": 0.12647967040538788,
+        "search": 0.8441111445426941,
+        "writing": 0.029409140348434448
+      },
+      "latency_ms": 0.398
+    },
+    {
+      "id": "route-069",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，结果需要附上依据。",
+        "id": "route-069"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8401323556900024,
+      "probabilities": {
+        "code": 0.12181292474269867,
+        "search": 0.8401323556900024,
+        "writing": 0.038054753094911575
+      },
+      "latency_ms": 0.242
+    },
+    {
+      "id": "route-070",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，请按优先级处理。",
+        "id": "route-070"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8238000273704529,
+      "probabilities": {
+        "code": 0.14084549248218536,
+        "search": 0.8238000273704529,
+        "writing": 0.03535453975200653
+      },
+      "latency_ms": 0.232
+    },
+    {
+      "id": "route-071",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，团队马上要用。",
+        "id": "route-071"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8457236886024475,
+      "probabilities": {
+        "code": 0.12461017072200775,
+        "search": 0.8457236886024475,
+        "writing": 0.029666125774383545
+      },
+      "latency_ms": 0.222
+    },
+    {
+      "id": "route-072",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，尽量说明你的判断。",
+        "id": "route-072"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.8345375061035156,
+      "probabilities": {
+        "code": 0.12493933737277985,
+        "search": 0.8345375061035156,
+        "writing": 0.04052318260073662
+      },
+      "latency_ms": 0.225
+    },
+    {
+      "id": "route-199",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，请给出可执行的下一步。",
+        "id": "route-199"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.9712004661560059,
+      "probabilities": {
+        "code": 0.018171148374676704,
+        "search": 0.010628369636833668,
+        "writing": 0.9712004661560059
+      },
+      "latency_ms": 0.23
+    },
+    {
+      "id": "route-200",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，希望今天完成。",
+        "id": "route-200"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.9691464304924011,
+      "probabilities": {
+        "code": 0.01805785670876503,
+        "search": 0.012795648537576199,
+        "writing": 0.9691464304924011
+      },
+      "latency_ms": 0.217
+    },
+    {
+      "id": "route-201",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，结果需要附上依据。",
+        "id": "route-201"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.9718853831291199,
+      "probabilities": {
+        "code": 0.016008611768484116,
+        "search": 0.012106047011911869,
+        "writing": 0.9718853831291199
+      },
+      "latency_ms": 0.218
+    },
+    {
+      "id": "route-202",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，请按优先级处理。",
+        "id": "route-202"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.9712004661560059,
+      "probabilities": {
+        "code": 0.018171148374676704,
+        "search": 0.010628369636833668,
+        "writing": 0.9712004661560059
+      },
+      "latency_ms": 0.223
+    },
+    {
+      "id": "route-203",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，团队马上要用。",
+        "id": "route-203"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.9695884585380554,
+      "probabilities": {
+        "code": 0.017511192709207535,
+        "search": 0.012900356203317642,
+        "writing": 0.9695884585380554
+      },
+      "latency_ms": 0.549
+    },
+    {
+      "id": "route-204",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，尽量说明你的判断。",
+        "id": "route-204"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.9717404842376709,
+      "probabilities": {
+        "code": 0.01653820276260376,
+        "search": 0.01172127015888691,
+        "writing": 0.9717404842376709
+      },
+      "latency_ms": 0.401
+    },
+    {
+      "id": "route-205",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，请给出可执行的下一步。",
+        "id": "route-205"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.9307029247283936,
+      "probabilities": {
+        "code": 0.9307029247283936,
+        "search": 0.041987720876932144,
+        "writing": 0.027309387922286987
+      },
+      "latency_ms": 0.239
+    },
+    {
+      "id": "route-206",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，希望今天完成。",
+        "id": "route-206"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.9248631000518799,
+      "probabilities": {
+        "code": 0.9248631000518799,
+        "search": 0.049279067665338516,
+        "writing": 0.02585790678858757
+      },
+      "latency_ms": 0.22
+    },
+    {
+      "id": "route-207",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，结果需要附上依据。",
+        "id": "route-207"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.9144018292427063,
+      "probabilities": {
+        "code": 0.9144018292427063,
+        "search": 0.0513920783996582,
+        "writing": 0.034206077456474304
+      },
+      "latency_ms": 0.23
+    },
+    {
+      "id": "route-208",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，请按优先级处理。",
+        "id": "route-208"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.9307029247283936,
+      "probabilities": {
+        "code": 0.9307029247283936,
+        "search": 0.041987720876932144,
+        "writing": 0.027309387922286987
+      },
+      "latency_ms": 0.227
+    },
+    {
+      "id": "route-209",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，团队马上要用。",
+        "id": "route-209"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.924170196056366,
+      "probabilities": {
+        "code": 0.924170196056366,
+        "search": 0.04986494407057762,
+        "writing": 0.02596479281783104
+      },
+      "latency_ms": 0.218
+    },
+    {
+      "id": "route-210",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，尽量说明你的判断。",
+        "id": "route-210"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.9165950417518616,
+      "probabilities": {
+        "code": 0.9165950417518616,
+        "search": 0.04842321202158928,
+        "writing": 0.03498178720474243
+      },
+      "latency_ms": 0.229
+    },
+    {
+      "id": "route-211",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，请给出可执行的下一步。",
+        "id": "route-211"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.560507595539093,
+      "probabilities": {
+        "code": 0.560507595539093,
+        "search": 0.2769390046596527,
+        "writing": 0.16255339980125427
+      },
+      "latency_ms": 0.221
+    },
+    {
+      "id": "route-212",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，希望今天完成。",
+        "id": "route-212"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5313460230827332,
+      "probabilities": {
+        "code": 0.5313460230827332,
+        "search": 0.3180471956729889,
+        "writing": 0.15060682594776154
+      },
+      "latency_ms": 0.215
+    },
+    {
+      "id": "route-213",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，结果需要附上依据。",
+        "id": "route-213"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.4944359362125397,
+      "probabilities": {
+        "code": 0.4944359362125397,
+        "search": 0.31584709882736206,
+        "writing": 0.18971697986125946
+      },
+      "latency_ms": 0.539
+    },
+    {
+      "id": "route-214",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，请按优先级处理。",
+        "id": "route-214"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5566859245300293,
+      "probabilities": {
+        "code": 0.5566859245300293,
+        "search": 0.28186899423599243,
+        "writing": 0.16144506633281708
+      },
+      "latency_ms": 0.332
+    },
+    {
+      "id": "route-215",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，团队马上要用。",
+        "id": "route-215"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5222663283348083,
+      "probabilities": {
+        "code": 0.5222663283348083,
+        "search": 0.3250094950199127,
+        "writing": 0.15272416174411774
+      },
+      "latency_ms": 0.247
+    },
+    {
+      "id": "route-216",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，尽量说明你的判断。",
+        "id": "route-216"
+      },
+      "mode": "xgboost",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.5036894679069519,
+      "probabilities": {
+        "code": 0.5036894679069519,
+        "search": 0.3015555739402771,
+        "writing": 0.1947549283504486
+      },
+      "latency_ms": 0.329
+    }
+  ]
+}

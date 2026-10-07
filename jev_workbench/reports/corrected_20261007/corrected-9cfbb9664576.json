@@ -1,0 +1,1081 @@
+{
+  "run_id": "corrected-9cfbb9664576",
+  "experiment": "agent-routing",
+  "experiment_name": "Agent 路由选择",
+  "mode": "jev",
+  "status": "completed",
+  "dataset_total": 216,
+  "train_count": 126,
+  "validation_count": 36,
+  "test_count": 54,
+  "split_group_counts": {
+    "train": 21,
+    "validation": 6,
+    "test": 9
+  },
+  "input_contract": {
+    "model_receives_gold_label": false,
+    "rag_sends_query_and_passage": true,
+    "group_held_out": true
+  },
+  "metrics": {
+    "total": 54,
+    "completed": 54,
+    "failed": 0,
+    "completion_rate": 1.0,
+    "valid_output_rate": 1.0,
+    "accuracy_attempted": 1.0,
+    "accuracy_completed": 1.0,
+    "macro_f1_completed": 1.0,
+    "per_class_completed": {
+      "search": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "code": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "writing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      }
+    },
+    "avg_latency_ms_completed": 1334.9113703703706,
+    "p95_latency_ms_completed": 1511.7625499999997
+  },
+  "results": [
+    {
+      "id": "route-127",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，请给出可执行的下一步。",
+        "id": "route-127"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.88,
+      "probabilities": {
+        "code": 0.92,
+        "search": 0.01,
+        "writing": 0.07
+      },
+      "latency_ms": 1492.994
+    },
+    {
+      "id": "route-128",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，希望今天完成。",
+        "id": "route-128"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.97,
+      "probabilities": {
+        "code": 0.98,
+        "search": 0.0,
+        "writing": 0.02
+      },
+      "latency_ms": 1290.579
+    },
+    {
+      "id": "route-129",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，结果需要附上依据。",
+        "id": "route-129"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.86,
+      "probabilities": {
+        "code": 0.91,
+        "writing": 0.09,
+        "search": 0.0
+      },
+      "latency_ms": 1058.471
+    },
+    {
+      "id": "route-130",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，请按优先级处理。",
+        "id": "route-130"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.94,
+      "probabilities": {
+        "writing": 0.04,
+        "search": 0.0,
+        "code": 0.96
+      },
+      "latency_ms": 1282.076
+    },
+    {
+      "id": "route-131",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，团队马上要用。",
+        "id": "route-131"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.96,
+      "probabilities": {
+        "code": 0.98,
+        "writing": 0.02,
+        "search": 0.0
+      },
+      "latency_ms": 1250.533
+    },
+    {
+      "id": "route-132",
+      "group_id": "route-code-10",
+      "gold_label": "code",
+      "input": {
+        "task": "为 API 增加参数校验和错误处理，尽量说明你的判断。",
+        "id": "route-132"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.84,
+      "probabilities": {
+        "code": 0.89,
+        "writing": 0.1,
+        "search": 0.01
+      },
+      "latency_ms": 1333.277
+    },
+    {
+      "id": "route-133",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，请给出可执行的下一步。",
+        "id": "route-133"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.94,
+      "probabilities": {
+        "search": 0.02,
+        "writing": 0.02,
+        "code": 0.96
+      },
+      "latency_ms": 1255.224
+    },
+    {
+      "id": "route-134",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，希望今天完成。",
+        "id": "route-134"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.95,
+      "probabilities": {
+        "search": 0.02,
+        "writing": 0.01,
+        "code": 0.97
+      },
+      "latency_ms": 1366.763
+    },
+    {
+      "id": "route-135",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，结果需要附上依据。",
+        "id": "route-135"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.89,
+      "probabilities": {
+        "code": 0.93,
+        "writing": 0.03,
+        "search": 0.04
+      },
+      "latency_ms": 1059.614
+    },
+    {
+      "id": "route-136",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，请按优先级处理。",
+        "id": "route-136"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.96,
+      "probabilities": {
+        "writing": 0.01,
+        "search": 0.02,
+        "code": 0.97
+      },
+      "latency_ms": 1289.995
+    },
+    {
+      "id": "route-137",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，团队马上要用。",
+        "id": "route-137"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.94,
+      "probabilities": {
+        "writing": 0.01,
+        "code": 0.96,
+        "search": 0.03
+      },
+      "latency_ms": 1198.862
+    },
+    {
+      "id": "route-138",
+      "group_id": "route-code-11",
+      "gold_label": "code",
+      "input": {
+        "task": "定位部署后 502 错误并给出修复代码，尽量说明你的判断。",
+        "id": "route-138"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.91,
+      "probabilities": {
+        "code": 0.94,
+        "writing": 0.03,
+        "search": 0.03
+      },
+      "latency_ms": 1406.303
+    },
+    {
+      "id": "route-139",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，请给出可执行的下一步。",
+        "id": "route-139"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.88,
+      "probabilities": {
+        "writing": 0.08,
+        "search": 0.0,
+        "code": 0.92
+      },
+      "latency_ms": 1224.084
+    },
+    {
+      "id": "route-140",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，希望今天完成。",
+        "id": "route-140"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.93,
+      "probabilities": {
+        "writing": 0.04,
+        "code": 0.96,
+        "search": 0.0
+      },
+      "latency_ms": 1083.772
+    },
+    {
+      "id": "route-141",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，结果需要附上依据。",
+        "id": "route-141"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.9,
+      "probabilities": {
+        "writing": 0.07,
+        "code": 0.93,
+        "search": 0.0
+      },
+      "latency_ms": 1151.826
+    },
+    {
+      "id": "route-142",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，请按优先级处理。",
+        "id": "route-142"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.87,
+      "probabilities": {
+        "writing": 0.09,
+        "search": 0.0,
+        "code": 0.91
+      },
+      "latency_ms": 1275.332
+    },
+    {
+      "id": "route-143",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，团队马上要用。",
+        "id": "route-143"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.94,
+      "probabilities": {
+        "search": 0.0,
+        "writing": 0.04,
+        "code": 0.96
+      },
+      "latency_ms": 1305.666
+    },
+    {
+      "id": "route-144",
+      "group_id": "route-code-12",
+      "gold_label": "code",
+      "input": {
+        "task": "为实验平台写一个结果导出函数，尽量说明你的判断。",
+        "id": "route-144"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "code",
+      "confidence": 0.75,
+      "probabilities": {
+        "writing": 0.17,
+        "code": 0.83,
+        "search": 0.0
+      },
+      "latency_ms": 1451.852
+    },
+    {
+      "id": "route-055",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，请给出可执行的下一步。",
+        "id": "route-055"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.66,
+      "probabilities": {
+        "writing": 0.13,
+        "code": 0.09,
+        "search": 0.78
+      },
+      "latency_ms": 1443.934
+    },
+    {
+      "id": "route-056",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，希望今天完成。",
+        "id": "route-056"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.85,
+      "probabilities": {
+        "writing": 0.05,
+        "code": 0.05,
+        "search": 0.9
+      },
+      "latency_ms": 1144.152
+    },
+    {
+      "id": "route-057",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，结果需要附上依据。",
+        "id": "route-057"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.67,
+      "probabilities": {
+        "code": 0.05,
+        "writing": 0.16,
+        "search": 0.79
+      },
+      "latency_ms": 1224.462
+    },
+    {
+      "id": "route-058",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，请按优先级处理。",
+        "id": "route-058"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.67,
+      "probabilities": {
+        "code": 0.07,
+        "writing": 0.15,
+        "search": 0.78
+      },
+      "latency_ms": 1398.588
+    },
+    {
+      "id": "route-059",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，团队马上要用。",
+        "id": "route-059"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.89,
+      "probabilities": {
+        "search": 0.93,
+        "writing": 0.04,
+        "code": 0.03
+      },
+      "latency_ms": 1270.699
+    },
+    {
+      "id": "route-060",
+      "group_id": "route-search-10",
+      "gold_label": "search",
+      "input": {
+        "task": "查找用户反馈中最常见的问题，尽量说明你的判断。",
+        "id": "route-060"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.47,
+      "probabilities": {
+        "writing": 0.32,
+        "code": 0.03,
+        "search": 0.65
+      },
+      "latency_ms": 1171.241
+    },
+    {
+      "id": "route-061",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，请给出可执行的下一步。",
+        "id": "route-061"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.97,
+      "probabilities": {
+        "code": 0.02,
+        "search": 0.97,
+        "writing": 0.01
+      },
+      "latency_ms": 1336.063
+    },
+    {
+      "id": "route-062",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，希望今天完成。",
+        "id": "route-062"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.99,
+      "probabilities": {
+        "code": 0.0,
+        "search": 1.0,
+        "writing": 0.0
+      },
+      "latency_ms": 1317.957
+    },
+    {
+      "id": "route-063",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，结果需要附上依据。",
+        "id": "route-063"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.97,
+      "probabilities": {
+        "code": 0.01,
+        "search": 0.98,
+        "writing": 0.01
+      },
+      "latency_ms": 1428.386
+    },
+    {
+      "id": "route-064",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，请按优先级处理。",
+        "id": "route-064"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.98,
+      "probabilities": {
+        "writing": 0.01,
+        "search": 0.98,
+        "code": 0.01
+      },
+      "latency_ms": 1331.328
+    },
+    {
+      "id": "route-065",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，团队马上要用。",
+        "id": "route-065"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.98,
+      "probabilities": {
+        "search": 0.99,
+        "writing": 0.0,
+        "code": 0.01
+      },
+      "latency_ms": 1400.141
+    },
+    {
+      "id": "route-066",
+      "group_id": "route-search-11",
+      "gold_label": "search",
+      "input": {
+        "task": "搜索开源许可证的兼容性说明，尽量说明你的判断。",
+        "id": "route-066"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.9,
+      "probabilities": {
+        "writing": 0.06,
+        "search": 0.93,
+        "code": 0.01
+      },
+      "latency_ms": 1404.513
+    },
+    {
+      "id": "route-067",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，请给出可执行的下一步。",
+        "id": "route-067"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.9,
+      "probabilities": {
+        "search": 0.93,
+        "writing": 0.05,
+        "code": 0.01
+      },
+      "latency_ms": 1420.486
+    },
+    {
+      "id": "route-068",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，希望今天完成。",
+        "id": "route-068"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.81,
+      "probabilities": {
+        "code": 0.01,
+        "writing": 0.11,
+        "search": 0.88
+      },
+      "latency_ms": 1413.953
+    },
+    {
+      "id": "route-069",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，结果需要附上依据。",
+        "id": "route-069"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.88,
+      "probabilities": {
+        "writing": 0.08,
+        "code": 0.0,
+        "search": 0.92
+      },
+      "latency_ms": 1452.474
+    },
+    {
+      "id": "route-070",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，请按优先级处理。",
+        "id": "route-070"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.82,
+      "probabilities": {
+        "writing": 0.11,
+        "search": 0.87,
+        "code": 0.02
+      },
+      "latency_ms": 1494.44
+    },
+    {
+      "id": "route-071",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，团队马上要用。",
+        "id": "route-071"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.87,
+      "probabilities": {
+        "code": 0.02,
+        "writing": 0.07,
+        "search": 0.91
+      },
+      "latency_ms": 1253.925
+    },
+    {
+      "id": "route-072",
+      "group_id": "route-search-12",
+      "gold_label": "search",
+      "input": {
+        "task": "帮我整理网上关于 JEV 的使用案例，尽量说明你的判断。",
+        "id": "route-072"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "search",
+      "confidence": 0.72,
+      "probabilities": {
+        "writing": 0.18,
+        "search": 0.81,
+        "code": 0.01
+      },
+      "latency_ms": 1288.54
+    },
+    {
+      "id": "route-199",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，请给出可执行的下一步。",
+        "id": "route-199"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {
+        "code": 0.02,
+        "writing": 0.97,
+        "search": 0.01
+      },
+      "latency_ms": 1753.069
+    },
+    {
+      "id": "route-200",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，希望今天完成。",
+        "id": "route-200"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.97,
+      "probabilities": {
+        "search": 0.01,
+        "writing": 0.98,
+        "code": 0.01
+      },
+      "latency_ms": 1454.754
+    },
+    {
+      "id": "route-201",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，结果需要附上依据。",
+        "id": "route-201"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.97,
+      "probabilities": {
+        "code": 0.01,
+        "writing": 0.98,
+        "search": 0.01
+      },
+      "latency_ms": 1331.736
+    },
+    {
+      "id": "route-202",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，请按优先级处理。",
+        "id": "route-202"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.91,
+      "probabilities": {
+        "writing": 0.94,
+        "search": 0.01,
+        "code": 0.05
+      },
+      "latency_ms": 1310.598
+    },
+    {
+      "id": "route-203",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，团队马上要用。",
+        "id": "route-203"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.98,
+      "probabilities": {
+        "code": 0.01,
+        "search": 0.0,
+        "writing": 0.99
+      },
+      "latency_ms": 1484.836
+    },
+    {
+      "id": "route-204",
+      "group_id": "route-writing-10",
+      "gold_label": "writing",
+      "input": {
+        "task": "为这组数据写一份分析报告，尽量说明你的判断。",
+        "id": "route-204"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.97,
+      "probabilities": {
+        "code": 0.02,
+        "search": 0.01,
+        "writing": 0.97
+      },
+      "latency_ms": 1293.168
+    },
+    {
+      "id": "route-205",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，请给出可执行的下一步。",
+        "id": "route-205"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.96,
+      "probabilities": {
+        "search": 0.01,
+        "writing": 0.98,
+        "code": 0.01
+      },
+      "latency_ms": 1354.271
+    },
+    {
+      "id": "route-206",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，希望今天完成。",
+        "id": "route-206"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.98,
+      "probabilities": {
+        "code": 0.01,
+        "writing": 0.98,
+        "search": 0.01
+      },
+      "latency_ms": 1413.306
+    },
+    {
+      "id": "route-207",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，结果需要附上依据。",
+        "id": "route-207"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.96,
+      "probabilities": {
+        "code": 0.02,
+        "writing": 0.97,
+        "search": 0.01
+      },
+      "latency_ms": 1543.933
+    },
+    {
+      "id": "route-208",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，请按优先级处理。",
+        "id": "route-208"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.94,
+      "probabilities": {
+        "code": 0.02,
+        "writing": 0.96,
+        "search": 0.02
+      },
+      "latency_ms": 1311.26
+    },
+    {
+      "id": "route-209",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，团队马上要用。",
+        "id": "route-209"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.98,
+      "probabilities": {
+        "writing": 0.98,
+        "code": 0.01,
+        "search": 0.01
+      },
+      "latency_ms": 1404.692
+    },
+    {
+      "id": "route-210",
+      "group_id": "route-writing-11",
+      "gold_label": "writing",
+      "input": {
+        "task": "帮我拟一个 JEV 实验的标题和摘要，尽量说明你的判断。",
+        "id": "route-210"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.96,
+      "probabilities": {
+        "search": 0.01,
+        "writing": 0.98,
+        "code": 0.01
+      },
+      "latency_ms": 1467.259
+    },
+    {
+      "id": "route-211",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，请给出可执行的下一步。",
+        "id": "route-211"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.86,
+      "probabilities": {
+        "search": 0.01,
+        "writing": 0.9,
+        "code": 0.09
+      },
+      "latency_ms": 1558.238
+    },
+    {
+      "id": "route-212",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，希望今天完成。",
+        "id": "route-212"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {
+        "code": 0.03,
+        "search": 0.0,
+        "writing": 0.97
+      },
+      "latency_ms": 1331.213
+    },
+    {
+      "id": "route-213",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，结果需要附上依据。",
+        "id": "route-213"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.9,
+      "probabilities": {
+        "code": 0.06,
+        "writing": 0.93,
+        "search": 0.01
+      },
+      "latency_ms": 1310.24
+    },
+    {
+      "id": "route-214",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，请按优先级处理。",
+        "id": "route-214"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.91,
+      "probabilities": {
+        "writing": 0.95,
+        "code": 0.05,
+        "search": 0.0
+      },
+      "latency_ms": 1146.201
+    },
+    {
+      "id": "route-215",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，团队马上要用。",
+        "id": "route-215"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.95,
+      "probabilities": {
+        "search": 0.0,
+        "writing": 0.97,
+        "code": 0.03
+      },
+      "latency_ms": 1312.18
+    },
+    {
+      "id": "route-216",
+      "group_id": "route-writing-12",
+      "gold_label": "writing",
+      "input": {
+        "task": "把开发日志写成周报，尽量说明你的判断。",
+        "id": "route-216"
+      },
+      "mode": "jev",
+      "status": "completed",
+      "prediction": "writing",
+      "confidence": 0.94,
+      "probabilities": {
+        "code": 0.04,
+        "writing": 0.96,
+        "search": 0.0
+      },
+      "latency_ms": 1331.755
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="JEV 与传统模型的本地可视化实验工作台" />
+    <title>JEV Lab · 实验工作台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <p class="eyebrow">LOCAL EVALUATION CONSOLE</p>
+            <h1>JEV Lab</h1>
+          </div>
+        </div>
+        <div class="topbar-meta">
+          <span class="connection-dot" id="connection-dot"></span>
+          <span id="connection-label">等待连接后端</span>
+          <span class="divider"></span>
+          <span class="mono" id="clock">--:--:--</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">WORKSPACE</p>
+              <h2>实验目录</h2>
+            </div>
+            <button class="icon-button" id="refresh-experiments" title="刷新实验目录" aria-label="刷新实验目录">↻</button>
+          </div>
+          <div class="experiment-list" id="experiment-list" aria-label="实验列表"></div>
+          <div class="sidebar-footer">
+            <span class="status-square"></span>
+            <span>每次运行都会保存配置快照</span>
+          </div>
+        </aside>
+
+        <section class="main-column">
+          <div class="hero-row">
+            <div>
+              <p class="eyebrow" id="experiment-kicker">EXPERIMENT 01 / ZERO-SHOT</p>
+              <h2 id="experiment-title">零样本意图分类</h2>
+              <p class="muted" id="experiment-description">在同一批输入上比较规则、JEV 与生成式模型的判断质量、校准和运行成本。</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-quiet" href="/corrected.html">本次重跑结果</a>
+              <button class="button button-quiet" id="reset-view">重置视图</button>
+              <button class="button button-primary" id="start-run">开始实验 <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+
+          <div class="metric-grid" aria-live="polite">
+            <article class="metric-card"><span class="metric-label">运行状态</span><strong id="run-status">待运行</strong><span class="metric-foot" id="run-id">尚未创建 run</span></article>
+            <article class="metric-card"><span class="metric-label">完成样本</span><strong id="sample-progress">0 <small>/ —</small></strong><span class="metric-foot" id="throughput">等待开始</span></article>
+            <article class="metric-card"><span class="metric-label">当前最快</span><strong id="fastest-model">—</strong><span class="metric-foot" id="fastest-latency">—</span></article>
+            <article class="metric-card"><span class="metric-label">累计成本</span><strong id="total-cost">—</strong><span class="metric-foot">尚未记录计费明细</span></article>
+          </div>
+
+          <div class="progress-block panel-lite">
+            <div class="progress-header"><span>运行进度</span><span class="mono" id="progress-percent">0%</span></div>
+            <div class="progress-track"><div class="progress-value" id="progress-value"></div></div>
+          </div>
+
+          <div class="content-grid">
+            <section class="panel chart-panel">
+              <div class="panel-heading compact"><div><p class="eyebrow">LIVE TRACE</p><h3>事件流</h3></div><span class="live-chip" id="live-chip">IDLE</span></div>
+              <div class="event-feed" id="event-feed" aria-live="polite" aria-label="实验事件流"></div>
+            </section>
+            <section class="panel chart-panel result-panel">
+              <div class="panel-heading compact"><div><p class="eyebrow">MODEL SNAPSHOT</p><h3>模型对比</h3></div><span class="muted mono" id="result-count">0 models</span></div>
+              <div class="chart-wrap"><canvas id="model-chart" aria-label="模型指标对比图"></canvas><div class="chart-fallback" id="chart-fallback">运行后显示准确率和延迟</div></div>
+              <div class="table-wrap"><table><thead><tr><th>模型</th><th>Accuracy</th><th>Macro-F1</th><th>p95</th><th>成本</th></tr></thead><tbody id="result-table"><tr><td colspan="5" class="empty-cell">暂无结果</td></tr></tbody></table></div>
+            </section>
+          </div>
+
+          <section class="panel sample-panel">
+            <div class="panel-heading compact"><div><p class="eyebrow">SAMPLE INSPECTOR</p><h3>样本详情</h3></div><label class="select-label">筛选 <select id="sample-filter"><option value="all">全部样本</option><option value="errors">错误</option><option value="boundary">边界样本</option></select></label></div>
+            <div class="sample-table-wrap"><table><thead><tr><th>样本</th><th>输入摘要</th><th>真实标签</th><th>JEV 预测</th><th>置信度</th><th>延迟</th><th></th></tr></thead><tbody id="sample-table"><tr><td colspan="7" class="empty-cell">开始运行后查看单条样本</td></tr></tbody></table></div>
+          </section>
+        </section>
+
+        <aside class="right-rail">
+          <section class="panel config-panel">
+            <div class="panel-heading compact"><div><p class="eyebrow">RUN CONFIG</p><h3>运行配置</h3></div><span class="config-state">LOCAL</span></div>
+            <label class="field-label">数据集<select id="dataset-select"><option value="intent-classification">中文意图分类 · 216</option><option value="rag-relevance">RAG 片段相关性 · 200</option><option value="agent-routing">Agent 路由选择 · 216</option></select></label>
+            <label class="field-label">运行模式<select id="mode-select"><option value="xgboost">XGBoost · 本地</option><option value="lightgbm">LightGBM · 本地</option><option value="jev">JEV API · 远程</option><option value="gemini">Gemini 3.8 Flash · 远程</option><option value="simulation">规则模拟 · 本地</option></select></label>
+            <div class="field-label">模型适配器</div>
+            <div class="model-toggles" id="model-toggles"><label class="toggle-row"><input type="checkbox" value="xgboost" checked /><span class="toggle-box"></span><span>TF-IDF + XGBoost</span><em>local</em></label><label class="toggle-row"><input type="checkbox" value="lightgbm" /><span class="toggle-box"></span><span>TF-IDF + LightGBM</span><em>local</em></label><label class="toggle-row"><input type="checkbox" value="jev" /><span class="toggle-box"></span><span>JEV</span><em>api</em></label><label class="toggle-row"><input type="checkbox" value="gemini" /><span class="toggle-box"></span><span>Gemini 3.8 Flash</span><em>api</em></label></div>
+            <label class="field-label">并发数<div class="range-row"><input id="concurrency" type="range" min="1" max="16" value="4" /><output id="concurrency-value">4</output></div></label>
+            <div class="config-note"><span class="status-square"></span><span>API key 仅由后端环境变量读取，前端不会保存或发送。</span></div>
+            <button class="button button-stop" id="stop-run" disabled>停止当前运行</button>
+          </section>
+          <section class="panel export-panel">
+            <div class="panel-heading compact"><div><p class="eyebrow">EXPORT</p><h3>导出结果</h3></div></div>
+            <p class="muted">运行结束后下载原始记录，用于复核或写报告。</p>
+            <div class="export-actions"><button class="button button-quiet" id="export-json" disabled>JSON</button><button class="button button-quiet" id="export-csv" disabled>CSV</button></div>
+          </section>
+        </aside>
+      </main>
+      <footer class="footer"><span>JEV Lab / local-first evaluation</span><span class="mono">v0.1 · API <span id="api-origin">/api</span></span></footer>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js?v=corrected-partial-20261007-heldout"></script>
+  </body>
+</html>

@@ -1,0 +1,4237 @@
+{
+  "version": "split-manifest-v1",
+  "created_at": "2026-10-07T09:13:54.641397+08:00",
+  "split_algorithm": "sorted group identifiers, label-stratified where groups contain one label; no RNG; seed argument unused",
+  "experiments": {
+    "intent-classification": {
+      "labels": [
+        "billing",
+        "technical",
+        "complaint"
+      ],
+      "dataset_count": 216,
+      "dataset_sha256": "7bb6095b84b0996237f305f5b000aab6d9e0914110b97af546478d715c5a42b1",
+      "splits": {
+        "train": {
+          "record_count": 126,
+          "group_count": 21,
+          "group_ids": [
+            "intent-billing-01",
+            "intent-billing-02",
+            "intent-billing-03",
+            "intent-billing-04",
+            "intent-billing-05",
+            "intent-billing-06",
+            "intent-billing-07",
+            "intent-complaint-01",
+            "intent-complaint-02",
+            "intent-complaint-03",
+            "intent-complaint-04",
+            "intent-complaint-05",
+            "intent-complaint-06",
+            "intent-complaint-07",
+            "intent-technical-01",
+            "intent-technical-02",
+            "intent-technical-03",
+            "intent-technical-04",
+            "intent-technical-05",
+            "intent-technical-06",
+            "intent-technical-07"
+          ],
+          "records": [
+            {
+              "text": "我刚刚发现信用卡被重复扣款了，能帮我核查吗？请尽快帮忙看看。",
+              "id": "intent-001",
+              "label": "billing",
+              "group_id": "intent-billing-01"
+            },
+            {
+              "text": "我刚刚发现信用卡被重复扣款了，能帮我核查吗？麻烦告知下一步怎么做。",
+              "id": "intent-002",
+              "label": "billing",
+              "group_id": "intent-billing-01"
+            },
+            {
+              "text": "我刚刚发现信用卡被重复扣款了，能帮我核查吗？这是今天上午发生的。",
+              "id": "intent-003",
+              "label": "billing",
+              "group_id": "intent-billing-01"
+            },
+            {
+              "text": "我刚刚发现信用卡被重复扣款了，能帮我核查吗？我可以提供订单号。",
+              "id": "intent-004",
+              "label": "billing",
+              "group_id": "intent-billing-01"
+            },
+            {
+              "text": "我刚刚发现信用卡被重复扣款了，能帮我核查吗？希望今天能收到回复。",
+              "id": "intent-005",
+              "label": "billing",
+              "group_id": "intent-billing-01"
+            },
+            {
+              "text": "我刚刚发现信用卡被重复扣款了，能帮我核查吗？请确认是否需要补充材料。",
+              "id": "intent-006",
+              "label": "billing",
+              "group_id": "intent-billing-01"
+            },
+            {
+              "text": "订单已经取消，但款项还没有退回。请尽快帮忙看看。",
+              "id": "intent-007",
+              "label": "billing",
+              "group_id": "intent-billing-02"
+            },
+            {
+              "text": "订单已经取消，但款项还没有退回。麻烦告知下一步怎么做。",
+              "id": "intent-008",
+              "label": "billing",
+              "group_id": "intent-billing-02"
+            },
+            {
+              "text": "订单已经取消，但款项还没有退回。这是今天上午发生的。",
+              "id": "intent-009",
+              "label": "billing",
+              "group_id": "intent-billing-02"
+            },
+            {
+              "text": "订单已经取消，但款项还没有退回。我可以提供订单号。",
+              "id": "intent-010",
+              "label": "billing",
+              "group_id": "intent-billing-02"
+            },
+            {
+              "text": "订单已经取消，但款项还没有退回。希望今天能收到回复。",
+              "id": "intent-011",
+              "label": "billing",
+              "group_id": "intent-billing-02"
+            },
+            {
+              "text": "订单已经取消，但款项还没有退回。请确认是否需要补充材料。",
+              "id": "intent-012",
+              "label": "billing",
+              "group_id": "intent-billing-02"
+            },
+            {
+              "text": "这笔支付显示成功，余额却被扣了两次。请尽快帮忙看看。",
+              "id": "intent-013",
+              "label": "billing",
+              "group_id": "intent-billing-03"
+            },
+            {
+              "text": "这笔支付显示成功，余额却被扣了两次。麻烦告知下一步怎么做。",
+              "id": "intent-014",
+              "label": "billing",
+              "group_id": "intent-billing-03"
+            },
+            {
+              "text": "这笔支付显示成功，余额却被扣了两次。这是今天上午发生的。",
+              "id": "intent-015",
+              "label": "billing",
+              "group_id": "intent-billing-03"
+            },
+            {
+              "text": "这笔支付显示成功，余额却被扣了两次。我可以提供订单号。",
+              "id": "intent-016",
+              "label": "billing",
+              "group_id": "intent-billing-03"
+            },
+            {
+              "text": "这笔支付显示成功，余额却被扣了两次。希望今天能收到回复。",
+              "id": "intent-017",
+              "label": "billing",
+              "group_id": "intent-billing-03"
+            },
+            {
+              "text": "这笔支付显示成功，余额却被扣了两次。请确认是否需要补充材料。",
+              "id": "intent-018",
+              "label": "billing",
+              "group_id": "intent-billing-03"
+            },
+            {
+              "text": "我想申请本月订阅费用的退款。请尽快帮忙看看。",
+              "id": "intent-019",
+              "label": "billing",
+              "group_id": "intent-billing-04"
+            },
+            {
+              "text": "我想申请本月订阅费用的退款。麻烦告知下一步怎么做。",
+              "id": "intent-020",
+              "label": "billing",
+              "group_id": "intent-billing-04"
+            },
+            {
+              "text": "我想申请本月订阅费用的退款。这是今天上午发生的。",
+              "id": "intent-021",
+              "label": "billing",
+              "group_id": "intent-billing-04"
+            },
+            {
+              "text": "我想申请本月订阅费用的退款。我可以提供订单号。",
+              "id": "intent-022",
+              "label": "billing",
+              "group_id": "intent-billing-04"
+            },
+            {
+              "text": "我想申请本月订阅费用的退款。希望今天能收到回复。",
+              "id": "intent-023",
+              "label": "billing",
+              "group_id": "intent-billing-04"
+            },
+            {
+              "text": "我想申请本月订阅费用的退款。请确认是否需要补充材料。",
+              "id": "intent-024",
+              "label": "billing",
+              "group_id": "intent-billing-04"
+            },
+            {
+              "text": "发票金额和实际支付金额不一致。请尽快帮忙看看。",
+              "id": "intent-025",
+              "label": "billing",
+              "group_id": "intent-billing-05"
+            },
+            {
+              "text": "发票金额和实际支付金额不一致。麻烦告知下一步怎么做。",
+              "id": "intent-026",
+              "label": "billing",
+              "group_id": "intent-billing-05"
+            },
+            {
+              "text": "发票金额和实际支付金额不一致。这是今天上午发生的。",
+              "id": "intent-027",
+              "label": "billing",
+              "group_id": "intent-billing-05"
+            },
+            {
+              "text": "发票金额和实际支付金额不一致。我可以提供订单号。",
+              "id": "intent-028",
+              "label": "billing",
+              "group_id": "intent-billing-05"
+            },
+            {
+              "text": "发票金额和实际支付金额不一致。希望今天能收到回复。",
+              "id": "intent-029",
+              "label": "billing",
+              "group_id": "intent-billing-05"
+            },
+            {
+              "text": "发票金额和实际支付金额不一致。请确认是否需要补充材料。",
+              "id": "intent-030",
+              "label": "billing",
+              "group_id": "intent-billing-05"
+            },
+            {
+              "text": "付款时出现失败提示，但银行卡已经扣款。请尽快帮忙看看。",
+              "id": "intent-031",
+              "label": "billing",
+              "group_id": "intent-billing-06"
+            },
+            {
+              "text": "付款时出现失败提示，但银行卡已经扣款。麻烦告知下一步怎么做。",
+              "id": "intent-032",
+              "label": "billing",
+              "group_id": "intent-billing-06"
+            },
+            {
+              "text": "付款时出现失败提示，但银行卡已经扣款。这是今天上午发生的。",
+              "id": "intent-033",
+              "label": "billing",
+              "group_id": "intent-billing-06"
+            },
+            {
+              "text": "付款时出现失败提示，但银行卡已经扣款。我可以提供订单号。",
+              "id": "intent-034",
+              "label": "billing",
+              "group_id": "intent-billing-06"
+            },
+            {
+              "text": "付款时出现失败提示，但银行卡已经扣款。希望今天能收到回复。",
+              "id": "intent-035",
+              "label": "billing",
+              "group_id": "intent-billing-06"
+            },
+            {
+              "text": "付款时出现失败提示，但银行卡已经扣款。请确认是否需要补充材料。",
+              "id": "intent-036",
+              "label": "billing",
+              "group_id": "intent-billing-06"
+            },
+            {
+              "text": "请问企业账户的账单在哪里下载？请尽快帮忙看看。",
+              "id": "intent-037",
+              "label": "billing",
+              "group_id": "intent-billing-07"
+            },
+            {
+              "text": "请问企业账户的账单在哪里下载？麻烦告知下一步怎么做。",
+              "id": "intent-038",
+              "label": "billing",
+              "group_id": "intent-billing-07"
+            },
+            {
+              "text": "请问企业账户的账单在哪里下载？这是今天上午发生的。",
+              "id": "intent-039",
+              "label": "billing",
+              "group_id": "intent-billing-07"
+            },
+            {
+              "text": "请问企业账户的账单在哪里下载？我可以提供订单号。",
+              "id": "intent-040",
+              "label": "billing",
+              "group_id": "intent-billing-07"
+            },
+            {
+              "text": "请问企业账户的账单在哪里下载？希望今天能收到回复。",
+              "id": "intent-041",
+              "label": "billing",
+              "group_id": "intent-billing-07"
+            },
+            {
+              "text": "请问企业账户的账单在哪里下载？请确认是否需要补充材料。",
+              "id": "intent-042",
+              "label": "billing",
+              "group_id": "intent-billing-07"
+            },
+            {
+              "text": "客服三天都没有回复，我很失望。请尽快帮忙看看。",
+              "id": "intent-145",
+              "label": "complaint",
+              "group_id": "intent-complaint-01"
+            },
+            {
+              "text": "客服三天都没有回复，我很失望。麻烦告知下一步怎么做。",
+              "id": "intent-146",
+              "label": "complaint",
+              "group_id": "intent-complaint-01"
+            },
+            {
+              "text": "客服三天都没有回复，我很失望。这是今天上午发生的。",
+              "id": "intent-147",
+              "label": "complaint",
+              "group_id": "intent-complaint-01"
+            },
+            {
+              "text": "客服三天都没有回复，我很失望。我可以提供订单号。",
+              "id": "intent-148",
+              "label": "complaint",
+              "group_id": "intent-complaint-01"
+            },
+            {
+              "text": "客服三天都没有回复，我很失望。希望今天能收到回复。",
+              "id": "intent-149",
+              "label": "complaint",
+              "group_id": "intent-complaint-01"
+            },
+            {
+              "text": "客服三天都没有回复，我很失望。请确认是否需要补充材料。",
+              "id": "intent-150",
+              "label": "complaint",
+              "group_id": "intent-complaint-01"
+            },
+            {
+              "text": "这个问题来回提交两次，至今没有人跟进。请尽快帮忙看看。",
+              "id": "intent-151",
+              "label": "complaint",
+              "group_id": "intent-complaint-02"
+            },
+            {
+              "text": "这个问题来回提交两次，至今没有人跟进。麻烦告知下一步怎么做。",
+              "id": "intent-152",
+              "label": "complaint",
+              "group_id": "intent-complaint-02"
+            },
+            {
+              "text": "这个问题来回提交两次，至今没有人跟进。这是今天上午发生的。",
+              "id": "intent-153",
+              "label": "complaint",
+              "group_id": "intent-complaint-02"
+            },
+            {
+              "text": "这个问题来回提交两次，至今没有人跟进。我可以提供订单号。",
+              "id": "intent-154",
+              "label": "complaint",
+              "group_id": "intent-complaint-02"
+            },
+            {
+              "text": "这个问题来回提交两次，至今没有人跟进。希望今天能收到回复。",
+              "id": "intent-155",
+              "label": "complaint",
+              "group_id": "intent-complaint-02"
+            },
+            {
+              "text": "这个问题来回提交两次，至今没有人跟进。请确认是否需要补充材料。",
+              "id": "intent-156",
+              "label": "complaint",
+              "group_id": "intent-complaint-02"
+            },
+            {
+              "text": "承诺的处理时限已经到了，仍然没有结果。请尽快帮忙看看。",
+              "id": "intent-157",
+              "label": "complaint",
+              "group_id": "intent-complaint-03"
+            },
+            {
+              "text": "承诺的处理时限已经到了，仍然没有结果。麻烦告知下一步怎么做。",
+              "id": "intent-158",
+              "label": "complaint",
+              "group_id": "intent-complaint-03"
+            },
+            {
+              "text": "承诺的处理时限已经到了，仍然没有结果。这是今天上午发生的。",
+              "id": "intent-159",
+              "label": "complaint",
+              "group_id": "intent-complaint-03"
+            },
+            {
+              "text": "承诺的处理时限已经到了，仍然没有结果。我可以提供订单号。",
+              "id": "intent-160",
+              "label": "complaint",
+              "group_id": "intent-complaint-03"
+            },
+            {
+              "text": "承诺的处理时限已经到了，仍然没有结果。希望今天能收到回复。",
+              "id": "intent-161",
+              "label": "complaint",
+              "group_id": "intent-complaint-03"
+            },
+            {
+              "text": "承诺的处理时限已经到了，仍然没有结果。请确认是否需要补充材料。",
+              "id": "intent-162",
+              "label": "complaint",
+              "group_id": "intent-complaint-03"
+            },
+            {
+              "text": "客服的回复太敷衍了，我想正式投诉。请尽快帮忙看看。",
+              "id": "intent-163",
+              "label": "complaint",
+              "group_id": "intent-complaint-04"
+            },
+            {
+              "text": "客服的回复太敷衍了，我想正式投诉。麻烦告知下一步怎么做。",
+              "id": "intent-164",
+              "label": "complaint",
+              "group_id": "intent-complaint-04"
+            },
+            {
+              "text": "客服的回复太敷衍了，我想正式投诉。这是今天上午发生的。",
+              "id": "intent-165",
+              "label": "complaint",
+              "group_id": "intent-complaint-04"
+            },
+            {
+              "text": "客服的回复太敷衍了，我想正式投诉。我可以提供订单号。",
+              "id": "intent-166",
+              "label": "complaint",
+              "group_id": "intent-complaint-04"
+            },
+            {
+              "text": "客服的回复太敷衍了，我想正式投诉。希望今天能收到回复。",
+              "id": "intent-167",
+              "label": "complaint",
+              "group_id": "intent-complaint-04"
+            },
+            {
+              "text": "客服的回复太敷衍了，我想正式投诉。请确认是否需要补充材料。",
+              "id": "intent-168",
+              "label": "complaint",
+              "group_id": "intent-complaint-04"
+            },
+            {
+              "text": "同一个问题被转接了四次，体验很差。请尽快帮忙看看。",
+              "id": "intent-169",
+              "label": "complaint",
+              "group_id": "intent-complaint-05"
+            },
+            {
+              "text": "同一个问题被转接了四次，体验很差。麻烦告知下一步怎么做。",
+              "id": "intent-170",
+              "label": "complaint",
+              "group_id": "intent-complaint-05"
+            },
+            {
+              "text": "同一个问题被转接了四次，体验很差。这是今天上午发生的。",
+              "id": "intent-171",
+              "label": "complaint",
+              "group_id": "intent-complaint-05"
+            },
+            {
+              "text": "同一个问题被转接了四次，体验很差。我可以提供订单号。",
+              "id": "intent-172",
+              "label": "complaint",
+              "group_id": "intent-complaint-05"
+            },
+            {
+              "text": "同一个问题被转接了四次，体验很差。希望今天能收到回复。",
+              "id": "intent-173",
+              "label": "complaint",
+              "group_id": "intent-complaint-05"
+            },
+            {
+              "text": "同一个问题被转接了四次，体验很差。请确认是否需要补充材料。",
+              "id": "intent-174",
+              "label": "complaint",
+              "group_id": "intent-complaint-05"
+            },
+            {
+              "text": "售后一直推诿责任，请给出明确解释。请尽快帮忙看看。",
+              "id": "intent-175",
+              "label": "complaint",
+              "group_id": "intent-complaint-06"
+            },
+            {
+              "text": "售后一直推诿责任，请给出明确解释。麻烦告知下一步怎么做。",
+              "id": "intent-176",
+              "label": "complaint",
+              "group_id": "intent-complaint-06"
+            },
+            {
+              "text": "售后一直推诿责任，请给出明确解释。这是今天上午发生的。",
+              "id": "intent-177",
+              "label": "complaint",
+              "group_id": "intent-complaint-06"
+            },
+            {
+              "text": "售后一直推诿责任，请给出明确解释。我可以提供订单号。",
+              "id": "intent-178",
+              "label": "complaint",
+              "group_id": "intent-complaint-06"
+            },
+            {
+              "text": "售后一直推诿责任，请给出明确解释。希望今天能收到回复。",
+              "id": "intent-179",
+              "label": "complaint",
+              "group_id": "intent-complaint-06"
+            },
+            {
+              "text": "售后一直推诿责任，请给出明确解释。请确认是否需要补充材料。",
+              "id": "intent-180",
+              "label": "complaint",
+              "group_id": "intent-complaint-06"
+            },
+            {
+              "text": "我已经提供全部资料，却还要重复说明情况。请尽快帮忙看看。",
+              "id": "intent-181",
+              "label": "complaint",
+              "group_id": "intent-complaint-07"
+            },
+            {
+              "text": "我已经提供全部资料，却还要重复说明情况。麻烦告知下一步怎么做。",
+              "id": "intent-182",
+              "label": "complaint",
+              "group_id": "intent-complaint-07"
+            },
+            {
+              "text": "我已经提供全部资料，却还要重复说明情况。这是今天上午发生的。",
+              "id": "intent-183",
+              "label": "complaint",
+              "group_id": "intent-complaint-07"
+            },
+            {
+              "text": "我已经提供全部资料，却还要重复说明情况。我可以提供订单号。",
+              "id": "intent-184",
+              "label": "complaint",
+              "group_id": "intent-complaint-07"
+            },
+            {
+              "text": "我已经提供全部资料，却还要重复说明情况。希望今天能收到回复。",
+              "id": "intent-185",
+              "label": "complaint",
+              "group_id": "intent-complaint-07"
+            },
+            {
+              "text": "我已经提供全部资料，却还要重复说明情况。请确认是否需要补充材料。",
+              "id": "intent-186",
+              "label": "complaint",
+              "group_id": "intent-complaint-07"
+            },
+            {
+              "text": "登录后页面一直显示 500 错误，怎么处理？请尽快帮忙看看。",
+              "id": "intent-073",
+              "label": "technical",
+              "group_id": "intent-technical-01"
+            },
+            {
+              "text": "登录后页面一直显示 500 错误，怎么处理？麻烦告知下一步怎么做。",
+              "id": "intent-074",
+              "label": "technical",
+              "group_id": "intent-technical-01"
+            },
+            {
+              "text": "登录后页面一直显示 500 错误，怎么处理？这是今天上午发生的。",
+              "id": "intent-075",
+              "label": "technical",
+              "group_id": "intent-technical-01"
+            },
+            {
+              "text": "登录后页面一直显示 500 错误，怎么处理？我可以提供订单号。",
+              "id": "intent-076",
+              "label": "technical",
+              "group_id": "intent-technical-01"
+            },
+            {
+              "text": "登录后页面一直显示 500 错误，怎么处理？希望今天能收到回复。",
+              "id": "intent-077",
+              "label": "technical",
+              "group_id": "intent-technical-01"
+            },
+            {
+              "text": "登录后页面一直显示 500 错误，怎么处理？请确认是否需要补充材料。",
+              "id": "intent-078",
+              "label": "technical",
+              "group_id": "intent-technical-01"
+            },
+            {
+              "text": "上传文件时浏览器卡住，最后没有完成。请尽快帮忙看看。",
+              "id": "intent-079",
+              "label": "technical",
+              "group_id": "intent-technical-02"
+            },
+            {
+              "text": "上传文件时浏览器卡住，最后没有完成。麻烦告知下一步怎么做。",
+              "id": "intent-080",
+              "label": "technical",
+              "group_id": "intent-technical-02"
+            },
+            {
+              "text": "上传文件时浏览器卡住，最后没有完成。这是今天上午发生的。",
+              "id": "intent-081",
+              "label": "technical",
+              "group_id": "intent-technical-02"
+            },
+            {
+              "text": "上传文件时浏览器卡住，最后没有完成。我可以提供订单号。",
+              "id": "intent-082",
+              "label": "technical",
+              "group_id": "intent-technical-02"
+            },
+            {
+              "text": "上传文件时浏览器卡住，最后没有完成。希望今天能收到回复。",
+              "id": "intent-083",
+              "label": "technical",
+              "group_id": "intent-technical-02"
+            },
+            {
+              "text": "上传文件时浏览器卡住，最后没有完成。请确认是否需要补充材料。",
+              "id": "intent-084",
+              "label": "technical",
+              "group_id": "intent-technical-02"
+            },
+            {
+              "text": "手机端打开应用会闪退。请尽快帮忙看看。",
+              "id": "intent-085",
+              "label": "technical",
+              "group_id": "intent-technical-03"
+            },
+            {
+              "text": "手机端打开应用会闪退。麻烦告知下一步怎么做。",
+              "id": "intent-086",
+              "label": "technical",
+              "group_id": "intent-technical-03"
+            },
+            {
+              "text": "手机端打开应用会闪退。这是今天上午发生的。",
+              "id": "intent-087",
+              "label": "technical",
+              "group_id": "intent-technical-03"
+            },
+            {
+              "text": "手机端打开应用会闪退。我可以提供订单号。",
+              "id": "intent-088",
+              "label": "technical",
+              "group_id": "intent-technical-03"
+            },
+            {
+              "text": "手机端打开应用会闪退。希望今天能收到回复。",
+              "id": "intent-089",
+              "label": "technical",
+              "group_id": "intent-technical-03"
+            },
+            {
+              "text": "手机端打开应用会闪退。请确认是否需要补充材料。",
+              "id": "intent-090",
+              "label": "technical",
+              "group_id": "intent-technical-03"
+            },
+            {
+              "text": "我修改密码后无法再次登录。请尽快帮忙看看。",
+              "id": "intent-091",
+              "label": "technical",
+              "group_id": "intent-technical-04"
+            },
+            {
+              "text": "我修改密码后无法再次登录。麻烦告知下一步怎么做。",
+              "id": "intent-092",
+              "label": "technical",
+              "group_id": "intent-technical-04"
+            },
+            {
+              "text": "我修改密码后无法再次登录。这是今天上午发生的。",
+              "id": "intent-093",
+              "label": "technical",
+              "group_id": "intent-technical-04"
+            },
+            {
+              "text": "我修改密码后无法再次登录。我可以提供订单号。",
+              "id": "intent-094",
+              "label": "technical",
+              "group_id": "intent-technical-04"
+            },
+            {
+              "text": "我修改密码后无法再次登录。希望今天能收到回复。",
+              "id": "intent-095",
+              "label": "technical",
+              "group_id": "intent-technical-04"
+            },
+            {
+              "text": "我修改密码后无法再次登录。请确认是否需要补充材料。",
+              "id": "intent-096",
+              "label": "technical",
+              "group_id": "intent-technical-04"
+            },
+            {
+              "text": "接口请求经常返回超时。请尽快帮忙看看。",
+              "id": "intent-097",
+              "label": "technical",
+              "group_id": "intent-technical-05"
+            },
+            {
+              "text": "接口请求经常返回超时。麻烦告知下一步怎么做。",
+              "id": "intent-098",
+              "label": "technical",
+              "group_id": "intent-technical-05"
+            },
+            {
+              "text": "接口请求经常返回超时。这是今天上午发生的。",
+              "id": "intent-099",
+              "label": "technical",
+              "group_id": "intent-technical-05"
+            },
+            {
+              "text": "接口请求经常返回超时。我可以提供订单号。",
+              "id": "intent-100",
+              "label": "technical",
+              "group_id": "intent-technical-05"
+            },
+            {
+              "text": "接口请求经常返回超时。希望今天能收到回复。",
+              "id": "intent-101",
+              "label": "technical",
+              "group_id": "intent-technical-05"
+            },
+            {
+              "text": "接口请求经常返回超时。请确认是否需要补充材料。",
+              "id": "intent-102",
+              "label": "technical",
+              "group_id": "intent-technical-05"
+            },
+            {
+              "text": "页面加载到一半就白屏了。请尽快帮忙看看。",
+              "id": "intent-103",
+              "label": "technical",
+              "group_id": "intent-technical-06"
+            },
+            {
+              "text": "页面加载到一半就白屏了。麻烦告知下一步怎么做。",
+              "id": "intent-104",
+              "label": "technical",
+              "group_id": "intent-technical-06"
+            },
+            {
+              "text": "页面加载到一半就白屏了。这是今天上午发生的。",
+              "id": "intent-105",
+              "label": "technical",
+              "group_id": "intent-technical-06"
+            },
+            {
+              "text": "页面加载到一半就白屏了。我可以提供订单号。",
+              "id": "intent-106",
+              "label": "technical",
+              "group_id": "intent-technical-06"
+            },
+            {
+              "text": "页面加载到一半就白屏了。希望今天能收到回复。",
+              "id": "intent-107",
+              "label": "technical",
+              "group_id": "intent-technical-06"
+            },
+            {
+              "text": "页面加载到一半就白屏了。请确认是否需要补充材料。",
+              "id": "intent-108",
+              "label": "technical",
+              "group_id": "intent-technical-06"
+            },
+            {
+              "text": "验证码一直收不到，无法验证身份。请尽快帮忙看看。",
+              "id": "intent-109",
+              "label": "technical",
+              "group_id": "intent-technical-07"
+            },
+            {
+              "text": "验证码一直收不到，无法验证身份。麻烦告知下一步怎么做。",
+              "id": "intent-110",
+              "label": "technical",
+              "group_id": "intent-technical-07"
+            },
+            {
+              "text": "验证码一直收不到，无法验证身份。这是今天上午发生的。",
+              "id": "intent-111",
+              "label": "technical",
+              "group_id": "intent-technical-07"
+            },
+            {
+              "text": "验证码一直收不到，无法验证身份。我可以提供订单号。",
+              "id": "intent-112",
+              "label": "technical",
+              "group_id": "intent-technical-07"
+            },
+            {
+              "text": "验证码一直收不到，无法验证身份。希望今天能收到回复。",
+              "id": "intent-113",
+              "label": "technical",
+              "group_id": "intent-technical-07"
+            },
+            {
+              "text": "验证码一直收不到，无法验证身份。请确认是否需要补充材料。",
+              "id": "intent-114",
+              "label": "technical",
+              "group_id": "intent-technical-07"
+            }
+          ]
+        },
+        "validation": {
+          "record_count": 36,
+          "group_count": 6,
+          "group_ids": [
+            "intent-billing-08",
+            "intent-billing-09",
+            "intent-complaint-08",
+            "intent-complaint-09",
+            "intent-technical-08",
+            "intent-technical-09"
+          ],
+          "records": [
+            {
+              "text": "自动续费我没有开启，为什么产生了扣款？请尽快帮忙看看。",
+              "id": "intent-043",
+              "label": "billing",
+              "group_id": "intent-billing-08"
+            },
+            {
+              "text": "自动续费我没有开启，为什么产生了扣款？麻烦告知下一步怎么做。",
+              "id": "intent-044",
+              "label": "billing",
+              "group_id": "intent-billing-08"
+            },
+            {
+              "text": "自动续费我没有开启，为什么产生了扣款？这是今天上午发生的。",
+              "id": "intent-045",
+              "label": "billing",
+              "group_id": "intent-billing-08"
+            },
+            {
+              "text": "自动续费我没有开启，为什么产生了扣款？我可以提供订单号。",
+              "id": "intent-046",
+              "label": "billing",
+              "group_id": "intent-billing-08"
+            },
+            {
+              "text": "自动续费我没有开启，为什么产生了扣款？希望今天能收到回复。",
+              "id": "intent-047",
+              "label": "billing",
+              "group_id": "intent-billing-08"
+            },
+            {
+              "text": "自动续费我没有开启，为什么产生了扣款？请确认是否需要补充材料。",
+              "id": "intent-048",
+              "label": "billing",
+              "group_id": "intent-billing-08"
+            },
+            {
+              "text": "退款申请提交后，什么时候能到账？请尽快帮忙看看。",
+              "id": "intent-049",
+              "label": "billing",
+              "group_id": "intent-billing-09"
+            },
+            {
+              "text": "退款申请提交后，什么时候能到账？麻烦告知下一步怎么做。",
+              "id": "intent-050",
+              "label": "billing",
+              "group_id": "intent-billing-09"
+            },
+            {
+              "text": "退款申请提交后，什么时候能到账？这是今天上午发生的。",
+              "id": "intent-051",
+              "label": "billing",
+              "group_id": "intent-billing-09"
+            },
+            {
+              "text": "退款申请提交后，什么时候能到账？我可以提供订单号。",
+              "id": "intent-052",
+              "label": "billing",
+              "group_id": "intent-billing-09"
+            },
+            {
+              "text": "退款申请提交后，什么时候能到账？希望今天能收到回复。",
+              "id": "intent-053",
+              "label": "billing",
+              "group_id": "intent-billing-09"
+            },
+            {
+              "text": "退款申请提交后，什么时候能到账？请确认是否需要补充材料。",
+              "id": "intent-054",
+              "label": "billing",
+              "group_id": "intent-billing-09"
+            },
+            {
+              "text": "服务质量下降得很明显，希望有人重视。请尽快帮忙看看。",
+              "id": "intent-187",
+              "label": "complaint",
+              "group_id": "intent-complaint-08"
+            },
+            {
+              "text": "服务质量下降得很明显，希望有人重视。麻烦告知下一步怎么做。",
+              "id": "intent-188",
+              "label": "complaint",
+              "group_id": "intent-complaint-08"
+            },
+            {
+              "text": "服务质量下降得很明显，希望有人重视。这是今天上午发生的。",
+              "id": "intent-189",
+              "label": "complaint",
+              "group_id": "intent-complaint-08"
+            },
+            {
+              "text": "服务质量下降得很明显，希望有人重视。我可以提供订单号。",
+              "id": "intent-190",
+              "label": "complaint",
+              "group_id": "intent-complaint-08"
+            },
+            {
+              "text": "服务质量下降得很明显，希望有人重视。希望今天能收到回复。",
+              "id": "intent-191",
+              "label": "complaint",
+              "group_id": "intent-complaint-08"
+            },
+            {
+              "text": "服务质量下降得很明显，希望有人重视。请确认是否需要补充材料。",
+              "id": "intent-192",
+              "label": "complaint",
+              "group_id": "intent-complaint-08"
+            },
+            {
+              "text": "反馈提交一周了，为什么没有任何进展？请尽快帮忙看看。",
+              "id": "intent-193",
+              "label": "complaint",
+              "group_id": "intent-complaint-09"
+            },
+            {
+              "text": "反馈提交一周了，为什么没有任何进展？麻烦告知下一步怎么做。",
+              "id": "intent-194",
+              "label": "complaint",
+              "group_id": "intent-complaint-09"
+            },
+            {
+              "text": "反馈提交一周了，为什么没有任何进展？这是今天上午发生的。",
+              "id": "intent-195",
+              "label": "complaint",
+              "group_id": "intent-complaint-09"
+            },
+            {
+              "text": "反馈提交一周了，为什么没有任何进展？我可以提供订单号。",
+              "id": "intent-196",
+              "label": "complaint",
+              "group_id": "intent-complaint-09"
+            },
+            {
+              "text": "反馈提交一周了，为什么没有任何进展？希望今天能收到回复。",
+              "id": "intent-197",
+              "label": "complaint",
+              "group_id": "intent-complaint-09"
+            },
+            {
+              "text": "反馈提交一周了，为什么没有任何进展？请确认是否需要补充材料。",
+              "id": "intent-198",
+              "label": "complaint",
+              "group_id": "intent-complaint-09"
+            },
+            {
+              "text": "导出报表时程序提示系统故障。请尽快帮忙看看。",
+              "id": "intent-115",
+              "label": "technical",
+              "group_id": "intent-technical-08"
+            },
+            {
+              "text": "导出报表时程序提示系统故障。麻烦告知下一步怎么做。",
+              "id": "intent-116",
+              "label": "technical",
+              "group_id": "intent-technical-08"
+            },
+            {
+              "text": "导出报表时程序提示系统故障。这是今天上午发生的。",
+              "id": "intent-117",
+              "label": "technical",
+              "group_id": "intent-technical-08"
+            },
+            {
+              "text": "导出报表时程序提示系统故障。我可以提供订单号。",
+              "id": "intent-118",
+              "label": "technical",
+              "group_id": "intent-technical-08"
+            },
+            {
+              "text": "导出报表时程序提示系统故障。希望今天能收到回复。",
+              "id": "intent-119",
+              "label": "technical",
+              "group_id": "intent-technical-08"
+            },
+            {
+              "text": "导出报表时程序提示系统故障。请确认是否需要补充材料。",
+              "id": "intent-120",
+              "label": "technical",
+              "group_id": "intent-technical-08"
+            },
+            {
+              "text": "更新客户端后通知功能失效。请尽快帮忙看看。",
+              "id": "intent-121",
+              "label": "technical",
+              "group_id": "intent-technical-09"
+            },
+            {
+              "text": "更新客户端后通知功能失效。麻烦告知下一步怎么做。",
+              "id": "intent-122",
+              "label": "technical",
+              "group_id": "intent-technical-09"
+            },
+            {
+              "text": "更新客户端后通知功能失效。这是今天上午发生的。",
+              "id": "intent-123",
+              "label": "technical",
+              "group_id": "intent-technical-09"
+            },
+            {
+              "text": "更新客户端后通知功能失效。我可以提供订单号。",
+              "id": "intent-124",
+              "label": "technical",
+              "group_id": "intent-technical-09"
+            },
+            {
+              "text": "更新客户端后通知功能失效。希望今天能收到回复。",
+              "id": "intent-125",
+              "label": "technical",
+              "group_id": "intent-technical-09"
+            },
+            {
+              "text": "更新客户端后通知功能失效。请确认是否需要补充材料。",
+              "id": "intent-126",
+              "label": "technical",
+              "group_id": "intent-technical-09"
+            }
+          ]
+        },
+        "test": {
+          "record_count": 54,
+          "group_count": 9,
+          "group_ids": [
+            "intent-billing-10",
+            "intent-billing-11",
+            "intent-billing-12",
+            "intent-complaint-10",
+            "intent-complaint-11",
+            "intent-complaint-12",
+            "intent-technical-10",
+            "intent-technical-11",
+            "intent-technical-12"
+          ],
+          "records": [
+            {
+              "text": "优惠券没有生效，订单金额多收了。请尽快帮忙看看。",
+              "id": "intent-055",
+              "label": "billing",
+              "group_id": "intent-billing-10"
+            },
+            {
+              "text": "优惠券没有生效，订单金额多收了。麻烦告知下一步怎么做。",
+              "id": "intent-056",
+              "label": "billing",
+              "group_id": "intent-billing-10"
+            },
+            {
+              "text": "优惠券没有生效，订单金额多收了。这是今天上午发生的。",
+              "id": "intent-057",
+              "label": "billing",
+              "group_id": "intent-billing-10"
+            },
+            {
+              "text": "优惠券没有生效，订单金额多收了。我可以提供订单号。",
+              "id": "intent-058",
+              "label": "billing",
+              "group_id": "intent-billing-10"
+            },
+            {
+              "text": "优惠券没有生效，订单金额多收了。希望今天能收到回复。",
+              "id": "intent-059",
+              "label": "billing",
+              "group_id": "intent-billing-10"
+            },
+            {
+              "text": "优惠券没有生效，订单金额多收了。请确认是否需要补充材料。",
+              "id": "intent-060",
+              "label": "billing",
+              "group_id": "intent-billing-10"
+            },
+            {
+              "text": "能否把这笔订单改成其他支付方式？请尽快帮忙看看。",
+              "id": "intent-061",
+              "label": "billing",
+              "group_id": "intent-billing-11"
+            },
+            {
+              "text": "能否把这笔订单改成其他支付方式？麻烦告知下一步怎么做。",
+              "id": "intent-062",
+              "label": "billing",
+              "group_id": "intent-billing-11"
+            },
+            {
+              "text": "能否把这笔订单改成其他支付方式？这是今天上午发生的。",
+              "id": "intent-063",
+              "label": "billing",
+              "group_id": "intent-billing-11"
+            },
+            {
+              "text": "能否把这笔订单改成其他支付方式？我可以提供订单号。",
+              "id": "intent-064",
+              "label": "billing",
+              "group_id": "intent-billing-11"
+            },
+            {
+              "text": "能否把这笔订单改成其他支付方式？希望今天能收到回复。",
+              "id": "intent-065",
+              "label": "billing",
+              "group_id": "intent-billing-11"
+            },
+            {
+              "text": "能否把这笔订单改成其他支付方式？请确认是否需要补充材料。",
+              "id": "intent-066",
+              "label": "billing",
+              "group_id": "intent-billing-11"
+            },
+            {
+              "text": "充值金额没有到账，请检查交易记录。请尽快帮忙看看。",
+              "id": "intent-067",
+              "label": "billing",
+              "group_id": "intent-billing-12"
+            },
+            {
+              "text": "充值金额没有到账，请检查交易记录。麻烦告知下一步怎么做。",
+              "id": "intent-068",
+              "label": "billing",
+              "group_id": "intent-billing-12"
+            },
+            {
+              "text": "充值金额没有到账，请检查交易记录。这是今天上午发生的。",
+              "id": "intent-069",
+              "label": "billing",
+              "group_id": "intent-billing-12"
+            },
+            {
+              "text": "充值金额没有到账，请检查交易记录。我可以提供订单号。",
+              "id": "intent-070",
+              "label": "billing",
+              "group_id": "intent-billing-12"
+            },
+            {
+              "text": "充值金额没有到账，请检查交易记录。希望今天能收到回复。",
+              "id": "intent-071",
+              "label": "billing",
+              "group_id": "intent-billing-12"
+            },
+            {
+              "text": "充值金额没有到账，请检查交易记录。请确认是否需要补充材料。",
+              "id": "intent-072",
+              "label": "billing",
+              "group_id": "intent-billing-12"
+            },
+            {
+              "text": "这次处理让我很不满意，请安排专人联系。请尽快帮忙看看。",
+              "id": "intent-199",
+              "label": "complaint",
+              "group_id": "intent-complaint-10"
+            },
+            {
+              "text": "这次处理让我很不满意，请安排专人联系。麻烦告知下一步怎么做。",
+              "id": "intent-200",
+              "label": "complaint",
+              "group_id": "intent-complaint-10"
+            },
+            {
+              "text": "这次处理让我很不满意，请安排专人联系。这是今天上午发生的。",
+              "id": "intent-201",
+              "label": "complaint",
+              "group_id": "intent-complaint-10"
+            },
+            {
+              "text": "这次处理让我很不满意，请安排专人联系。我可以提供订单号。",
+              "id": "intent-202",
+              "label": "complaint",
+              "group_id": "intent-complaint-10"
+            },
+            {
+              "text": "这次处理让我很不满意，请安排专人联系。希望今天能收到回复。",
+              "id": "intent-203",
+              "label": "complaint",
+              "group_id": "intent-complaint-10"
+            },
+            {
+              "text": "这次处理让我很不满意，请安排专人联系。请确认是否需要补充材料。",
+              "id": "intent-204",
+              "label": "complaint",
+              "group_id": "intent-complaint-10"
+            },
+            {
+              "text": "你们的承诺没有兑现，我需要一个说法。请尽快帮忙看看。",
+              "id": "intent-205",
+              "label": "complaint",
+              "group_id": "intent-complaint-11"
+            },
+            {
+              "text": "你们的承诺没有兑现，我需要一个说法。麻烦告知下一步怎么做。",
+              "id": "intent-206",
+              "label": "complaint",
+              "group_id": "intent-complaint-11"
+            },
+            {
+              "text": "你们的承诺没有兑现，我需要一个说法。这是今天上午发生的。",
+              "id": "intent-207",
+              "label": "complaint",
+              "group_id": "intent-complaint-11"
+            },
+            {
+              "text": "你们的承诺没有兑现，我需要一个说法。我可以提供订单号。",
+              "id": "intent-208",
+              "label": "complaint",
+              "group_id": "intent-complaint-11"
+            },
+            {
+              "text": "你们的承诺没有兑现，我需要一个说法。希望今天能收到回复。",
+              "id": "intent-209",
+              "label": "complaint",
+              "group_id": "intent-complaint-11"
+            },
+            {
+              "text": "你们的承诺没有兑现，我需要一个说法。请确认是否需要补充材料。",
+              "id": "intent-210",
+              "label": "complaint",
+              "group_id": "intent-complaint-11"
+            },
+            {
+              "text": "客服一直让我等待，完全没有解决问题。请尽快帮忙看看。",
+              "id": "intent-211",
+              "label": "complaint",
+              "group_id": "intent-complaint-12"
+            },
+            {
+              "text": "客服一直让我等待，完全没有解决问题。麻烦告知下一步怎么做。",
+              "id": "intent-212",
+              "label": "complaint",
+              "group_id": "intent-complaint-12"
+            },
+            {
+              "text": "客服一直让我等待，完全没有解决问题。这是今天上午发生的。",
+              "id": "intent-213",
+              "label": "complaint",
+              "group_id": "intent-complaint-12"
+            },
+            {
+              "text": "客服一直让我等待，完全没有解决问题。我可以提供订单号。",
+              "id": "intent-214",
+              "label": "complaint",
+              "group_id": "intent-complaint-12"
+            },
+            {
+              "text": "客服一直让我等待，完全没有解决问题。希望今天能收到回复。",
+              "id": "intent-215",
+              "label": "complaint",
+              "group_id": "intent-complaint-12"
+            },
+            {
+              "text": "客服一直让我等待，完全没有解决问题。请确认是否需要补充材料。",
+              "id": "intent-216",
+              "label": "complaint",
+              "group_id": "intent-complaint-12"
+            },
+            {
+              "text": "API 调用返回 429，请问怎样重试？请尽快帮忙看看。",
+              "id": "intent-127",
+              "label": "technical",
+              "group_id": "intent-technical-10"
+            },
+            {
+              "text": "API 调用返回 429，请问怎样重试？麻烦告知下一步怎么做。",
+              "id": "intent-128",
+              "label": "technical",
+              "group_id": "intent-technical-10"
+            },
+            {
+              "text": "API 调用返回 429，请问怎样重试？这是今天上午发生的。",
+              "id": "intent-129",
+              "label": "technical",
+              "group_id": "intent-technical-10"
+            },
+            {
+              "text": "API 调用返回 429，请问怎样重试？我可以提供订单号。",
+              "id": "intent-130",
+              "label": "technical",
+              "group_id": "intent-technical-10"
+            },
+            {
+              "text": "API 调用返回 429，请问怎样重试？希望今天能收到回复。",
+              "id": "intent-131",
+              "label": "technical",
+              "group_id": "intent-technical-10"
+            },
+            {
+              "text": "API 调用返回 429，请问怎样重试？请确认是否需要补充材料。",
+              "id": "intent-132",
+              "label": "technical",
+              "group_id": "intent-technical-10"
+            },
+            {
+              "text": "搜索功能输入关键词后没有结果。请尽快帮忙看看。",
+              "id": "intent-133",
+              "label": "technical",
+              "group_id": "intent-technical-11"
+            },
+            {
+              "text": "搜索功能输入关键词后没有结果。麻烦告知下一步怎么做。",
+              "id": "intent-134",
+              "label": "technical",
+              "group_id": "intent-technical-11"
+            },
+            {
+              "text": "搜索功能输入关键词后没有结果。这是今天上午发生的。",
+              "id": "intent-135",
+              "label": "technical",
+              "group_id": "intent-technical-11"
+            },
+            {
+              "text": "搜索功能输入关键词后没有结果。我可以提供订单号。",
+              "id": "intent-136",
+              "label": "technical",
+              "group_id": "intent-technical-11"
+            },
+            {
+              "text": "搜索功能输入关键词后没有结果。希望今天能收到回复。",
+              "id": "intent-137",
+              "label": "technical",
+              "group_id": "intent-technical-11"
+            },
+            {
+              "text": "搜索功能输入关键词后没有结果。请确认是否需要补充材料。",
+              "id": "intent-138",
+              "label": "technical",
+              "group_id": "intent-technical-11"
+            },
+            {
+              "text": "同步数据时任务一直停在处理中。请尽快帮忙看看。",
+              "id": "intent-139",
+              "label": "technical",
+              "group_id": "intent-technical-12"
+            },
+            {
+              "text": "同步数据时任务一直停在处理中。麻烦告知下一步怎么做。",
+              "id": "intent-140",
+              "label": "technical",
+              "group_id": "intent-technical-12"
+            },
+            {
+              "text": "同步数据时任务一直停在处理中。这是今天上午发生的。",
+              "id": "intent-141",
+              "label": "technical",
+              "group_id": "intent-technical-12"
+            },
+            {
+              "text": "同步数据时任务一直停在处理中。我可以提供订单号。",
+              "id": "intent-142",
+              "label": "technical",
+              "group_id": "intent-technical-12"
+            },
+            {
+              "text": "同步数据时任务一直停在处理中。希望今天能收到回复。",
+              "id": "intent-143",
+              "label": "technical",
+              "group_id": "intent-technical-12"
+            },
+            {
+              "text": "同步数据时任务一直停在处理中。请确认是否需要补充材料。",
+              "id": "intent-144",
+              "label": "technical",
+              "group_id": "intent-technical-12"
+            }
+          ]
+        }
+      },
+      "overlaps": {
+        "train__validation": {
+          "group_ids": [],
+          "text_count": 0
+        },
+        "train__test": {
+          "group_ids": [],
+          "text_count": 0
+        },
+        "validation__test": {
+          "group_ids": [],
+          "text_count": 0
+        }
+      }
+    },
+    "rag-relevance": {
+      "labels": [
+        "relevant",
+        "irrelevant"
+      ],
+      "dataset_count": 200,
+      "dataset_sha256": "7224b7d74f76823bcd99677e50d4c5727e72d8529d82ccda325056300adb5f1c",
+      "splits": {
+        "train": {
+          "record_count": 120,
+          "group_count": 12,
+          "group_ids": [
+            "rag-topic-01",
+            "rag-topic-02",
+            "rag-topic-03",
+            "rag-topic-04",
+            "rag-topic-05",
+            "rag-topic-06",
+            "rag-topic-07",
+            "rag-topic-08",
+            "rag-topic-09",
+            "rag-topic-10",
+            "rag-topic-11",
+            "rag-topic-12"
+          ],
+          "records": [
+            {
+              "id": "rag-001",
+              "query": "如何申请退款（网页端）",
+              "passage": "用户可以在订单页提交退款申请，审核通常需要两个工作日。",
+              "label": "relevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-002",
+              "query": "如何申请退款（管理员视角）",
+              "passage": "用户可以在订单页提交退款申请，审核通常需要两个工作日。",
+              "label": "relevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-003",
+              "query": "如何申请退款（本月遇到的问题）",
+              "passage": "用户可以在订单页提交退款申请，审核通常需要两个工作日。",
+              "label": "relevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-004",
+              "query": "如何申请退款（请给出具体步骤）",
+              "passage": "用户可以在订单页提交退款申请，审核通常需要两个工作日。",
+              "label": "relevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-005",
+              "query": "如何申请退款（急用）",
+              "passage": "用户可以在订单页提交退款申请，审核通常需要两个工作日。",
+              "label": "relevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-006",
+              "query": "如何申请退款（网页端）",
+              "passage": "首页新增了深色模式和快捷键设置。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-007",
+              "query": "如何申请退款（管理员视角）",
+              "passage": "首页新增了深色模式和快捷键设置。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-008",
+              "query": "如何申请退款（本月遇到的问题）",
+              "passage": "首页新增了深色模式和快捷键设置。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-009",
+              "query": "如何申请退款（请给出具体步骤）",
+              "passage": "首页新增了深色模式和快捷键设置。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-010",
+              "query": "如何申请退款（急用）",
+              "passage": "首页新增了深色模式和快捷键设置。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-01"
+            },
+            {
+              "id": "rag-011",
+              "query": "API 限流是多少（网页端）",
+              "passage": "公开 API 每分钟最多 60 次请求，超出后返回 429。",
+              "label": "relevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-012",
+              "query": "API 限流是多少（管理员视角）",
+              "passage": "公开 API 每分钟最多 60 次请求，超出后返回 429。",
+              "label": "relevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-013",
+              "query": "API 限流是多少（本月遇到的问题）",
+              "passage": "公开 API 每分钟最多 60 次请求，超出后返回 429。",
+              "label": "relevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-014",
+              "query": "API 限流是多少（请给出具体步骤）",
+              "passage": "公开 API 每分钟最多 60 次请求，超出后返回 429。",
+              "label": "relevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-015",
+              "query": "API 限流是多少（急用）",
+              "passage": "公开 API 每分钟最多 60 次请求，超出后返回 429。",
+              "label": "relevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-016",
+              "query": "API 限流是多少（网页端）",
+              "passage": "团队头像可以在个人资料页更换。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-017",
+              "query": "API 限流是多少（管理员视角）",
+              "passage": "团队头像可以在个人资料页更换。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-018",
+              "query": "API 限流是多少（本月遇到的问题）",
+              "passage": "团队头像可以在个人资料页更换。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-019",
+              "query": "API 限流是多少（请给出具体步骤）",
+              "passage": "团队头像可以在个人资料页更换。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-020",
+              "query": "API 限流是多少（急用）",
+              "passage": "团队头像可以在个人资料页更换。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-02"
+            },
+            {
+              "id": "rag-021",
+              "query": "订单如何取消（网页端）",
+              "passage": "付款前可以在订单详情页点击取消订单，已发货订单需要联系客服。",
+              "label": "relevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-022",
+              "query": "订单如何取消（管理员视角）",
+              "passage": "付款前可以在订单详情页点击取消订单，已发货订单需要联系客服。",
+              "label": "relevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-023",
+              "query": "订单如何取消（本月遇到的问题）",
+              "passage": "付款前可以在订单详情页点击取消订单，已发货订单需要联系客服。",
+              "label": "relevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-024",
+              "query": "订单如何取消（请给出具体步骤）",
+              "passage": "付款前可以在订单详情页点击取消订单，已发货订单需要联系客服。",
+              "label": "relevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-025",
+              "query": "订单如何取消（急用）",
+              "passage": "付款前可以在订单详情页点击取消订单，已发货订单需要联系客服。",
+              "label": "relevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-026",
+              "query": "订单如何取消（网页端）",
+              "passage": "本季度产品路线图已经发布。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-027",
+              "query": "订单如何取消（管理员视角）",
+              "passage": "本季度产品路线图已经发布。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-028",
+              "query": "订单如何取消（本月遇到的问题）",
+              "passage": "本季度产品路线图已经发布。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-029",
+              "query": "订单如何取消（请给出具体步骤）",
+              "passage": "本季度产品路线图已经发布。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-030",
+              "query": "订单如何取消（急用）",
+              "passage": "本季度产品路线图已经发布。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-03"
+            },
+            {
+              "id": "rag-031",
+              "query": "怎么修改登录邮箱（网页端）",
+              "passage": "在账户安全设置中验证旧邮箱后即可绑定新邮箱。",
+              "label": "relevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-032",
+              "query": "怎么修改登录邮箱（管理员视角）",
+              "passage": "在账户安全设置中验证旧邮箱后即可绑定新邮箱。",
+              "label": "relevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-033",
+              "query": "怎么修改登录邮箱（本月遇到的问题）",
+              "passage": "在账户安全设置中验证旧邮箱后即可绑定新邮箱。",
+              "label": "relevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-034",
+              "query": "怎么修改登录邮箱（请给出具体步骤）",
+              "passage": "在账户安全设置中验证旧邮箱后即可绑定新邮箱。",
+              "label": "relevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-035",
+              "query": "怎么修改登录邮箱（急用）",
+              "passage": "在账户安全设置中验证旧邮箱后即可绑定新邮箱。",
+              "label": "relevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-036",
+              "query": "怎么修改登录邮箱（网页端）",
+              "passage": "活动页面展示了最新社区文章。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-037",
+              "query": "怎么修改登录邮箱（管理员视角）",
+              "passage": "活动页面展示了最新社区文章。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-038",
+              "query": "怎么修改登录邮箱（本月遇到的问题）",
+              "passage": "活动页面展示了最新社区文章。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-039",
+              "query": "怎么修改登录邮箱（请给出具体步骤）",
+              "passage": "活动页面展示了最新社区文章。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-040",
+              "query": "怎么修改登录邮箱（急用）",
+              "passage": "活动页面展示了最新社区文章。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-04"
+            },
+            {
+              "id": "rag-041",
+              "query": "如何开启双因素认证（网页端）",
+              "passage": "进入安全中心，扫描验证器二维码并输入一次性验证码。",
+              "label": "relevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-042",
+              "query": "如何开启双因素认证（管理员视角）",
+              "passage": "进入安全中心，扫描验证器二维码并输入一次性验证码。",
+              "label": "relevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-043",
+              "query": "如何开启双因素认证（本月遇到的问题）",
+              "passage": "进入安全中心，扫描验证器二维码并输入一次性验证码。",
+              "label": "relevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-044",
+              "query": "如何开启双因素认证（请给出具体步骤）",
+              "passage": "进入安全中心，扫描验证器二维码并输入一次性验证码。",
+              "label": "relevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-045",
+              "query": "如何开启双因素认证（急用）",
+              "passage": "进入安全中心，扫描验证器二维码并输入一次性验证码。",
+              "label": "relevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-046",
+              "query": "如何开启双因素认证（网页端）",
+              "passage": "客户端支持三种主题颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-047",
+              "query": "如何开启双因素认证（管理员视角）",
+              "passage": "客户端支持三种主题颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-048",
+              "query": "如何开启双因素认证（本月遇到的问题）",
+              "passage": "客户端支持三种主题颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-049",
+              "query": "如何开启双因素认证（请给出具体步骤）",
+              "passage": "客户端支持三种主题颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-050",
+              "query": "如何开启双因素认证（急用）",
+              "passage": "客户端支持三种主题颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-05"
+            },
+            {
+              "id": "rag-051",
+              "query": "报表在哪里下载（网页端）",
+              "passage": "在数据分析页面选择时间范围后点击导出按钮即可下载 CSV。",
+              "label": "relevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-052",
+              "query": "报表在哪里下载（管理员视角）",
+              "passage": "在数据分析页面选择时间范围后点击导出按钮即可下载 CSV。",
+              "label": "relevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-053",
+              "query": "报表在哪里下载（本月遇到的问题）",
+              "passage": "在数据分析页面选择时间范围后点击导出按钮即可下载 CSV。",
+              "label": "relevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-054",
+              "query": "报表在哪里下载（请给出具体步骤）",
+              "passage": "在数据分析页面选择时间范围后点击导出按钮即可下载 CSV。",
+              "label": "relevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-055",
+              "query": "报表在哪里下载（急用）",
+              "passage": "在数据分析页面选择时间范围后点击导出按钮即可下载 CSV。",
+              "label": "relevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-056",
+              "query": "报表在哪里下载（网页端）",
+              "passage": "研发团队下周会举办一次线上分享。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-057",
+              "query": "报表在哪里下载（管理员视角）",
+              "passage": "研发团队下周会举办一次线上分享。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-058",
+              "query": "报表在哪里下载（本月遇到的问题）",
+              "passage": "研发团队下周会举办一次线上分享。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-059",
+              "query": "报表在哪里下载（请给出具体步骤）",
+              "passage": "研发团队下周会举办一次线上分享。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-060",
+              "query": "报表在哪里下载（急用）",
+              "passage": "研发团队下周会举办一次线上分享。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-06"
+            },
+            {
+              "id": "rag-061",
+              "query": "企业如何开具发票（网页端）",
+              "passage": "管理员可在财务中心填写抬头和税号后申请电子发票。",
+              "label": "relevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-062",
+              "query": "企业如何开具发票（管理员视角）",
+              "passage": "管理员可在财务中心填写抬头和税号后申请电子发票。",
+              "label": "relevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-063",
+              "query": "企业如何开具发票（本月遇到的问题）",
+              "passage": "管理员可在财务中心填写抬头和税号后申请电子发票。",
+              "label": "relevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-064",
+              "query": "企业如何开具发票（请给出具体步骤）",
+              "passage": "管理员可在财务中心填写抬头和税号后申请电子发票。",
+              "label": "relevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-065",
+              "query": "企业如何开具发票（急用）",
+              "passage": "管理员可在财务中心填写抬头和税号后申请电子发票。",
+              "label": "relevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-066",
+              "query": "企业如何开具发票（网页端）",
+              "passage": "新版本更新了导航栏的图标样式。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-067",
+              "query": "企业如何开具发票（管理员视角）",
+              "passage": "新版本更新了导航栏的图标样式。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-068",
+              "query": "企业如何开具发票（本月遇到的问题）",
+              "passage": "新版本更新了导航栏的图标样式。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-069",
+              "query": "企业如何开具发票（请给出具体步骤）",
+              "passage": "新版本更新了导航栏的图标样式。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-070",
+              "query": "企业如何开具发票（急用）",
+              "passage": "新版本更新了导航栏的图标样式。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-07"
+            },
+            {
+              "id": "rag-071",
+              "query": "密码忘记了怎么办（网页端）",
+              "passage": "点击登录页的忘记密码，通过绑定手机重置新密码。",
+              "label": "relevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-072",
+              "query": "密码忘记了怎么办（管理员视角）",
+              "passage": "点击登录页的忘记密码，通过绑定手机重置新密码。",
+              "label": "relevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-073",
+              "query": "密码忘记了怎么办（本月遇到的问题）",
+              "passage": "点击登录页的忘记密码，通过绑定手机重置新密码。",
+              "label": "relevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-074",
+              "query": "密码忘记了怎么办（请给出具体步骤）",
+              "passage": "点击登录页的忘记密码，通过绑定手机重置新密码。",
+              "label": "relevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-075",
+              "query": "密码忘记了怎么办（急用）",
+              "passage": "点击登录页的忘记密码，通过绑定手机重置新密码。",
+              "label": "relevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-076",
+              "query": "密码忘记了怎么办（网页端）",
+              "passage": "设计系统新增了四种圆角规格。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-077",
+              "query": "密码忘记了怎么办（管理员视角）",
+              "passage": "设计系统新增了四种圆角规格。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-078",
+              "query": "密码忘记了怎么办（本月遇到的问题）",
+              "passage": "设计系统新增了四种圆角规格。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-079",
+              "query": "密码忘记了怎么办（请给出具体步骤）",
+              "passage": "设计系统新增了四种圆角规格。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-080",
+              "query": "密码忘记了怎么办（急用）",
+              "passage": "设计系统新增了四种圆角规格。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-08"
+            },
+            {
+              "id": "rag-081",
+              "query": "如何查看 API 调用记录（网页端）",
+              "passage": "控制台的开发者日志会按时间展示每次请求的状态码。",
+              "label": "relevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-082",
+              "query": "如何查看 API 调用记录（管理员视角）",
+              "passage": "控制台的开发者日志会按时间展示每次请求的状态码。",
+              "label": "relevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-083",
+              "query": "如何查看 API 调用记录（本月遇到的问题）",
+              "passage": "控制台的开发者日志会按时间展示每次请求的状态码。",
+              "label": "relevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-084",
+              "query": "如何查看 API 调用记录（请给出具体步骤）",
+              "passage": "控制台的开发者日志会按时间展示每次请求的状态码。",
+              "label": "relevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-085",
+              "query": "如何查看 API 调用记录（急用）",
+              "passage": "控制台的开发者日志会按时间展示每次请求的状态码。",
+              "label": "relevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-086",
+              "query": "如何查看 API 调用记录（网页端）",
+              "passage": "本周社区投票选出了新的活动主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-087",
+              "query": "如何查看 API 调用记录（管理员视角）",
+              "passage": "本周社区投票选出了新的活动主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-088",
+              "query": "如何查看 API 调用记录（本月遇到的问题）",
+              "passage": "本周社区投票选出了新的活动主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-089",
+              "query": "如何查看 API 调用记录（请给出具体步骤）",
+              "passage": "本周社区投票选出了新的活动主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-090",
+              "query": "如何查看 API 调用记录（急用）",
+              "passage": "本周社区投票选出了新的活动主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-09"
+            },
+            {
+              "id": "rag-091",
+              "query": "客服工作时间是什么时候（网页端）",
+              "passage": "在线客服每天 9:00 至 21:00 提供人工服务。",
+              "label": "relevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-092",
+              "query": "客服工作时间是什么时候（管理员视角）",
+              "passage": "在线客服每天 9:00 至 21:00 提供人工服务。",
+              "label": "relevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-093",
+              "query": "客服工作时间是什么时候（本月遇到的问题）",
+              "passage": "在线客服每天 9:00 至 21:00 提供人工服务。",
+              "label": "relevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-094",
+              "query": "客服工作时间是什么时候（请给出具体步骤）",
+              "passage": "在线客服每天 9:00 至 21:00 提供人工服务。",
+              "label": "relevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-095",
+              "query": "客服工作时间是什么时候（急用）",
+              "passage": "在线客服每天 9:00 至 21:00 提供人工服务。",
+              "label": "relevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-096",
+              "query": "客服工作时间是什么时候（网页端）",
+              "passage": "个人资料页可以上传新的头像。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-097",
+              "query": "客服工作时间是什么时候（管理员视角）",
+              "passage": "个人资料页可以上传新的头像。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-098",
+              "query": "客服工作时间是什么时候（本月遇到的问题）",
+              "passage": "个人资料页可以上传新的头像。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-099",
+              "query": "客服工作时间是什么时候（请给出具体步骤）",
+              "passage": "个人资料页可以上传新的头像。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-100",
+              "query": "客服工作时间是什么时候（急用）",
+              "passage": "个人资料页可以上传新的头像。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-10"
+            },
+            {
+              "id": "rag-101",
+              "query": "如何升级套餐（网页端）",
+              "passage": "在订阅管理页面选择目标套餐，确认差价后即可升级。",
+              "label": "relevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-102",
+              "query": "如何升级套餐（管理员视角）",
+              "passage": "在订阅管理页面选择目标套餐，确认差价后即可升级。",
+              "label": "relevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-103",
+              "query": "如何升级套餐（本月遇到的问题）",
+              "passage": "在订阅管理页面选择目标套餐，确认差价后即可升级。",
+              "label": "relevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-104",
+              "query": "如何升级套餐（请给出具体步骤）",
+              "passage": "在订阅管理页面选择目标套餐，确认差价后即可升级。",
+              "label": "relevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-105",
+              "query": "如何升级套餐（急用）",
+              "passage": "在订阅管理页面选择目标套餐，确认差价后即可升级。",
+              "label": "relevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-106",
+              "query": "如何升级套餐（网页端）",
+              "passage": "帮助中心增加了一个产品术语表。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-107",
+              "query": "如何升级套餐（管理员视角）",
+              "passage": "帮助中心增加了一个产品术语表。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-108",
+              "query": "如何升级套餐（本月遇到的问题）",
+              "passage": "帮助中心增加了一个产品术语表。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-109",
+              "query": "如何升级套餐（请给出具体步骤）",
+              "passage": "帮助中心增加了一个产品术语表。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-110",
+              "query": "如何升级套餐（急用）",
+              "passage": "帮助中心增加了一个产品术语表。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-11"
+            },
+            {
+              "id": "rag-111",
+              "query": "数据多久同步一次（网页端）",
+              "passage": "系统每 15 分钟同步一次外部数据，也可以手动触发同步。",
+              "label": "relevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-112",
+              "query": "数据多久同步一次（管理员视角）",
+              "passage": "系统每 15 分钟同步一次外部数据，也可以手动触发同步。",
+              "label": "relevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-113",
+              "query": "数据多久同步一次（本月遇到的问题）",
+              "passage": "系统每 15 分钟同步一次外部数据，也可以手动触发同步。",
+              "label": "relevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-114",
+              "query": "数据多久同步一次（请给出具体步骤）",
+              "passage": "系统每 15 分钟同步一次外部数据，也可以手动触发同步。",
+              "label": "relevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-115",
+              "query": "数据多久同步一次（急用）",
+              "passage": "系统每 15 分钟同步一次外部数据，也可以手动触发同步。",
+              "label": "relevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-116",
+              "query": "数据多久同步一次（网页端）",
+              "passage": "首页轮播图本月更换了三张插画。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-117",
+              "query": "数据多久同步一次（管理员视角）",
+              "passage": "首页轮播图本月更换了三张插画。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-118",
+              "query": "数据多久同步一次（本月遇到的问题）",
+              "passage": "首页轮播图本月更换了三张插画。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-119",
+              "query": "数据多久同步一次（请给出具体步骤）",
+              "passage": "首页轮播图本月更换了三张插画。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-12"
+            },
+            {
+              "id": "rag-120",
+              "query": "数据多久同步一次（急用）",
+              "passage": "首页轮播图本月更换了三张插画。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-12"
+            }
+          ]
+        },
+        "validation": {
+          "record_count": 40,
+          "group_count": 4,
+          "group_ids": [
+            "rag-topic-13",
+            "rag-topic-14",
+            "rag-topic-15",
+            "rag-topic-16"
+          ],
+          "records": [
+            {
+              "id": "rag-121",
+              "query": "支持哪些文件格式（网页端）",
+              "passage": "批量导入支持 CSV、XLSX 和 JSON 三种文件格式。",
+              "label": "relevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-122",
+              "query": "支持哪些文件格式（管理员视角）",
+              "passage": "批量导入支持 CSV、XLSX 和 JSON 三种文件格式。",
+              "label": "relevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-123",
+              "query": "支持哪些文件格式（本月遇到的问题）",
+              "passage": "批量导入支持 CSV、XLSX 和 JSON 三种文件格式。",
+              "label": "relevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-124",
+              "query": "支持哪些文件格式（请给出具体步骤）",
+              "passage": "批量导入支持 CSV、XLSX 和 JSON 三种文件格式。",
+              "label": "relevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-125",
+              "query": "支持哪些文件格式（急用）",
+              "passage": "批量导入支持 CSV、XLSX 和 JSON 三种文件格式。",
+              "label": "relevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-126",
+              "query": "支持哪些文件格式（网页端）",
+              "passage": "团队空间可以自定义背景颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-127",
+              "query": "支持哪些文件格式（管理员视角）",
+              "passage": "团队空间可以自定义背景颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-128",
+              "query": "支持哪些文件格式（本月遇到的问题）",
+              "passage": "团队空间可以自定义背景颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-129",
+              "query": "支持哪些文件格式（请给出具体步骤）",
+              "passage": "团队空间可以自定义背景颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-130",
+              "query": "支持哪些文件格式（急用）",
+              "passage": "团队空间可以自定义背景颜色。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-13"
+            },
+            {
+              "id": "rag-131",
+              "query": "如何邀请团队成员（网页端）",
+              "passage": "管理员在团队设置中输入成员邮箱并选择角色后发送邀请。",
+              "label": "relevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-132",
+              "query": "如何邀请团队成员（管理员视角）",
+              "passage": "管理员在团队设置中输入成员邮箱并选择角色后发送邀请。",
+              "label": "relevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-133",
+              "query": "如何邀请团队成员（本月遇到的问题）",
+              "passage": "管理员在团队设置中输入成员邮箱并选择角色后发送邀请。",
+              "label": "relevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-134",
+              "query": "如何邀请团队成员（请给出具体步骤）",
+              "passage": "管理员在团队设置中输入成员邮箱并选择角色后发送邀请。",
+              "label": "relevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-135",
+              "query": "如何邀请团队成员（急用）",
+              "passage": "管理员在团队设置中输入成员邮箱并选择角色后发送邀请。",
+              "label": "relevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-136",
+              "query": "如何邀请团队成员（网页端）",
+              "passage": "产品博客发布了本季度的设计回顾。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-137",
+              "query": "如何邀请团队成员（管理员视角）",
+              "passage": "产品博客发布了本季度的设计回顾。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-138",
+              "query": "如何邀请团队成员（本月遇到的问题）",
+              "passage": "产品博客发布了本季度的设计回顾。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-139",
+              "query": "如何邀请团队成员（请给出具体步骤）",
+              "passage": "产品博客发布了本季度的设计回顾。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-140",
+              "query": "如何邀请团队成员（急用）",
+              "passage": "产品博客发布了本季度的设计回顾。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-14"
+            },
+            {
+              "id": "rag-141",
+              "query": "退款多久到账（网页端）",
+              "passage": "审核通过后原路退款通常在 3 至 7 个工作日内到账。",
+              "label": "relevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-142",
+              "query": "退款多久到账（管理员视角）",
+              "passage": "审核通过后原路退款通常在 3 至 7 个工作日内到账。",
+              "label": "relevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-143",
+              "query": "退款多久到账（本月遇到的问题）",
+              "passage": "审核通过后原路退款通常在 3 至 7 个工作日内到账。",
+              "label": "relevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-144",
+              "query": "退款多久到账（请给出具体步骤）",
+              "passage": "审核通过后原路退款通常在 3 至 7 个工作日内到账。",
+              "label": "relevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-145",
+              "query": "退款多久到账（急用）",
+              "passage": "审核通过后原路退款通常在 3 至 7 个工作日内到账。",
+              "label": "relevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-146",
+              "query": "退款多久到账（网页端）",
+              "passage": "导航菜单现在支持按字母顺序排列。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-147",
+              "query": "退款多久到账（管理员视角）",
+              "passage": "导航菜单现在支持按字母顺序排列。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-148",
+              "query": "退款多久到账（本月遇到的问题）",
+              "passage": "导航菜单现在支持按字母顺序排列。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-149",
+              "query": "退款多久到账（请给出具体步骤）",
+              "passage": "导航菜单现在支持按字母顺序排列。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-150",
+              "query": "退款多久到账（急用）",
+              "passage": "导航菜单现在支持按字母顺序排列。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-15"
+            },
+            {
+              "id": "rag-151",
+              "query": "如何删除项目（网页端）",
+              "passage": "打开项目设置并点击删除，输入项目名称确认后才能完成操作。",
+              "label": "relevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-152",
+              "query": "如何删除项目（管理员视角）",
+              "passage": "打开项目设置并点击删除，输入项目名称确认后才能完成操作。",
+              "label": "relevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-153",
+              "query": "如何删除项目（本月遇到的问题）",
+              "passage": "打开项目设置并点击删除，输入项目名称确认后才能完成操作。",
+              "label": "relevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-154",
+              "query": "如何删除项目（请给出具体步骤）",
+              "passage": "打开项目设置并点击删除，输入项目名称确认后才能完成操作。",
+              "label": "relevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-155",
+              "query": "如何删除项目（急用）",
+              "passage": "打开项目设置并点击删除，输入项目名称确认后才能完成操作。",
+              "label": "relevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-156",
+              "query": "如何删除项目（网页端）",
+              "passage": "新手引导增加了三个快捷操作示例。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-157",
+              "query": "如何删除项目（管理员视角）",
+              "passage": "新手引导增加了三个快捷操作示例。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-158",
+              "query": "如何删除项目（本月遇到的问题）",
+              "passage": "新手引导增加了三个快捷操作示例。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-159",
+              "query": "如何删除项目（请给出具体步骤）",
+              "passage": "新手引导增加了三个快捷操作示例。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-16"
+            },
+            {
+              "id": "rag-160",
+              "query": "如何删除项目（急用）",
+              "passage": "新手引导增加了三个快捷操作示例。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-16"
+            }
+          ]
+        },
+        "test": {
+          "record_count": 40,
+          "group_count": 4,
+          "group_ids": [
+            "rag-topic-17",
+            "rag-topic-18",
+            "rag-topic-19",
+            "rag-topic-20"
+          ],
+          "records": [
+            {
+              "id": "rag-161",
+              "query": "怎么设置通知（网页端）",
+              "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。",
+              "label": "relevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-162",
+              "query": "怎么设置通知（管理员视角）",
+              "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。",
+              "label": "relevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-163",
+              "query": "怎么设置通知（本月遇到的问题）",
+              "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。",
+              "label": "relevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-164",
+              "query": "怎么设置通知（请给出具体步骤）",
+              "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。",
+              "label": "relevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-165",
+              "query": "怎么设置通知（急用）",
+              "passage": "在通知偏好中可以分别开关邮件、站内信和移动推送。",
+              "label": "relevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-166",
+              "query": "怎么设置通知（网页端）",
+              "passage": "配色面板提供了浅色和深色两套主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-167",
+              "query": "怎么设置通知（管理员视角）",
+              "passage": "配色面板提供了浅色和深色两套主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-168",
+              "query": "怎么设置通知（本月遇到的问题）",
+              "passage": "配色面板提供了浅色和深色两套主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-169",
+              "query": "怎么设置通知（请给出具体步骤）",
+              "passage": "配色面板提供了浅色和深色两套主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-170",
+              "query": "怎么设置通知（急用）",
+              "passage": "配色面板提供了浅色和深色两套主题。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-17"
+            },
+            {
+              "id": "rag-171",
+              "query": "登录为什么需要验证码（网页端）",
+              "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。",
+              "label": "relevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-172",
+              "query": "登录为什么需要验证码（管理员视角）",
+              "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。",
+              "label": "relevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-173",
+              "query": "登录为什么需要验证码（本月遇到的问题）",
+              "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。",
+              "label": "relevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-174",
+              "query": "登录为什么需要验证码（请给出具体步骤）",
+              "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。",
+              "label": "relevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-175",
+              "query": "登录为什么需要验证码（急用）",
+              "passage": "检测到新设备登录时，系统会额外要求短信验证码确认身份。",
+              "label": "relevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-176",
+              "query": "登录为什么需要验证码（网页端）",
+              "passage": "本周榜单展示了最受欢迎的模板。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-177",
+              "query": "登录为什么需要验证码（管理员视角）",
+              "passage": "本周榜单展示了最受欢迎的模板。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-178",
+              "query": "登录为什么需要验证码（本月遇到的问题）",
+              "passage": "本周榜单展示了最受欢迎的模板。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-179",
+              "query": "登录为什么需要验证码（请给出具体步骤）",
+              "passage": "本周榜单展示了最受欢迎的模板。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-180",
+              "query": "登录为什么需要验证码（急用）",
+              "passage": "本周榜单展示了最受欢迎的模板。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-18"
+            },
+            {
+              "id": "rag-181",
+              "query": "如何查看用量（网页端）",
+              "passage": "控制台概览页显示本月调用量和剩余配额。",
+              "label": "relevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-182",
+              "query": "如何查看用量（管理员视角）",
+              "passage": "控制台概览页显示本月调用量和剩余配额。",
+              "label": "relevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-183",
+              "query": "如何查看用量（本月遇到的问题）",
+              "passage": "控制台概览页显示本月调用量和剩余配额。",
+              "label": "relevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-184",
+              "query": "如何查看用量（请给出具体步骤）",
+              "passage": "控制台概览页显示本月调用量和剩余配额。",
+              "label": "relevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-185",
+              "query": "如何查看用量（急用）",
+              "passage": "控制台概览页显示本月调用量和剩余配额。",
+              "label": "relevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-186",
+              "query": "如何查看用量（网页端）",
+              "passage": "帮助中心首页新增了常见问题导航。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-187",
+              "query": "如何查看用量（管理员视角）",
+              "passage": "帮助中心首页新增了常见问题导航。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-188",
+              "query": "如何查看用量（本月遇到的问题）",
+              "passage": "帮助中心首页新增了常见问题导航。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-189",
+              "query": "如何查看用量（请给出具体步骤）",
+              "passage": "帮助中心首页新增了常见问题导航。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-190",
+              "query": "如何查看用量（急用）",
+              "passage": "帮助中心首页新增了常见问题导航。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-19"
+            },
+            {
+              "id": "rag-191",
+              "query": "服务出现故障时怎么办（网页端）",
+              "passage": "请先查看状态页公告，若持续异常可提交故障工单。",
+              "label": "relevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-192",
+              "query": "服务出现故障时怎么办（管理员视角）",
+              "passage": "请先查看状态页公告，若持续异常可提交故障工单。",
+              "label": "relevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-193",
+              "query": "服务出现故障时怎么办（本月遇到的问题）",
+              "passage": "请先查看状态页公告，若持续异常可提交故障工单。",
+              "label": "relevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-194",
+              "query": "服务出现故障时怎么办（请给出具体步骤）",
+              "passage": "请先查看状态页公告，若持续异常可提交故障工单。",
+              "label": "relevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-195",
+              "query": "服务出现故障时怎么办（急用）",
+              "passage": "请先查看状态页公告，若持续异常可提交故障工单。",
+              "label": "relevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-196",
+              "query": "服务出现故障时怎么办（网页端）",
+              "passage": "品牌中心提供了最新的字体下载包。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-197",
+              "query": "服务出现故障时怎么办（管理员视角）",
+              "passage": "品牌中心提供了最新的字体下载包。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-198",
+              "query": "服务出现故障时怎么办（本月遇到的问题）",
+              "passage": "品牌中心提供了最新的字体下载包。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-199",
+              "query": "服务出现故障时怎么办（请给出具体步骤）",
+              "passage": "品牌中心提供了最新的字体下载包。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-20"
+            },
+            {
+              "id": "rag-200",
+              "query": "服务出现故障时怎么办（急用）",
+              "passage": "品牌中心提供了最新的字体下载包。",
+              "label": "irrelevant",
+              "group_id": "rag-topic-20"
+            }
+          ]
+        }
+      },
+      "overlaps": {
+        "train__validation": {
+          "group_ids": [],
+          "text_count": 0
+        },
+        "train__test": {
+          "group_ids": [],
+          "text_count": 0
+        },
+        "validation__test": {
+          "group_ids": [],
+          "text_count": 0
+        }
+      }
+    },
+    "agent-routing": {
+      "labels": [
+        "search",
+        "code",
+        "writing"
+      ],
+      "dataset_count": 216,
+      "dataset_sha256": "918ac1d33efe1f9c2bcd6f4eacdda534a47aa24775cac70d80beb80ad9f6bdc4",
+      "splits": {
+        "train": {
+          "record_count": 126,
+          "group_count": 21,
+          "group_ids": [
+            "route-code-01",
+            "route-code-02",
+            "route-code-03",
+            "route-code-04",
+            "route-code-05",
+            "route-code-06",
+            "route-code-07",
+            "route-search-01",
+            "route-search-02",
+            "route-search-03",
+            "route-search-04",
+            "route-search-05",
+            "route-search-06",
+            "route-search-07",
+            "route-writing-01",
+            "route-writing-02",
+            "route-writing-03",
+            "route-writing-04",
+            "route-writing-05",
+            "route-writing-06",
+            "route-writing-07"
+          ],
+          "records": [
+            {
+              "task": "修复这段 Python 的异步竞态，请给出可执行的下一步。",
+              "id": "route-073",
+              "label": "code",
+              "group_id": "route-code-01"
+            },
+            {
+              "task": "修复这段 Python 的异步竞态，希望今天完成。",
+              "id": "route-074",
+              "label": "code",
+              "group_id": "route-code-01"
+            },
+            {
+              "task": "修复这段 Python 的异步竞态，结果需要附上依据。",
+              "id": "route-075",
+              "label": "code",
+              "group_id": "route-code-01"
+            },
+            {
+              "task": "修复这段 Python 的异步竞态，请按优先级处理。",
+              "id": "route-076",
+              "label": "code",
+              "group_id": "route-code-01"
+            },
+            {
+              "task": "修复这段 Python 的异步竞态，团队马上要用。",
+              "id": "route-077",
+              "label": "code",
+              "group_id": "route-code-01"
+            },
+            {
+              "task": "修复这段 Python 的异步竞态，尽量说明你的判断。",
+              "id": "route-078",
+              "label": "code",
+              "group_id": "route-code-01"
+            },
+            {
+              "task": "请检查这段代码的内存泄漏，请给出可执行的下一步。",
+              "id": "route-079",
+              "label": "code",
+              "group_id": "route-code-02"
+            },
+            {
+              "task": "请检查这段代码的内存泄漏，希望今天完成。",
+              "id": "route-080",
+              "label": "code",
+              "group_id": "route-code-02"
+            },
+            {
+              "task": "请检查这段代码的内存泄漏，结果需要附上依据。",
+              "id": "route-081",
+              "label": "code",
+              "group_id": "route-code-02"
+            },
+            {
+              "task": "请检查这段代码的内存泄漏，请按优先级处理。",
+              "id": "route-082",
+              "label": "code",
+              "group_id": "route-code-02"
+            },
+            {
+              "task": "请检查这段代码的内存泄漏，团队马上要用。",
+              "id": "route-083",
+              "label": "code",
+              "group_id": "route-code-02"
+            },
+            {
+              "task": "请检查这段代码的内存泄漏，尽量说明你的判断。",
+              "id": "route-084",
+              "label": "code",
+              "group_id": "route-code-02"
+            },
+            {
+              "task": "为这个接口补一个重试机制，请给出可执行的下一步。",
+              "id": "route-085",
+              "label": "code",
+              "group_id": "route-code-03"
+            },
+            {
+              "task": "为这个接口补一个重试机制，希望今天完成。",
+              "id": "route-086",
+              "label": "code",
+              "group_id": "route-code-03"
+            },
+            {
+              "task": "为这个接口补一个重试机制，结果需要附上依据。",
+              "id": "route-087",
+              "label": "code",
+              "group_id": "route-code-03"
+            },
+            {
+              "task": "为这个接口补一个重试机制，请按优先级处理。",
+              "id": "route-088",
+              "label": "code",
+              "group_id": "route-code-03"
+            },
+            {
+              "task": "为这个接口补一个重试机制，团队马上要用。",
+              "id": "route-089",
+              "label": "code",
+              "group_id": "route-code-03"
+            },
+            {
+              "task": "为这个接口补一个重试机制，尽量说明你的判断。",
+              "id": "route-090",
+              "label": "code",
+              "group_id": "route-code-03"
+            },
+            {
+              "task": "把 SQL 查询优化到可接受的延迟，请给出可执行的下一步。",
+              "id": "route-091",
+              "label": "code",
+              "group_id": "route-code-04"
+            },
+            {
+              "task": "把 SQL 查询优化到可接受的延迟，希望今天完成。",
+              "id": "route-092",
+              "label": "code",
+              "group_id": "route-code-04"
+            },
+            {
+              "task": "把 SQL 查询优化到可接受的延迟，结果需要附上依据。",
+              "id": "route-093",
+              "label": "code",
+              "group_id": "route-code-04"
+            },
+            {
+              "task": "把 SQL 查询优化到可接受的延迟，请按优先级处理。",
+              "id": "route-094",
+              "label": "code",
+              "group_id": "route-code-04"
+            },
+            {
+              "task": "把 SQL 查询优化到可接受的延迟，团队马上要用。",
+              "id": "route-095",
+              "label": "code",
+              "group_id": "route-code-04"
+            },
+            {
+              "task": "把 SQL 查询优化到可接受的延迟，尽量说明你的判断。",
+              "id": "route-096",
+              "label": "code",
+              "group_id": "route-code-04"
+            },
+            {
+              "task": "排查服务启动时报错的原因，请给出可执行的下一步。",
+              "id": "route-097",
+              "label": "code",
+              "group_id": "route-code-05"
+            },
+            {
+              "task": "排查服务启动时报错的原因，希望今天完成。",
+              "id": "route-098",
+              "label": "code",
+              "group_id": "route-code-05"
+            },
+            {
+              "task": "排查服务启动时报错的原因，结果需要附上依据。",
+              "id": "route-099",
+              "label": "code",
+              "group_id": "route-code-05"
+            },
+            {
+              "task": "排查服务启动时报错的原因，请按优先级处理。",
+              "id": "route-100",
+              "label": "code",
+              "group_id": "route-code-05"
+            },
+            {
+              "task": "排查服务启动时报错的原因，团队马上要用。",
+              "id": "route-101",
+              "label": "code",
+              "group_id": "route-code-05"
+            },
+            {
+              "task": "排查服务启动时报错的原因，尽量说明你的判断。",
+              "id": "route-102",
+              "label": "code",
+              "group_id": "route-code-05"
+            },
+            {
+              "task": "给前端组件增加表单校验逻辑，请给出可执行的下一步。",
+              "id": "route-103",
+              "label": "code",
+              "group_id": "route-code-06"
+            },
+            {
+              "task": "给前端组件增加表单校验逻辑，希望今天完成。",
+              "id": "route-104",
+              "label": "code",
+              "group_id": "route-code-06"
+            },
+            {
+              "task": "给前端组件增加表单校验逻辑，结果需要附上依据。",
+              "id": "route-105",
+              "label": "code",
+              "group_id": "route-code-06"
+            },
+            {
+              "task": "给前端组件增加表单校验逻辑，请按优先级处理。",
+              "id": "route-106",
+              "label": "code",
+              "group_id": "route-code-06"
+            },
+            {
+              "task": "给前端组件增加表单校验逻辑，团队马上要用。",
+              "id": "route-107",
+              "label": "code",
+              "group_id": "route-code-06"
+            },
+            {
+              "task": "给前端组件增加表单校验逻辑，尽量说明你的判断。",
+              "id": "route-108",
+              "label": "code",
+              "group_id": "route-code-06"
+            },
+            {
+              "task": "实现一个批量导入 CSV 的脚本，请给出可执行的下一步。",
+              "id": "route-109",
+              "label": "code",
+              "group_id": "route-code-07"
+            },
+            {
+              "task": "实现一个批量导入 CSV 的脚本，希望今天完成。",
+              "id": "route-110",
+              "label": "code",
+              "group_id": "route-code-07"
+            },
+            {
+              "task": "实现一个批量导入 CSV 的脚本，结果需要附上依据。",
+              "id": "route-111",
+              "label": "code",
+              "group_id": "route-code-07"
+            },
+            {
+              "task": "实现一个批量导入 CSV 的脚本，请按优先级处理。",
+              "id": "route-112",
+              "label": "code",
+              "group_id": "route-code-07"
+            },
+            {
+              "task": "实现一个批量导入 CSV 的脚本，团队马上要用。",
+              "id": "route-113",
+              "label": "code",
+              "group_id": "route-code-07"
+            },
+            {
+              "task": "实现一个批量导入 CSV 的脚本，尽量说明你的判断。",
+              "id": "route-114",
+              "label": "code",
+              "group_id": "route-code-07"
+            },
+            {
+              "task": "查一下本周关于 JEV 的开源项目，请给出可执行的下一步。",
+              "id": "route-001",
+              "label": "search",
+              "group_id": "route-search-01"
+            },
+            {
+              "task": "查一下本周关于 JEV 的开源项目，希望今天完成。",
+              "id": "route-002",
+              "label": "search",
+              "group_id": "route-search-01"
+            },
+            {
+              "task": "查一下本周关于 JEV 的开源项目，结果需要附上依据。",
+              "id": "route-003",
+              "label": "search",
+              "group_id": "route-search-01"
+            },
+            {
+              "task": "查一下本周关于 JEV 的开源项目，请按优先级处理。",
+              "id": "route-004",
+              "label": "search",
+              "group_id": "route-search-01"
+            },
+            {
+              "task": "查一下本周关于 JEV 的开源项目，团队马上要用。",
+              "id": "route-005",
+              "label": "search",
+              "group_id": "route-search-01"
+            },
+            {
+              "task": "查一下本周关于 JEV 的开源项目，尽量说明你的判断。",
+              "id": "route-006",
+              "label": "search",
+              "group_id": "route-search-01"
+            },
+            {
+              "task": "搜索最近发布的中文 RAG 评测报告，请给出可执行的下一步。",
+              "id": "route-007",
+              "label": "search",
+              "group_id": "route-search-02"
+            },
+            {
+              "task": "搜索最近发布的中文 RAG 评测报告，希望今天完成。",
+              "id": "route-008",
+              "label": "search",
+              "group_id": "route-search-02"
+            },
+            {
+              "task": "搜索最近发布的中文 RAG 评测报告，结果需要附上依据。",
+              "id": "route-009",
+              "label": "search",
+              "group_id": "route-search-02"
+            },
+            {
+              "task": "搜索最近发布的中文 RAG 评测报告，请按优先级处理。",
+              "id": "route-010",
+              "label": "search",
+              "group_id": "route-search-02"
+            },
+            {
+              "task": "搜索最近发布的中文 RAG 评测报告，团队马上要用。",
+              "id": "route-011",
+              "label": "search",
+              "group_id": "route-search-02"
+            },
+            {
+              "task": "搜索最近发布的中文 RAG 评测报告，尽量说明你的判断。",
+              "id": "route-012",
+              "label": "search",
+              "group_id": "route-search-02"
+            },
+            {
+              "task": "帮我找资料比较向量数据库，请给出可执行的下一步。",
+              "id": "route-013",
+              "label": "search",
+              "group_id": "route-search-03"
+            },
+            {
+              "task": "帮我找资料比较向量数据库，希望今天完成。",
+              "id": "route-014",
+              "label": "search",
+              "group_id": "route-search-03"
+            },
+            {
+              "task": "帮我找资料比较向量数据库，结果需要附上依据。",
+              "id": "route-015",
+              "label": "search",
+              "group_id": "route-search-03"
+            },
+            {
+              "task": "帮我找资料比较向量数据库，请按优先级处理。",
+              "id": "route-016",
+              "label": "search",
+              "group_id": "route-search-03"
+            },
+            {
+              "task": "帮我找资料比较向量数据库，团队马上要用。",
+              "id": "route-017",
+              "label": "search",
+              "group_id": "route-search-03"
+            },
+            {
+              "task": "帮我找资料比较向量数据库，尽量说明你的判断。",
+              "id": "route-018",
+              "label": "search",
+              "group_id": "route-search-03"
+            },
+            {
+              "task": "检索社区里关于提示词缓存的讨论，请给出可执行的下一步。",
+              "id": "route-019",
+              "label": "search",
+              "group_id": "route-search-04"
+            },
+            {
+              "task": "检索社区里关于提示词缓存的讨论，希望今天完成。",
+              "id": "route-020",
+              "label": "search",
+              "group_id": "route-search-04"
+            },
+            {
+              "task": "检索社区里关于提示词缓存的讨论，结果需要附上依据。",
+              "id": "route-021",
+              "label": "search",
+              "group_id": "route-search-04"
+            },
+            {
+              "task": "检索社区里关于提示词缓存的讨论，请按优先级处理。",
+              "id": "route-022",
+              "label": "search",
+              "group_id": "route-search-04"
+            },
+            {
+              "task": "检索社区里关于提示词缓存的讨论，团队马上要用。",
+              "id": "route-023",
+              "label": "search",
+              "group_id": "route-search-04"
+            },
+            {
+              "task": "检索社区里关于提示词缓存的讨论，尽量说明你的判断。",
+              "id": "route-024",
+              "label": "search",
+              "group_id": "route-search-04"
+            },
+            {
+              "task": "查找这家公司最新的 API 文档，请给出可执行的下一步。",
+              "id": "route-025",
+              "label": "search",
+              "group_id": "route-search-05"
+            },
+            {
+              "task": "查找这家公司最新的 API 文档，希望今天完成。",
+              "id": "route-026",
+              "label": "search",
+              "group_id": "route-search-05"
+            },
+            {
+              "task": "查找这家公司最新的 API 文档，结果需要附上依据。",
+              "id": "route-027",
+              "label": "search",
+              "group_id": "route-search-05"
+            },
+            {
+              "task": "查找这家公司最新的 API 文档，请按优先级处理。",
+              "id": "route-028",
+              "label": "search",
+              "group_id": "route-search-05"
+            },
+            {
+              "task": "查找这家公司最新的 API 文档，团队马上要用。",
+              "id": "route-029",
+              "label": "search",
+              "group_id": "route-search-05"
+            },
+            {
+              "task": "查找这家公司最新的 API 文档，尽量说明你的判断。",
+              "id": "route-030",
+              "label": "search",
+              "group_id": "route-search-05"
+            },
+            {
+              "task": "搜索 GitHub 上可用的日志分析工具，请给出可执行的下一步。",
+              "id": "route-031",
+              "label": "search",
+              "group_id": "route-search-06"
+            },
+            {
+              "task": "搜索 GitHub 上可用的日志分析工具，希望今天完成。",
+              "id": "route-032",
+              "label": "search",
+              "group_id": "route-search-06"
+            },
+            {
+              "task": "搜索 GitHub 上可用的日志分析工具，结果需要附上依据。",
+              "id": "route-033",
+              "label": "search",
+              "group_id": "route-search-06"
+            },
+            {
+              "task": "搜索 GitHub 上可用的日志分析工具，请按优先级处理。",
+              "id": "route-034",
+              "label": "search",
+              "group_id": "route-search-06"
+            },
+            {
+              "task": "搜索 GitHub 上可用的日志分析工具，团队马上要用。",
+              "id": "route-035",
+              "label": "search",
+              "group_id": "route-search-06"
+            },
+            {
+              "task": "搜索 GitHub 上可用的日志分析工具，尽量说明你的判断。",
+              "id": "route-036",
+              "label": "search",
+              "group_id": "route-search-06"
+            },
+            {
+              "task": "帮忙查一下本地部署模型的教程，请给出可执行的下一步。",
+              "id": "route-037",
+              "label": "search",
+              "group_id": "route-search-07"
+            },
+            {
+              "task": "帮忙查一下本地部署模型的教程，希望今天完成。",
+              "id": "route-038",
+              "label": "search",
+              "group_id": "route-search-07"
+            },
+            {
+              "task": "帮忙查一下本地部署模型的教程，结果需要附上依据。",
+              "id": "route-039",
+              "label": "search",
+              "group_id": "route-search-07"
+            },
+            {
+              "task": "帮忙查一下本地部署模型的教程，请按优先级处理。",
+              "id": "route-040",
+              "label": "search",
+              "group_id": "route-search-07"
+            },
+            {
+              "task": "帮忙查一下本地部署模型的教程，团队马上要用。",
+              "id": "route-041",
+              "label": "search",
+              "group_id": "route-search-07"
+            },
+            {
+              "task": "帮忙查一下本地部署模型的教程，尽量说明你的判断。",
+              "id": "route-042",
+              "label": "search",
+              "group_id": "route-search-07"
+            },
+            {
+              "task": "把实验结果改写成一篇博客，请给出可执行的下一步。",
+              "id": "route-145",
+              "label": "writing",
+              "group_id": "route-writing-01"
+            },
+            {
+              "task": "把实验结果改写成一篇博客，希望今天完成。",
+              "id": "route-146",
+              "label": "writing",
+              "group_id": "route-writing-01"
+            },
+            {
+              "task": "把实验结果改写成一篇博客，结果需要附上依据。",
+              "id": "route-147",
+              "label": "writing",
+              "group_id": "route-writing-01"
+            },
+            {
+              "task": "把实验结果改写成一篇博客，请按优先级处理。",
+              "id": "route-148",
+              "label": "writing",
+              "group_id": "route-writing-01"
+            },
+            {
+              "task": "把实验结果改写成一篇博客，团队马上要用。",
+              "id": "route-149",
+              "label": "writing",
+              "group_id": "route-writing-01"
+            },
+            {
+              "task": "把实验结果改写成一篇博客，尽量说明你的判断。",
+              "id": "route-150",
+              "label": "writing",
+              "group_id": "route-writing-01"
+            },
+            {
+              "task": "写一份面向新人的使用教程，请给出可执行的下一步。",
+              "id": "route-151",
+              "label": "writing",
+              "group_id": "route-writing-02"
+            },
+            {
+              "task": "写一份面向新人的使用教程，希望今天完成。",
+              "id": "route-152",
+              "label": "writing",
+              "group_id": "route-writing-02"
+            },
+            {
+              "task": "写一份面向新人的使用教程，结果需要附上依据。",
+              "id": "route-153",
+              "label": "writing",
+              "group_id": "route-writing-02"
+            },
+            {
+              "task": "写一份面向新人的使用教程，请按优先级处理。",
+              "id": "route-154",
+              "label": "writing",
+              "group_id": "route-writing-02"
+            },
+            {
+              "task": "写一份面向新人的使用教程，团队马上要用。",
+              "id": "route-155",
+              "label": "writing",
+              "group_id": "route-writing-02"
+            },
+            {
+              "task": "写一份面向新人的使用教程，尽量说明你的判断。",
+              "id": "route-156",
+              "label": "writing",
+              "group_id": "route-writing-02"
+            },
+            {
+              "task": "将这段技术说明润色成公众号文章，请给出可执行的下一步。",
+              "id": "route-157",
+              "label": "writing",
+              "group_id": "route-writing-03"
+            },
+            {
+              "task": "将这段技术说明润色成公众号文章，希望今天完成。",
+              "id": "route-158",
+              "label": "writing",
+              "group_id": "route-writing-03"
+            },
+            {
+              "task": "将这段技术说明润色成公众号文章，结果需要附上依据。",
+              "id": "route-159",
+              "label": "writing",
+              "group_id": "route-writing-03"
+            },
+            {
+              "task": "将这段技术说明润色成公众号文章，请按优先级处理。",
+              "id": "route-160",
+              "label": "writing",
+              "group_id": "route-writing-03"
+            },
+            {
+              "task": "将这段技术说明润色成公众号文章，团队马上要用。",
+              "id": "route-161",
+              "label": "writing",
+              "group_id": "route-writing-03"
+            },
+            {
+              "task": "将这段技术说明润色成公众号文章，尽量说明你的判断。",
+              "id": "route-162",
+              "label": "writing",
+              "group_id": "route-writing-03"
+            },
+            {
+              "task": "为发布会准备一篇产品介绍稿，请给出可执行的下一步。",
+              "id": "route-163",
+              "label": "writing",
+              "group_id": "route-writing-04"
+            },
+            {
+              "task": "为发布会准备一篇产品介绍稿，希望今天完成。",
+              "id": "route-164",
+              "label": "writing",
+              "group_id": "route-writing-04"
+            },
+            {
+              "task": "为发布会准备一篇产品介绍稿，结果需要附上依据。",
+              "id": "route-165",
+              "label": "writing",
+              "group_id": "route-writing-04"
+            },
+            {
+              "task": "为发布会准备一篇产品介绍稿，请按优先级处理。",
+              "id": "route-166",
+              "label": "writing",
+              "group_id": "route-writing-04"
+            },
+            {
+              "task": "为发布会准备一篇产品介绍稿，团队马上要用。",
+              "id": "route-167",
+              "label": "writing",
+              "group_id": "route-writing-04"
+            },
+            {
+              "task": "为发布会准备一篇产品介绍稿，尽量说明你的判断。",
+              "id": "route-168",
+              "label": "writing",
+              "group_id": "route-writing-04"
+            },
+            {
+              "task": "写一个比较两个模型的评测总结，请给出可执行的下一步。",
+              "id": "route-169",
+              "label": "writing",
+              "group_id": "route-writing-05"
+            },
+            {
+              "task": "写一个比较两个模型的评测总结，希望今天完成。",
+              "id": "route-170",
+              "label": "writing",
+              "group_id": "route-writing-05"
+            },
+            {
+              "task": "写一个比较两个模型的评测总结，结果需要附上依据。",
+              "id": "route-171",
+              "label": "writing",
+              "group_id": "route-writing-05"
+            },
+            {
+              "task": "写一个比较两个模型的评测总结，请按优先级处理。",
+              "id": "route-172",
+              "label": "writing",
+              "group_id": "route-writing-05"
+            },
+            {
+              "task": "写一个比较两个模型的评测总结，团队马上要用。",
+              "id": "route-173",
+              "label": "writing",
+              "group_id": "route-writing-05"
+            },
+            {
+              "task": "写一个比较两个模型的评测总结，尽量说明你的判断。",
+              "id": "route-174",
+              "label": "writing",
+              "group_id": "route-writing-05"
+            },
+            {
+              "task": "把会议记录整理成结构清晰的文章，请给出可执行的下一步。",
+              "id": "route-175",
+              "label": "writing",
+              "group_id": "route-writing-06"
+            },
+            {
+              "task": "把会议记录整理成结构清晰的文章，希望今天完成。",
+              "id": "route-176",
+              "label": "writing",
+              "group_id": "route-writing-06"
+            },
+            {
+              "task": "把会议记录整理成结构清晰的文章，结果需要附上依据。",
+              "id": "route-177",
+              "label": "writing",
+              "group_id": "route-writing-06"
+            },
+            {
+              "task": "把会议记录整理成结构清晰的文章，请按优先级处理。",
+              "id": "route-178",
+              "label": "writing",
+              "group_id": "route-writing-06"
+            },
+            {
+              "task": "把会议记录整理成结构清晰的文章，团队马上要用。",
+              "id": "route-179",
+              "label": "writing",
+              "group_id": "route-writing-06"
+            },
+            {
+              "task": "把会议记录整理成结构清晰的文章，尽量说明你的判断。",
+              "id": "route-180",
+              "label": "writing",
+              "group_id": "route-writing-06"
+            },
+            {
+              "task": "为网站首页写一段简洁的产品文案，请给出可执行的下一步。",
+              "id": "route-181",
+              "label": "writing",
+              "group_id": "route-writing-07"
+            },
+            {
+              "task": "为网站首页写一段简洁的产品文案，希望今天完成。",
+              "id": "route-182",
+              "label": "writing",
+              "group_id": "route-writing-07"
+            },
+            {
+              "task": "为网站首页写一段简洁的产品文案，结果需要附上依据。",
+              "id": "route-183",
+              "label": "writing",
+              "group_id": "route-writing-07"
+            },
+            {
+              "task": "为网站首页写一段简洁的产品文案，请按优先级处理。",
+              "id": "route-184",
+              "label": "writing",
+              "group_id": "route-writing-07"
+            },
+            {
+              "task": "为网站首页写一段简洁的产品文案，团队马上要用。",
+              "id": "route-185",
+              "label": "writing",
+              "group_id": "route-writing-07"
+            },
+            {
+              "task": "为网站首页写一段简洁的产品文案，尽量说明你的判断。",
+              "id": "route-186",
+              "label": "writing",
+              "group_id": "route-writing-07"
+            }
+          ]
+        },
+        "validation": {
+          "record_count": 36,
+          "group_count": 6,
+          "group_ids": [
+            "route-code-08",
+            "route-code-09",
+            "route-search-08",
+            "route-search-09",
+            "route-writing-08",
+            "route-writing-09"
+          ],
+          "records": [
+            {
+              "task": "修复并发任务偶发重复执行的 bug，请给出可执行的下一步。",
+              "id": "route-115",
+              "label": "code",
+              "group_id": "route-code-08"
+            },
+            {
+              "task": "修复并发任务偶发重复执行的 bug，希望今天完成。",
+              "id": "route-116",
+              "label": "code",
+              "group_id": "route-code-08"
+            },
+            {
+              "task": "修复并发任务偶发重复执行的 bug，结果需要附上依据。",
+              "id": "route-117",
+              "label": "code",
+              "group_id": "route-code-08"
+            },
+            {
+              "task": "修复并发任务偶发重复执行的 bug，请按优先级处理。",
+              "id": "route-118",
+              "label": "code",
+              "group_id": "route-code-08"
+            },
+            {
+              "task": "修复并发任务偶发重复执行的 bug，团队马上要用。",
+              "id": "route-119",
+              "label": "code",
+              "group_id": "route-code-08"
+            },
+            {
+              "task": "修复并发任务偶发重复执行的 bug，尽量说明你的判断。",
+              "id": "route-120",
+              "label": "code",
+              "group_id": "route-code-08"
+            },
+            {
+              "task": "把这段 Java 代码改成线程安全版本，请给出可执行的下一步。",
+              "id": "route-121",
+              "label": "code",
+              "group_id": "route-code-09"
+            },
+            {
+              "task": "把这段 Java 代码改成线程安全版本，希望今天完成。",
+              "id": "route-122",
+              "label": "code",
+              "group_id": "route-code-09"
+            },
+            {
+              "task": "把这段 Java 代码改成线程安全版本，结果需要附上依据。",
+              "id": "route-123",
+              "label": "code",
+              "group_id": "route-code-09"
+            },
+            {
+              "task": "把这段 Java 代码改成线程安全版本，请按优先级处理。",
+              "id": "route-124",
+              "label": "code",
+              "group_id": "route-code-09"
+            },
+            {
+              "task": "把这段 Java 代码改成线程安全版本，团队马上要用。",
+              "id": "route-125",
+              "label": "code",
+              "group_id": "route-code-09"
+            },
+            {
+              "task": "把这段 Java 代码改成线程安全版本，尽量说明你的判断。",
+              "id": "route-126",
+              "label": "code",
+              "group_id": "route-code-09"
+            },
+            {
+              "task": "找一份可信的多模态模型基准资料，请给出可执行的下一步。",
+              "id": "route-043",
+              "label": "search",
+              "group_id": "route-search-08"
+            },
+            {
+              "task": "找一份可信的多模态模型基准资料，希望今天完成。",
+              "id": "route-044",
+              "label": "search",
+              "group_id": "route-search-08"
+            },
+            {
+              "task": "找一份可信的多模态模型基准资料，结果需要附上依据。",
+              "id": "route-045",
+              "label": "search",
+              "group_id": "route-search-08"
+            },
+            {
+              "task": "找一份可信的多模态模型基准资料，请按优先级处理。",
+              "id": "route-046",
+              "label": "search",
+              "group_id": "route-search-08"
+            },
+            {
+              "task": "找一份可信的多模态模型基准资料，团队马上要用。",
+              "id": "route-047",
+              "label": "search",
+              "group_id": "route-search-08"
+            },
+            {
+              "task": "找一份可信的多模态模型基准资料，尽量说明你的判断。",
+              "id": "route-048",
+              "label": "search",
+              "group_id": "route-search-08"
+            },
+            {
+              "task": "检索过去一年 Agent 路由的论文，请给出可执行的下一步。",
+              "id": "route-049",
+              "label": "search",
+              "group_id": "route-search-09"
+            },
+            {
+              "task": "检索过去一年 Agent 路由的论文，希望今天完成。",
+              "id": "route-050",
+              "label": "search",
+              "group_id": "route-search-09"
+            },
+            {
+              "task": "检索过去一年 Agent 路由的论文，结果需要附上依据。",
+              "id": "route-051",
+              "label": "search",
+              "group_id": "route-search-09"
+            },
+            {
+              "task": "检索过去一年 Agent 路由的论文，请按优先级处理。",
+              "id": "route-052",
+              "label": "search",
+              "group_id": "route-search-09"
+            },
+            {
+              "task": "检索过去一年 Agent 路由的论文，团队马上要用。",
+              "id": "route-053",
+              "label": "search",
+              "group_id": "route-search-09"
+            },
+            {
+              "task": "检索过去一年 Agent 路由的论文，尽量说明你的判断。",
+              "id": "route-054",
+              "label": "search",
+              "group_id": "route-search-09"
+            },
+            {
+              "task": "写一封向用户解释延迟问题的邮件，请给出可执行的下一步。",
+              "id": "route-187",
+              "label": "writing",
+              "group_id": "route-writing-08"
+            },
+            {
+              "task": "写一封向用户解释延迟问题的邮件，希望今天完成。",
+              "id": "route-188",
+              "label": "writing",
+              "group_id": "route-writing-08"
+            },
+            {
+              "task": "写一封向用户解释延迟问题的邮件，结果需要附上依据。",
+              "id": "route-189",
+              "label": "writing",
+              "group_id": "route-writing-08"
+            },
+            {
+              "task": "写一封向用户解释延迟问题的邮件，请按优先级处理。",
+              "id": "route-190",
+              "label": "writing",
+              "group_id": "route-writing-08"
+            },
+            {
+              "task": "写一封向用户解释延迟问题的邮件，团队马上要用。",
+              "id": "route-191",
+              "label": "writing",
+              "group_id": "route-writing-08"
+            },
+            {
+              "task": "写一封向用户解释延迟问题的邮件，尽量说明你的判断。",
+              "id": "route-192",
+              "label": "writing",
+              "group_id": "route-writing-08"
+            },
+            {
+              "task": "将研究结论改写为易懂的科普文章，请给出可执行的下一步。",
+              "id": "route-193",
+              "label": "writing",
+              "group_id": "route-writing-09"
+            },
+            {
+              "task": "将研究结论改写为易懂的科普文章，希望今天完成。",
+              "id": "route-194",
+              "label": "writing",
+              "group_id": "route-writing-09"
+            },
+            {
+              "task": "将研究结论改写为易懂的科普文章，结果需要附上依据。",
+              "id": "route-195",
+              "label": "writing",
+              "group_id": "route-writing-09"
+            },
+            {
+              "task": "将研究结论改写为易懂的科普文章，请按优先级处理。",
+              "id": "route-196",
+              "label": "writing",
+              "group_id": "route-writing-09"
+            },
+            {
+              "task": "将研究结论改写为易懂的科普文章，团队马上要用。",
+              "id": "route-197",
+              "label": "writing",
+              "group_id": "route-writing-09"
+            },
+            {
+              "task": "将研究结论改写为易懂的科普文章，尽量说明你的判断。",
+              "id": "route-198",
+              "label": "writing",
+              "group_id": "route-writing-09"
+            }
+          ]
+        },
+        "test": {
+          "record_count": 54,
+          "group_count": 9,
+          "group_ids": [
+            "route-code-10",
+            "route-code-11",
+            "route-code-12",
+            "route-search-10",
+            "route-search-11",
+            "route-search-12",
+            "route-writing-10",
+            "route-writing-11",
+            "route-writing-12"
+          ],
+          "records": [
+            {
+              "task": "为 API 增加参数校验和错误处理，请给出可执行的下一步。",
+              "id": "route-127",
+              "label": "code",
+              "group_id": "route-code-10"
+            },
+            {
+              "task": "为 API 增加参数校验和错误处理，希望今天完成。",
+              "id": "route-128",
+              "label": "code",
+              "group_id": "route-code-10"
+            },
+            {
+              "task": "为 API 增加参数校验和错误处理，结果需要附上依据。",
+              "id": "route-129",
+              "label": "code",
+              "group_id": "route-code-10"
+            },
+            {
+              "task": "为 API 增加参数校验和错误处理，请按优先级处理。",
+              "id": "route-130",
+              "label": "code",
+              "group_id": "route-code-10"
+            },
+            {
+              "task": "为 API 增加参数校验和错误处理，团队马上要用。",
+              "id": "route-131",
+              "label": "code",
+              "group_id": "route-code-10"
+            },
+            {
+              "task": "为 API 增加参数校验和错误处理，尽量说明你的判断。",
+              "id": "route-132",
+              "label": "code",
+              "group_id": "route-code-10"
+            },
+            {
+              "task": "定位部署后 502 错误并给出修复代码，请给出可执行的下一步。",
+              "id": "route-133",
+              "label": "code",
+              "group_id": "route-code-11"
+            },
+            {
+              "task": "定位部署后 502 错误并给出修复代码，希望今天完成。",
+              "id": "route-134",
+              "label": "code",
+              "group_id": "route-code-11"
+            },
+            {
+              "task": "定位部署后 502 错误并给出修复代码，结果需要附上依据。",
+              "id": "route-135",
+              "label": "code",
+              "group_id": "route-code-11"
+            },
+            {
+              "task": "定位部署后 502 错误并给出修复代码，请按优先级处理。",
+              "id": "route-136",
+              "label": "code",
+              "group_id": "route-code-11"
+            },
+            {
+              "task": "定位部署后 502 错误并给出修复代码，团队马上要用。",
+              "id": "route-137",
+              "label": "code",
+              "group_id": "route-code-11"
+            },
+            {
+              "task": "定位部署后 502 错误并给出修复代码，尽量说明你的判断。",
+              "id": "route-138",
+              "label": "code",
+              "group_id": "route-code-11"
+            },
+            {
+              "task": "为实验平台写一个结果导出函数，请给出可执行的下一步。",
+              "id": "route-139",
+              "label": "code",
+              "group_id": "route-code-12"
+            },
+            {
+              "task": "为实验平台写一个结果导出函数，希望今天完成。",
+              "id": "route-140",
+              "label": "code",
+              "group_id": "route-code-12"
+            },
+            {
+              "task": "为实验平台写一个结果导出函数，结果需要附上依据。",
+              "id": "route-141",
+              "label": "code",
+              "group_id": "route-code-12"
+            },
+            {
+              "task": "为实验平台写一个结果导出函数，请按优先级处理。",
+              "id": "route-142",
+              "label": "code",
+              "group_id": "route-code-12"
+            },
+            {
+              "task": "为实验平台写一个结果导出函数，团队马上要用。",
+              "id": "route-143",
+              "label": "code",
+              "group_id": "route-code-12"
+            },
+            {
+              "task": "为实验平台写一个结果导出函数，尽量说明你的判断。",
+              "id": "route-144",
+              "label": "code",
+              "group_id": "route-code-12"
+            },
+            {
+              "task": "查找用户反馈中最常见的问题，请给出可执行的下一步。",
+              "id": "route-055",
+              "label": "search",
+              "group_id": "route-search-10"
+            },
+            {
+              "task": "查找用户反馈中最常见的问题，希望今天完成。",
+              "id": "route-056",
+              "label": "search",
+              "group_id": "route-search-10"
+            },
+            {
+              "task": "查找用户反馈中最常见的问题，结果需要附上依据。",
+              "id": "route-057",
+              "label": "search",
+              "group_id": "route-search-10"
+            },
+            {
+              "task": "查找用户反馈中最常见的问题，请按优先级处理。",
+              "id": "route-058",
+              "label": "search",
+              "group_id": "route-search-10"
+            },
+            {
+              "task": "查找用户反馈中最常见的问题，团队马上要用。",
+              "id": "route-059",
+              "label": "search",
+              "group_id": "route-search-10"
+            },
+            {
+              "task": "查找用户反馈中最常见的问题，尽量说明你的判断。",
+              "id": "route-060",
+              "label": "search",
+              "group_id": "route-search-10"
+            },
+            {
+              "task": "搜索开源许可证的兼容性说明，请给出可执行的下一步。",
+              "id": "route-061",
+              "label": "search",
+              "group_id": "route-search-11"
+            },
+            {
+              "task": "搜索开源许可证的兼容性说明，希望今天完成。",
+              "id": "route-062",
+              "label": "search",
+              "group_id": "route-search-11"
+            },
+            {
+              "task": "搜索开源许可证的兼容性说明，结果需要附上依据。",
+              "id": "route-063",
+              "label": "search",
+              "group_id": "route-search-11"
+            },
+            {
+              "task": "搜索开源许可证的兼容性说明，请按优先级处理。",
+              "id": "route-064",
+              "label": "search",
+              "group_id": "route-search-11"
+            },
+            {
+              "task": "搜索开源许可证的兼容性说明，团队马上要用。",
+              "id": "route-065",
+              "label": "search",
+              "group_id": "route-search-11"
+            },
+            {
+              "task": "搜索开源许可证的兼容性说明，尽量说明你的判断。",
+              "id": "route-066",
+              "label": "search",
+              "group_id": "route-search-11"
+            },
+            {
+              "task": "帮我整理网上关于 JEV 的使用案例，请给出可执行的下一步。",
+              "id": "route-067",
+              "label": "search",
+              "group_id": "route-search-12"
+            },
+            {
+              "task": "帮我整理网上关于 JEV 的使用案例，希望今天完成。",
+              "id": "route-068",
+              "label": "search",
+              "group_id": "route-search-12"
+            },
+            {
+              "task": "帮我整理网上关于 JEV 的使用案例，结果需要附上依据。",
+              "id": "route-069",
+              "label": "search",
+              "group_id": "route-search-12"
+            },
+            {
+              "task": "帮我整理网上关于 JEV 的使用案例，请按优先级处理。",
+              "id": "route-070",
+              "label": "search",
+              "group_id": "route-search-12"
+            },
+            {
+              "task": "帮我整理网上关于 JEV 的使用案例，团队马上要用。",
+              "id": "route-071",
+              "label": "search",
+              "group_id": "route-search-12"
+            },
+            {
+              "task": "帮我整理网上关于 JEV 的使用案例，尽量说明你的判断。",
+              "id": "route-072",
+              "label": "search",
+              "group_id": "route-search-12"
+            },
+            {
+              "task": "为这组数据写一份分析报告，请给出可执行的下一步。",
+              "id": "route-199",
+              "label": "writing",
+              "group_id": "route-writing-10"
+            },
+            {
+              "task": "为这组数据写一份分析报告，希望今天完成。",
+              "id": "route-200",
+              "label": "writing",
+              "group_id": "route-writing-10"
+            },
+            {
+              "task": "为这组数据写一份分析报告，结果需要附上依据。",
+              "id": "route-201",
+              "label": "writing",
+              "group_id": "route-writing-10"
+            },
+            {
+              "task": "为这组数据写一份分析报告，请按优先级处理。",
+              "id": "route-202",
+              "label": "writing",
+              "group_id": "route-writing-10"
+            },
+            {
+              "task": "为这组数据写一份分析报告，团队马上要用。",
+              "id": "route-203",
+              "label": "writing",
+              "group_id": "route-writing-10"
+            },
+            {
+              "task": "为这组数据写一份分析报告，尽量说明你的判断。",
+              "id": "route-204",
+              "label": "writing",
+              "group_id": "route-writing-10"
+            },
+            {
+              "task": "帮我拟一个 JEV 实验的标题和摘要，请给出可执行的下一步。",
+              "id": "route-205",
+              "label": "writing",
+              "group_id": "route-writing-11"
+            },
+            {
+              "task": "帮我拟一个 JEV 实验的标题和摘要，希望今天完成。",
+              "id": "route-206",
+              "label": "writing",
+              "group_id": "route-writing-11"
+            },
+            {
+              "task": "帮我拟一个 JEV 实验的标题和摘要，结果需要附上依据。",
+              "id": "route-207",
+              "label": "writing",
+              "group_id": "route-writing-11"
+            },
+            {
+              "task": "帮我拟一个 JEV 实验的标题和摘要，请按优先级处理。",
+              "id": "route-208",
+              "label": "writing",
+              "group_id": "route-writing-11"
+            },
+            {
+              "task": "帮我拟一个 JEV 实验的标题和摘要，团队马上要用。",
+              "id": "route-209",
+              "label": "writing",
+              "group_id": "route-writing-11"
+            },
+            {
+              "task": "帮我拟一个 JEV 实验的标题和摘要，尽量说明你的判断。",
+              "id": "route-210",
+              "label": "writing",
+              "group_id": "route-writing-11"
+            },
+            {
+              "task": "把开发日志写成周报，请给出可执行的下一步。",
+              "id": "route-211",
+              "label": "writing",
+              "group_id": "route-writing-12"
+            },
+            {
+              "task": "把开发日志写成周报，希望今天完成。",
+              "id": "route-212",
+              "label": "writing",
+              "group_id": "route-writing-12"
+            },
+            {
+              "task": "把开发日志写成周报，结果需要附上依据。",
+              "id": "route-213",
+              "label": "writing",
+              "group_id": "route-writing-12"
+            },
+            {
+              "task": "把开发日志写成周报，请按优先级处理。",
+              "id": "route-214",
+              "label": "writing",
+              "group_id": "route-writing-12"
+            },
+            {
+              "task": "把开发日志写成周报，团队马上要用。",
+              "id": "route-215",
+              "label": "writing",
+              "group_id": "route-writing-12"
+            },
+            {
+              "task": "把开发日志写成周报，尽量说明你的判断。",
+              "id": "route-216",
+              "label": "writing",
+              "group_id": "route-writing-12"
+            }
+          ]
+        }
+      },
+      "overlaps": {
+        "train__validation": {
+          "group_ids": [],
+          "text_count": 0
+        },
+        "train__test": {
+          "group_ids": [],
+          "text_count": 0
+        },
+        "validation__test": {
+          "group_ids": [],
+          "text_count": 0
+        }
+      }
+    }
+  }
+}
